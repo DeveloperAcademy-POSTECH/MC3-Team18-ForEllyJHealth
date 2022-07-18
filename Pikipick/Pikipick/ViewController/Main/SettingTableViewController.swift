@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingTableViewController: UITableViewController {
-	var SettingMenus = ["오픈소스 라이센스", "버전정보"]
+	private var SettingMenus = ["오픈소스 라이센스", "버전정보"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
