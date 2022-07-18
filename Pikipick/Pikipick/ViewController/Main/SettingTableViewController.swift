@@ -29,8 +29,8 @@ class SettingTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if indexPath.row == 0 {
-			guard let vc = storyboard?.instantiateViewController(withIdentifier: "LicenseVC") as? LicenseViewController else { return }
-			navigationController?.pushViewController(vc, animated: true)
+			guard let viewController = storyboard?.instantiateViewController(withIdentifier: "LicenseVC") as? LicenseViewController else { return }
+			navigationController?.pushViewController(viewController, animated: true)
 		}
 	}
 
