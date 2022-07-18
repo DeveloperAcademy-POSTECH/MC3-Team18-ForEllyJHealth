@@ -14,7 +14,6 @@
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
-		E2B6B24A288191400034E0DD /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B249288191400034E0DD /* SettingTableViewController.swift */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
 		E2B6B2502882AA2E0034E0DD /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24F2882AA2E0034E0DD /* SettingModel.swift */; };
 		E2B6B2522882AB970034E0DD /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B2512882AB970034E0DD /* LicenseViewController.swift */; };
@@ -30,7 +29,6 @@
 		3AB219C9287FE94400945A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2B6B249288191400034E0DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
 		E2B6B24F2882AA2E0034E0DD /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		E2B6B2512882AB970034E0DD /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				3AB219C1287FE94300945A02 /* MainViewController.swift */,
-				E2B6B249288191400034E0DD /* SettingTableViewController.swift */,
 				E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */,
 				E2B6B2512882AB970034E0DD /* LicenseViewController.swift */,
 			);
@@ -184,7 +181,6 @@
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
 				E2B6B2502882AA2E0034E0DD /* SettingModel.swift in Sources */,
-				E2B6B24A288191400034E0DD /* SettingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
