@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BD287FE94300945A02 /* AppDelegate.swift */; };
 		3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BF287FE94300945A02 /* SceneDelegate.swift */; };
-		3AB219C2287FE94300945A02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C1287FE94300945A02 /* ViewController.swift */; };
+		3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C1287FE94300945A02 /* MainViewController.swift */; };
 		3AB219C5287FE94300945A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C3287FE94300945A02 /* Main.storyboard */; };
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
+		E2B6B24A288191400034E0DD /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B249288191400034E0DD /* SettingTableViewController.swift */; };
+		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
+		E2B6B2502882AA2E0034E0DD /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24F2882AA2E0034E0DD /* SettingModel.swift */; };
+		E2B6B2522882AB970034E0DD /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B2512882AB970034E0DD /* LicenseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3AB219BA287FE94300945A02 /* Pikipick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pikipick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB219BD287FE94300945A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB219BF287FE94300945A02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3AB219C1287FE94300945A02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3AB219C1287FE94300945A02 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3AB219C4287FE94300945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AB219C7287FE94300945A02 /* Pikipick.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pikipick.xcdatamodel; sourceTree = "<group>"; };
 		3AB219C9287FE94400945A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B6B249288191400034E0DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
+		E2B6B24F2882AA2E0034E0DD /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		E2B6B2512882AB970034E0DD /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,10 @@
 		3AB219BC287FE94300945A02 /* Pikipick */ = {
 			isa = PBXGroup;
 			children = (
+				E2B6B24E2882AA190034E0DD /* Model */,
+				E2B6B246288190A20034E0DD /* ViewController */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
-				3AB219C1287FE94300945A02 /* ViewController.swift */,
 				3AB219C3287FE94300945A02 /* Main.storyboard */,
 				3AB219C9287FE94400945A02 /* Assets.xcassets */,
 				3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */,
@@ -68,6 +77,33 @@
 				3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */,
 			);
 			path = Pikipick;
+			sourceTree = "<group>";
+		};
+		E2B6B246288190A20034E0DD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E2B6B247288190B90034E0DD /* Main */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E2B6B247288190B90034E0DD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3AB219C1287FE94300945A02 /* MainViewController.swift */,
+				E2B6B249288191400034E0DD /* SettingTableViewController.swift */,
+				E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */,
+				E2B6B2512882AB970034E0DD /* LicenseViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E2B6B24E2882AA190034E0DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2B6B24F2882AA2E0034E0DD /* SettingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB219C2287FE94300945A02 /* ViewController.swift in Sources */,
+				E2B6B2522882AB970034E0DD /* LicenseViewController.swift in Sources */,
+				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
+				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
+				E2B6B2502882AA2E0034E0DD /* SettingModel.swift in Sources */,
+				E2B6B24A288191400034E0DD /* SettingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +329,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SXSNK823Y9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pikipick/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -305,6 +347,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhHwang.Pikipick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Pikipick;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,8 +359,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SXSNK823Y9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pikipick/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,6 +377,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhHwang.Pikipick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Pikipick;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
