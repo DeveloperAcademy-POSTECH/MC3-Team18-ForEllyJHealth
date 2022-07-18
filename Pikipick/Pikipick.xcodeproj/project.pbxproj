@@ -16,7 +16,6 @@
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
 		E2B6B2502882AA2E0034E0DD /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24F2882AA2E0034E0DD /* SettingModel.swift */; };
-		E2B6B2522882AB970034E0DD /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B2512882AB970034E0DD /* LicenseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
 		E2B6B24F2882AA2E0034E0DD /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
-		E2B6B2512882AB970034E0DD /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +88,6 @@
 			children = (
 				3AB219C1287FE94300945A02 /* MainViewController.swift */,
 				E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */,
-				E2B6B2512882AB970034E0DD /* LicenseViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -174,7 +171,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B6B2522882AB970034E0DD /* LicenseViewController.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,

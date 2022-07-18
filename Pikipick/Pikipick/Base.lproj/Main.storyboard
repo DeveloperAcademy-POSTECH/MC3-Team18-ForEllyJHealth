@@ -64,9 +64,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7l8-9J-RAi" secondAttribute="bottom" constant="16" id="u8c-Ap-pkV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="EAx-mT-nuX">
-                        <barButtonItem key="leftBarButtonItem" image="gearshape" catalog="system" id="n3J-ce-kJL"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="EAx-mT-nuX"/>
                     <connections>
                         <outlet property="participateButton" destination="Wot-aw-bzL" id="IgT-pl-4gO"/>
                     </connections>
@@ -152,7 +150,6 @@
     </scenes>
     <resources>
         <image name="MainImage" width="286" height="286"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
         <namedColor name="PrimaryColor">
             <color red="1" green="0.67100000381469727" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
