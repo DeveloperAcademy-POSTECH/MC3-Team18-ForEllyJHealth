@@ -14,6 +14,8 @@
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
+		E00EF79028854C41008BA593 /* AudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00EF78F28854C41008BA593 /* AudienceViewController.swift */; };
+		E00EF792288593FB008BA593 /* AudienceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00EF791288593FB008BA593 /* AudienceStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3AB219C9287FE94400945A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E00EF78F28854C41008BA593 /* AudienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudienceViewController.swift; sourceTree = "<group>"; };
+		E00EF791288593FB008BA593 /* AudienceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudienceStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,13 @@
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
 				3AB219C1287FE94300945A02 /* ViewController.swift */,
+				E00EF78F28854C41008BA593 /* AudienceViewController.swift */,
 				3AB219C3287FE94300945A02 /* Main.storyboard */,
 				3AB219C9287FE94400945A02 /* Assets.xcassets */,
 				3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */,
 				3AB219CE287FE94400945A02 /* Info.plist */,
 				3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */,
+				E00EF791288593FB008BA593 /* AudienceStoryboard.storyboard */,
 			);
 			path = Pikipick;
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 				3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */,
 				3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */,
 				3AB219C5287FE94300945A02 /* Main.storyboard in Resources */,
+				E00EF792288593FB008BA593 /* AudienceStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +150,7 @@
 			files = (
 				3AB219C2287FE94300945A02 /* ViewController.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
+				E00EF79028854C41008BA593 /* AudienceViewController.swift in Sources */,
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
 			);
