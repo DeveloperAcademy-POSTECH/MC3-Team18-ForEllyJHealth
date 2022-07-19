@@ -10,11 +10,16 @@ import UIKit
 class AudienceViewController: UIViewController {
 
     private let fadeOutTime = 4
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var emoji: UILabel!
+	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var emoji: UILabel!
+	
+	var deviceName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		if let text = deviceName {
+			titleLabel.text = "\(text)의 발표입니다."
+		}
     }
     
     @IBAction func tabClapButton(_ sender: UIButton) {

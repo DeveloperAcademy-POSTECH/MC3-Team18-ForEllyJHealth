@@ -108,7 +108,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gL4-hE-sje" kind="show" id="mkE-pv-fdD"/>
+                                            <segue destination="gL4-hE-sje" kind="show" identifier="Segue" id="uAg-xW-dgm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
