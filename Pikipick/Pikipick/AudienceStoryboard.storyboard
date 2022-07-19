@@ -225,7 +225,7 @@
                     </view>
                     <connections>
                         <outlet property="emoji" destination="A17-La-NMV" id="EwN-84-0Mg"/>
-                        <outlet property="titleLabel" destination="XXn-b8-4iA" id="orI-j0-PDg"/>
+                        <outlet property="titleLabel" destination="XXn-b8-4iA" id="vpb-bg-7Xo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJ0-u6-s0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
