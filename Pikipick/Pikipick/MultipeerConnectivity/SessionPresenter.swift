@@ -140,16 +140,13 @@ extension SessionPresenter: MCSessionDelegate {
     
     // Can't Receive Specific Item 1
     public func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
-        log.error("Receiving streams is not supported")
     }
     
     // Can't Receive Specific Item 2
     public func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with Progress: Progress) {
-        log.error("Receiving resources is not supported")
     }
     
     // Can't Receive Specific Item 3
     public func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
-        log.error("Receiving resources is not supported")
     }
 }
