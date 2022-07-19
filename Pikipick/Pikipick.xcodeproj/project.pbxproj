@@ -24,6 +24,8 @@
 		7080890F2886D6250059647A /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7080890E2886D6250059647A /* ConfettiSwiftUI */; };
 		708089112886DB2D0059647A /* DeviceNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708089102886DB2D0059647A /* DeviceNameView.swift */; };
 		708089132886DB430059647A /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708089122886DB430059647A /* ButtonActionView.swift */; };
+		E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */; };
+		E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +49,10 @@
 		7080890B2886D5F10059647A /* GoodButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodButtonView.swift; sourceTree = "<group>"; };
 		708089102886DB2D0059647A /* DeviceNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNameView.swift; sourceTree = "<group>"; };
 		708089122886DB430059647A /* ButtonActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
+		E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudienceViewController.swift; sourceTree = "<group>"; };
+		E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudienceStoryboard.storyboard; sourceTree = "<group>"; };
 		E276ACFE2885742900D14369 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E2B6B249288191400034E0DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +73,7 @@
 			children = (
 				3AB219BC287FE94300945A02 /* Pikipick */,
 				3AB219BB287FE94300945A02 /* Products */,
+				E08EFF842886A0C700582C83 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,12 +89,14 @@
 			isa = PBXGroup;
 			children = (
 				E2B6B246288190A20034E0DD /* ViewController */,
+				E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
 				708089002886D4EF0059647A /* ButtonView */,
 				708088FE2886D0EE0059647A /* PresentationView.swift */,
 				708089102886DB2D0059647A /* DeviceNameView.swift */,
 				708089122886DB430059647A /* ButtonActionView.swift */,
+				E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */,
 				3AB219C3287FE94300945A02 /* Main.storyboard */,
 				3AB219C9287FE94400945A02 /* Assets.xcassets */,
 				3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */,
@@ -110,6 +118,12 @@
 				7080890B2886D5F10059647A /* GoodButtonView.swift */,
 			);
 			path = ButtonView;
+		E08EFF842886A0C700582C83 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				E2B6B249288191400034E0DD /* SettingTableViewController.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		E2B6B246288190A20034E0DD /* ViewController */ = {
@@ -197,6 +211,7 @@
 				3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */,
 				3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */,
 				3AB219C5287FE94300945A02 /* Main.storyboard in Resources */,
+				E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +236,7 @@
 				708089112886DB2D0059647A /* DeviceNameView.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
 				708089082886D5B70059647A /* LegoButtonView.swift in Sources */,
+				E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
