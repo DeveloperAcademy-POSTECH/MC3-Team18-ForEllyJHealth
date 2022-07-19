@@ -19,6 +19,15 @@
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
+		70B6833E288714B300835093 /* SurprisingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B68338288714B300835093 /* SurprisingButtonView.swift */; };
+		70B6833F288714B300835093 /* LegoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B68339288714B300835093 /* LegoButtonView.swift */; };
+		70B68340288714B300835093 /* MarvelousButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6833A288714B300835093 /* MarvelousButtonView.swift */; };
+		70B68341288714B300835093 /* GoodButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6833B288714B300835093 /* GoodButtonView.swift */; };
+		70B68342288714B300835093 /* CongratsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6833C288714B300835093 /* CongratsButtonView.swift */; };
+		70B68343288714B300835093 /* IdkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6833D288714B300835093 /* IdkButtonView.swift */; };
+		70B68347288714C600835093 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B68344288714C600835093 /* PresentationView.swift */; };
+		70B68348288714C600835093 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B68345288714C600835093 /* ButtonActionView.swift */; };
+		70B68349288714C600835093 /* DeviceNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B68346288714C600835093 /* DeviceNameView.swift */; };
 		E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */; };
 		E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
@@ -40,6 +49,15 @@
 		3AB219C9287FE94400945A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70B68338288714B300835093 /* SurprisingButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurprisingButtonView.swift; sourceTree = "<group>"; };
+		70B68339288714B300835093 /* LegoButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegoButtonView.swift; sourceTree = "<group>"; };
+		70B6833A288714B300835093 /* MarvelousButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelousButtonView.swift; sourceTree = "<group>"; };
+		70B6833B288714B300835093 /* GoodButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodButtonView.swift; sourceTree = "<group>"; };
+		70B6833C288714B300835093 /* CongratsButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsButtonView.swift; sourceTree = "<group>"; };
+		70B6833D288714B300835093 /* IdkButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdkButtonView.swift; sourceTree = "<group>"; };
+		70B68344288714C600835093 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
+		70B68345288714C600835093 /* ButtonActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
+		70B68346288714C600835093 /* DeviceNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceNameView.swift; sourceTree = "<group>"; };
 		E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudienceViewController.swift; sourceTree = "<group>"; };
 		E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudienceStoryboard.storyboard; sourceTree = "<group>"; };
 		E276ACFE2885742900D14369 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -104,10 +122,14 @@
 		3AB219BC287FE94300945A02 /* Pikipick */ = {
 			isa = PBXGroup;
 			children = (
+				70B68337288714B300835093 /* ButtonView */,
 				3A5AE5CB2886DA48002393E6 /* Extensions */,
 				3A5AE5C42886D7FD002393E6 /* MultipeerConnectivity */,
 				3A5AE5C12886D730002393E6 /* Model */,
 				E2B6B246288190A20034E0DD /* ViewController */,
+				70B68345288714C600835093 /* ButtonActionView.swift */,
+				70B68346288714C600835093 /* DeviceNameView.swift */,
+				70B68344288714C600835093 /* PresentationView.swift */,
 				E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
@@ -120,6 +142,19 @@
 				E276ACFE2885742900D14369 /* Settings.bundle */,
 			);
 			path = Pikipick;
+			sourceTree = "<group>";
+		};
+		70B68337288714B300835093 /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				70B68338288714B300835093 /* SurprisingButtonView.swift */,
+				70B68339288714B300835093 /* LegoButtonView.swift */,
+				70B6833A288714B300835093 /* MarvelousButtonView.swift */,
+				70B6833B288714B300835093 /* GoodButtonView.swift */,
+				70B6833C288714B300835093 /* CongratsButtonView.swift */,
+				70B6833D288714B300835093 /* IdkButtonView.swift */,
+			);
+			path = ButtonView;
 			sourceTree = "<group>";
 		};
 		E08EFF842886A0C700582C83 /* Recovered References */ = {
@@ -220,17 +255,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B68343288714B300835093 /* IdkButtonView.swift in Sources */,
+				70B6833F288714B300835093 /* LegoButtonView.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
+				70B68348288714C600835093 /* ButtonActionView.swift in Sources */,
+				70B6833E288714B300835093 /* SurprisingButtonView.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
+				70B68341288714B300835093 /* GoodButtonView.swift in Sources */,
 				3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */,
 				3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */,
 				3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */,
+				70B68340288714B300835093 /* MarvelousButtonView.swift in Sources */,
+				70B68342288714B300835093 /* CongratsButtonView.swift in Sources */,
 				3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */,
+				70B68347288714C600835093 /* PresentationView.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
 				3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */,
 				E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */,
+				70B68349288714C600835093 /* DeviceNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
