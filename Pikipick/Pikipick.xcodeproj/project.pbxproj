@@ -66,12 +66,12 @@
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
 				3AB219C1287FE94300945A02 /* ViewController.swift */,
 				E00EF78F28854C41008BA593 /* AudienceViewController.swift */,
+				E00EF791288593FB008BA593 /* AudienceStoryboard.storyboard */,
 				3AB219C3287FE94300945A02 /* Main.storyboard */,
 				3AB219C9287FE94400945A02 /* Assets.xcassets */,
 				3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */,
 				3AB219CE287FE94400945A02 /* Info.plist */,
 				3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */,
-				E00EF791288593FB008BA593 /* AudienceStoryboard.storyboard */,
 			);
 			path = Pikipick;
 			sourceTree = "<group>";
