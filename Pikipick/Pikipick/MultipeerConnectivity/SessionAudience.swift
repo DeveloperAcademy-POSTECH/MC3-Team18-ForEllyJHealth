@@ -89,11 +89,6 @@ class SessionAudience: NSObject, ObservableObject {
 
 // Error Notice Delegate
 extension SessionAudience: MCNearbyServiceAdvertiserDelegate {
-    // Advertise Not Begin
-    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
-        log.error("ServiceAdvertiser didNotStartAdvertisingPeer: \(String(describing: error))")
-    }
-    
     // Receive Invitation == true
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         log.info("didReceiveInvitationFromPeer \(peerID)")

@@ -83,11 +83,6 @@ class SessionPresenter: NSObject, ObservableObject {
 
 // Error Notice Delegate
 extension SessionPresenter: MCNearbyServiceAdvertiserDelegate {
-    // Advertise Not Begin
-    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
-        log.error("ServiceAdvertiser didNotStartAdvertisingPeer: \(String(describing: error))")
-    }
-    
     // Receive Invitation == true
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         log.info("didReceiveInvitationFromPeer \(peerID)")
@@ -100,11 +95,6 @@ extension SessionPresenter: MCNearbyServiceAdvertiserDelegate {
 }
 
 extension SessionPresenter: MCNearbyServiceBrowserDelegate {
-    // Browsing Not Begin
-    func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
-        log.error("ServiceBrowser didNotStartBrowsingForPeers: \(String(describing: error))")
-    }
-    
     // Found Peer
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
         log.info("ServiceBrowser found peer: \(peerID)")

@@ -74,11 +74,6 @@ class PresenterDetector: NSObject, ObservableObject {
 }
 
 extension PresenterDetector: MCNearbyServiceBrowserDelegate {
-    // Browsing Not Begin
-    func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
-        log.error("ServiceBrowser didNotStartBrowsingForPeers: \(String(describing: error))")
-    }
-    
     // Found Peer
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
         log.info("ServiceBrowser found peer: \(peerID)")
