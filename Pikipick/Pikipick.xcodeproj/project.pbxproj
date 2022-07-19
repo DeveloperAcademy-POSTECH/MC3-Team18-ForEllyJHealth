@@ -14,6 +14,7 @@
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
+		708088FF2886D0EE0059647A /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708088FE2886D0EE0059647A /* PresentationView.swift */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		3AB219C9287FE94400945A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		708088FE2886D0EE0059647A /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		E276ACFE2885742900D14369 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 				E2B6B246288190A20034E0DD /* ViewController */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
+				708088FE2886D0EE0059647A /* PresentationView.swift */,
 				3AB219C3287FE94300945A02 /* Main.storyboard */,
 				3AB219C9287FE94400945A02 /* Assets.xcassets */,
 				3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */,
@@ -166,6 +169,7 @@
 			files = (
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
+				708088FF2886D0EE0059647A /* PresentationView.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
