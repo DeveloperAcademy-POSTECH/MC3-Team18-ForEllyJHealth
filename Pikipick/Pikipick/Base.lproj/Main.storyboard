@@ -107,6 +107,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="gL4-hE-sje" kind="show" id="mkE-pv-fdD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -130,6 +133,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97Q-tz-86I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1257" y="124"/>
+        </scene>
+        <!--AudienceViewController-->
+        <scene sceneID="alH-Ov-hsi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AudienceStoryboard" referencedIdentifier="AudienceViewController" id="gL4-hE-sje" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bby-jX-F2E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKj-Mf-XFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MIp-bo-lGl">
