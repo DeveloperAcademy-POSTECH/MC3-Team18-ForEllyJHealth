@@ -15,6 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의 발표입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXn-b8-4iA">
+                                <rect key="frame" x="158.5" y="68" width="97.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A17-La-NMV" userLabel="Emoji">
+                                <rect key="frame" x="207" y="354" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fpL-3l-XJW">
                                 <rect key="frame" x="72" y="402" width="270" height="400"/>
                                 <subviews>
@@ -199,25 +211,13 @@
                                 </subviews>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의 발표입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXn-b8-4iA">
-                                <rect key="frame" x="158.5" y="68" width="97.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A17-La-NMV" userLabel="Emoji">
-                                <rect key="frame" x="207" y="186.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dxh-ZG-qMc"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fpL-3l-XJW" firstAttribute="centerX" secondItem="aii-lK-AiX" secondAttribute="centerX" id="KP5-nZ-Gkv"/>
                             <constraint firstItem="Dxh-ZG-qMc" firstAttribute="bottom" secondItem="fpL-3l-XJW" secondAttribute="bottom" constant="60" id="PX4-kz-462"/>
-                            <constraint firstItem="A17-La-NMV" firstAttribute="top" secondItem="XXn-b8-4iA" secondAttribute="bottom" constant="98" id="SxV-RT-cvw"/>
+                            <constraint firstItem="A17-La-NMV" firstAttribute="bottom" secondItem="fpL-3l-XJW" secondAttribute="top" constant="-48" id="SxV-RT-cvw"/>
                             <constraint firstItem="XXn-b8-4iA" firstAttribute="centerX" secondItem="Dxh-ZG-qMc" secondAttribute="centerX" id="jtW-08-c30"/>
                             <constraint firstItem="XXn-b8-4iA" firstAttribute="top" secondItem="Dxh-ZG-qMc" secondAttribute="top" constant="24" id="m7j-3O-C6W"/>
                             <constraint firstItem="A17-La-NMV" firstAttribute="centerX" secondItem="Dxh-ZG-qMc" secondAttribute="centerX" id="zsp-YB-WnQ"/>
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJ0-u6-s0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="63"/>
+            <point key="canvasLocation" x="47.826086956521742" y="62.946428571428569"/>
         </scene>
     </scenes>
 </document>

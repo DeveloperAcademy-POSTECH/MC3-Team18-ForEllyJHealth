@@ -9,48 +9,44 @@ import UIKit
 
 class AudienceViewController: UIViewController {
 
+    let fadeOutTime = 4
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var emoji: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var emoji: UILabel!
-    
     @IBAction func tabClapButton(_ sender: UIButton) {
-        self.emoji.text = "👏"
-        viewFadeOut()
+        emoji.text = "👏"
+        viewFadeOut(fadeOutTime: fadeOutTime)
     }
-    
     @IBAction func tabSurpriseButton(_ sender: UIButton) {
-        self.emoji.text = "😮"
-        viewFadeOut()
+        emoji.text = "😮"
+        viewFadeOut(fadeOutTime: fadeOutTime)
     }
-    
     @IBAction func tapCelebrateButton(_ sender: UIButton) {
-        self.emoji.text = "🎉"
-        viewFadeOut()
+        emoji.text = "🎉"
+        viewFadeOut(fadeOutTime: fadeOutTime)
     }
-    
     @IBAction func tapFireButton(_ sender: UIButton) {
-        self.emoji.text = "🔥"
-        viewFadeOut()
+        emoji.text = "🔥"
+        viewFadeOut(fadeOutTime: fadeOutTime)
     }
-    
     @IBAction func tapCuriousbutton(_ sender: UIButton) {
-        self.emoji.text = "🤔"
-        viewFadeOut()
+        emoji.text = "🤔"
+        viewFadeOut(fadeOutTime: fadeOutTime)
     }
-    
     @IBAction func tapGoodButton(_ sender: UIButton) {
-        self.emoji.text = "👍"
-        viewFadeOut()
+        emoji.text = "👍"
+        viewFadeOut(fadeOutTime: fadeOutTime)
     }
-    
-    func viewFadeOut() {
-        UIView.animate(withDuration: 5, animations: {
+
+    func viewFadeOut(fadeOutTime: Int) {
+        UIView.animate(withDuration: TimeInterval(fadeOutTime), animations: {
             self.emoji.alpha = 1
             self.emoji.alpha = 0
         })
     }
+
 }
