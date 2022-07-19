@@ -23,16 +23,6 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
-        <!--AudienceViewController-->
-        <scene sceneID="RJR-s1-Um8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AudienceStoryboard" referencedIdentifier="AudienceViewController" id="COC-kO-g88" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="dUy-or-E9t"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e9C-9C-fOW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="833" y="368"/>
-        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
