@@ -20,7 +20,7 @@ class ParticipateViewController: UIViewController {
     }
     
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "Segue" {
+		if segue.identifier == "AudienceSegue" {
 			let cell = sender as! UITableViewCell
 			let indexPath = tableView.indexPath(for: cell)
 			let audienceVC = segue.destination as! AudienceViewController

@@ -21,6 +21,7 @@
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
 		E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */; };
 		E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */; };
+		E21D993428872C2C0065CB2A /* LocalNetworkPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D993328872C2C0065CB2A /* LocalNetworkPrivacy.swift */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudienceViewController.swift; sourceTree = "<group>"; };
 		E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudienceStoryboard.storyboard; sourceTree = "<group>"; };
+		E21D993328872C2C0065CB2A /* LocalNetworkPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPrivacy.swift; sourceTree = "<group>"; };
 		E276ACFE2885742900D14369 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E2B6B249288191400034E0DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				3AB219CE287FE94400945A02 /* Info.plist */,
 				3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */,
 				E276ACFE2885742900D14369 /* Settings.bundle */,
+				E21D993328872C2C0065CB2A /* LocalNetworkPrivacy.swift */,
 			);
 			path = Pikipick;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
 				3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */,
 				E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */,
+				E21D993428872C2C0065CB2A /* LocalNetworkPrivacy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
