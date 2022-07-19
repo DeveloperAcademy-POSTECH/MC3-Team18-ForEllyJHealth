@@ -9,7 +9,7 @@ import UIKit
 
 class AudienceViewController: UIViewController {
 
-    let fadeOutTime = 4
+    private let fadeOutTime = 4
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emoji: UILabel!
     
