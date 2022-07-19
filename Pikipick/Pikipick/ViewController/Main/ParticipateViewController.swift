@@ -6,17 +6,48 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
 class ParticipateViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 	
+    private var detector = PresenterDetector()
+    
 	var devices = [String]()
-	
+	private var presenterList = [MCPeerID]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
+        
+        detector.startBrowsing()
+        initRefresh()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        detector.startBrowsing()
+        tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        detector.stopBrowsing()
+        detector.sessionDisconnect()
+    }
+    
+    // https://gigas-blog.tistory.com/44
+    func initRefresh() {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(updateUI(refresh:)), for: .valueChanged)
+        refresh.attributedTitle = NSAttributedString(string: "RELOAD")
+        
+        tableView.refreshControl = refresh
+    }
+    
+    @objc func updateUI(refresh: UIRefreshControl) {
+        refresh.endRefreshing()
+        tableView.reloadData()
     }
     
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -24,9 +55,9 @@ class ParticipateViewController: UIViewController {
 			let cell = sender as! UITableViewCell
 			let indexPath = tableView.indexPath(for: cell)
 			let audienceVC = segue.destination as! AudienceViewController
-			audienceVC.deviceName = devices[indexPath!.row]
+            audienceVC.deviceName = presenterList[indexPath!.row]
 			if let indexPath = indexPath {
-				audienceVC.deviceName = devices[indexPath.row]
+                audienceVC.deviceName = presenterList[indexPath.row]
 			}
 		}
 	}
@@ -34,16 +65,30 @@ class ParticipateViewController: UIViewController {
 
 extension ParticipateViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if devices.isEmpty {
+		if detector.connectedPeers.isEmpty {
 			emptyMessage("현재 연결 가능한 기기가 없습니다.")
 		} else {
 			restore()
 		}
-		return devices.count
+        
+        if !presenterList.isEmpty {
+            presenterList.removeAll()
+        }
+        
+        var count = 0
+        for peer in detector.connectedPeers {
+            if(peer.displayName.contains(presenterSuffix)) {
+                count += 1
+                presenterList.append(peer)
+            }
+        }
+        return count
 	}
+    
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-		cell.textLabel?.text = devices[indexPath.row]
+        let presenterStrLength = presenterList[indexPath.row].displayName.count
+        cell.textLabel?.text = presenterList[indexPath.row].displayName.substring(from: 0, to: presenterStrLength - minusPresenterSuffixNum)
 		
 		return cell
 	}
