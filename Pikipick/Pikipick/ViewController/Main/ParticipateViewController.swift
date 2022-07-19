@@ -16,6 +16,8 @@ class ParticipateViewController: UIViewController {
 	var devices = [String]()
 	private var presenterList = [MCPeerID]()
     
+    let waitTime: TimeInterval = 0.3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,7 +49,9 @@ class ParticipateViewController: UIViewController {
     
     @objc func updateUI(refresh: UIRefreshControl) {
         refresh.endRefreshing()
-        tableView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
+            self.tableView.reloadData()
+        }
     }
     
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
