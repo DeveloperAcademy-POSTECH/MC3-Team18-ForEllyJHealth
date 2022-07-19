@@ -21,21 +21,19 @@ struct IdkButtonView: View {
     @State var counter = 0
     
     var body: some View {
-        VStack{
             ZStack{
                 ForEach(finishedAnimationCouter...counter, id:\.self){ i in
                     IdkConfettiContainer(animate:$animate[i], finishedAnimationCouter:$finishedAnimationCouter, num:1)
                 }
-            }
-            
-            Button("🤔"){
-                animate[counter].toggle()
-                animate.append(false)
-                counter+=1
+                Button("🤔"){
+                    animate[counter].toggle()
+                    animate.append(false)
+                    counter+=1
+                }
             }
         }
     }
-}
+
 
 struct IdkConfettiContainer: View {
     @Binding var animate:Bool
@@ -65,23 +63,28 @@ struct IdkConfetti: View{
 
     var body: some View{
         Text("🤔")
-            .frame(width: 50, height: 50, alignment: .center)
             .offset(x: movement.x, y: movement.y)
             .scaleEffect(movement.z)
             .opacity(movement.opacity)
             .onChange(of: animate) { _ in
                 withAnimation(Animation.easeOut(duration: 0.4)) {
                     movement.opacity = 1
-                    movement.x = CGFloat.random(in: -150...150)
-                    movement.y = -300 * CGFloat.random(in: 0.7...1)
+                    movement.x = CGFloat.random(in: -400...300)
+                    movement.y = -300 * CGFloat.random(in: 0.3...0.8)
                 }
 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                     withAnimation(Animation.easeIn(duration: 3)) {
                         movement.y = 200
                         movement.opacity = 0.0
-                    }
                 }
+            }
         }
+    }
+}
+
+struct IdkButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        IdkButtonView()
     }
 }

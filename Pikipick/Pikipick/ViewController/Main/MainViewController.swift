@@ -19,7 +19,8 @@ class MainViewController: UIViewController {
 
 	@IBAction func participateButtonTapped(_ sender: UIButton) {
 	}
-    
+    // UIHostingController를 사용해 UIKit 기반 App에 SwiftUI View를 연결합니다.
+    // ref : https://www.createwithswift.com/using-a-swiftui-view-in-a-uikit-app/
     // 2. Create a UIHostingController
        let swiftUIController = UIHostingController(rootView: PresentationView())
        

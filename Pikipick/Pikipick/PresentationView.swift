@@ -8,22 +8,19 @@
 import SwiftUI
 
 struct PresentationView: View {
+    
+    @State var isPresentationReady : Bool = false
+    
     var body: some View {
-        
-    Spacer()
-        
-    HStack(spacing: 5){
-        
-        SurprisingButtonView()
-        MarvelousButtonView()
-        CongratsButtonView()
-        LegoButtonView()
-        IdkButtonView()
-        GoodButtonView()
-        
-        }        
+        VStack{
+            Spacer()
+           
+            ButtonActionView()
+
+        }
     }
 }
+        
 
 struct PresentationView_Previews: PreviewProvider {
     static var previews: some View {
