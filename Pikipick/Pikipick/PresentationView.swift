@@ -9,7 +9,19 @@ import SwiftUI
 
 struct PresentationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+    Spacer()
+        
+    HStack(spacing: 5){
+        
+        SurprisingButtonView()
+        MarvelousButtonView()
+        CongratsButtonView()
+        LegoButtonView()
+        IdkButtonView()
+        GoodButtonView()
+        
+        }        
     }
 }
 

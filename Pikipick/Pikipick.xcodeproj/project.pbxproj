@@ -15,6 +15,13 @@
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
 		708088FF2886D0EE0059647A /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708088FE2886D0EE0059647A /* PresentationView.swift */; };
+		708089022886D5440059647A /* MarvelousButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708089012886D5440059647A /* MarvelousButtonView.swift */; };
+		708089042886D5750059647A /* SurprisingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708089032886D5750059647A /* SurprisingButtonView.swift */; };
+		708089062886D58F0059647A /* CongratsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708089052886D58F0059647A /* CongratsButtonView.swift */; };
+		708089082886D5B70059647A /* LegoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708089072886D5B70059647A /* LegoButtonView.swift */; };
+		7080890A2886D5D20059647A /* IdkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708089092886D5D20059647A /* IdkButtonView.swift */; };
+		7080890C2886D5F10059647A /* GoodButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7080890B2886D5F10059647A /* GoodButtonView.swift */; };
+		7080890F2886D6250059647A /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7080890E2886D6250059647A /* ConfettiSwiftUI */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +37,12 @@
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		708088FE2886D0EE0059647A /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
+		708089012886D5440059647A /* MarvelousButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelousButtonView.swift; sourceTree = "<group>"; };
+		708089032886D5750059647A /* SurprisingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurprisingButtonView.swift; sourceTree = "<group>"; };
+		708089052886D58F0059647A /* CongratsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsButtonView.swift; sourceTree = "<group>"; };
+		708089072886D5B70059647A /* LegoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoButtonView.swift; sourceTree = "<group>"; };
+		708089092886D5D20059647A /* IdkButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdkButtonView.swift; sourceTree = "<group>"; };
+		7080890B2886D5F10059647A /* GoodButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodButtonView.swift; sourceTree = "<group>"; };
 		E276ACFE2885742900D14369 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7080890F2886D6250059647A /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +81,7 @@
 				E2B6B246288190A20034E0DD /* ViewController */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
+				708089002886D4EF0059647A /* ButtonView */,
 				708088FE2886D0EE0059647A /* PresentationView.swift */,
 				3AB219C3287FE94300945A02 /* Main.storyboard */,
 				3AB219C9287FE94400945A02 /* Assets.xcassets */,
@@ -76,6 +91,19 @@
 				E276ACFE2885742900D14369 /* Settings.bundle */,
 			);
 			path = Pikipick;
+			sourceTree = "<group>";
+		};
+		708089002886D4EF0059647A /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				708089012886D5440059647A /* MarvelousButtonView.swift */,
+				708089032886D5750059647A /* SurprisingButtonView.swift */,
+				708089052886D58F0059647A /* CongratsButtonView.swift */,
+				708089072886D5B70059647A /* LegoButtonView.swift */,
+				708089092886D5D20059647A /* IdkButtonView.swift */,
+				7080890B2886D5F10059647A /* GoodButtonView.swift */,
+			);
+			path = ButtonView;
 			sourceTree = "<group>";
 		};
 		E2B6B246288190A20034E0DD /* ViewController */ = {
@@ -111,6 +139,9 @@
 			dependencies = (
 			);
 			name = Pikipick;
+			packageProductDependencies = (
+				7080890E2886D6250059647A /* ConfettiSwiftUI */,
+			);
 			productName = Pikipick;
 			productReference = 3AB219BA287FE94300945A02 /* Pikipick.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 3AB219B1287FE94300945A02;
+			packageReferences = (
+				7080890D2886D6250059647A /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 3AB219BB287FE94300945A02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,11 +202,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
+				7080890A2886D5D20059647A /* IdkButtonView.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
+				7080890C2886D5F10059647A /* GoodButtonView.swift in Sources */,
+				708089042886D5750059647A /* SurprisingButtonView.swift in Sources */,
+				708089022886D5440059647A /* MarvelousButtonView.swift in Sources */,
 				708088FF2886D0EE0059647A /* PresentationView.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
+				708089062886D58F0059647A /* CongratsButtonView.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
+				708089082886D5B70059647A /* LegoButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7080890D2886D6250059647A /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7080890E2886D6250059647A /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7080890D2886D6250059647A /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */ = {
