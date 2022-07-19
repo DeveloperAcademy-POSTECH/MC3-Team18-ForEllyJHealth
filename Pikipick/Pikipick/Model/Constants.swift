@@ -18,8 +18,8 @@ enum EmojiName: String, CaseIterable {
 }
 
 // MARK: Enum -> String 변환
-func emojiString(s: String) -> String {
-    switch s {
+func emojiIs(emojiName: String) -> String {
+    switch emojiName {
     case "Marvelous":
         return "👏"
     case "Surprising":
