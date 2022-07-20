@@ -12,7 +12,6 @@ struct Emoji: Hashable {
 }
 
 struct ButtonActionView: View {
-    
     @State private var counter: Int = 0
     @State var emoji = [
         Emoji(emoticon: "👏"),
@@ -22,19 +21,15 @@ struct ButtonActionView: View {
         Emoji(emoticon: "🤔"),
         Emoji(emoticon: "👍"),
     ]
+    
     var body: some View {
-        
         HStack {
-            ButtonAnimView(emoji: $emoji[0])
-            ButtonAnimView(emoji: $emoji[1])
-            ButtonAnimView(emoji: $emoji[2])
-            ButtonAnimView(emoji: $emoji[3])
-            ButtonAnimView(emoji: $emoji[4])
-            ButtonAnimView(emoji: $emoji[5])
+            ForEach(0 ..< emoji.count, id:\.self){ i in
+            ButtonAnimView(emoji: $emoji[i])
+            }
         }
     }
 }
-
 
 struct ButtonActionView_Previews: PreviewProvider {
     static var previews: some View {

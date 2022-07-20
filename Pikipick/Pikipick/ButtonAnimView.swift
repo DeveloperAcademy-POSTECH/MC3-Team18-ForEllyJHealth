@@ -20,29 +20,30 @@ struct ButtonAnimView: View {
     @Binding var emoji: Emoji
     
     var body: some View {
-        
-            ZStack{
-                ForEach(finishedAnimationCouter...counter, id:\.self){ i in
-                    ConfettiContainer(animate:$animate[i], finishedAnimationCouter:$finishedAnimationCouter,emoji: $emoji ,num:1)
-                }
-                Button(emoji.emoticon){
-                    animate[counter].toggle()
-                    animate.append(false)
-                    counter+=1
-                }
+        ZStack{
+            ForEach(finishedAnimationCouter...counter, id:\.self) { i in
+                ConfettiContainer(animate:$animate[i], emoji: $emoji, finishedAnimationCouter:$finishedAnimationCouter ,num:1)
+            }
+            Button(emoji.emoticon){
+                animate[counter].toggle()
+                animate.append(false)
+                counter+=1
             }
         }
     }
+}
+
 struct ConfettiContainer: View {
-    @Binding var animate:Bool
-    @Binding var finishedAnimationCouter:Int
     @State var movement = Movement(x: 0, y: 0, z: 1, opacity: 0)
+    @Binding var animate:Bool
     @Binding var emoji: Emoji
+    @Binding var finishedAnimationCouter:Int
+    
     var num:Int
     
     var body: some View{
         ZStack{
-            ForEach(0...num-1, id:\.self){ _ in
+            ForEach(0...num-1, id:\.self) { _ in
                 Text(emoji.emoticon)
                     .offset(x: movement.x, y: movement.y)
                     .scaleEffect(movement.z)
@@ -53,17 +54,17 @@ struct ConfettiContainer: View {
                             movement.x = CGFloat.random(in: -300...400)
                             movement.y = -300 * CGFloat.random(in: 0.3...0.8)
                         }
-
+                        
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                             withAnimation(Animation.easeIn(duration: 3)) {
                                 movement.y = 200
                                 movement.opacity = 0.0
+                            }
                         }
                     }
-                }
             }
         }
-        .onChange(of: animate){_ in
+        .onChange(of: animate) {_ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                 finishedAnimationCouter+=1
             }
