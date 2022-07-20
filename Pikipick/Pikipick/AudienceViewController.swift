@@ -10,7 +10,10 @@ import UIKit
 
 class AudienceViewController: UIViewController {
 
-    private let fadeOutTime = 4
+    private let fadeOutTime = 3
+    var isHapticOn : Bool = true
+    var impactFeedbackGenerator: UIImpactFeedbackGenerator?
+    
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var emoji: UILabel!
 	
@@ -29,6 +32,14 @@ class AudienceViewController: UIViewController {
         audience.currentPresenter = deviceName
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UserDefaults.standard.object(forKey: "Haptic_preference") == nil {
+            UserDefaults.standard.set(true, forKey: "Haptic_preference")
+        }
+        isHapticOn = UserDefaults.standard.object(forKey: "Haptic_preference") as? Bool ?? true
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         audience.stopAdvertise()
         audience.sessionDisconnect()
@@ -38,31 +49,37 @@ class AudienceViewController: UIViewController {
         emoji.text = "👏"
         viewFadeOut(fadeOutTime: fadeOutTime)
         audience.send(emoji: EmojiName.Marvelous, receiver: deviceName!)
+        runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tabSurpriseButton(_ sender: UIButton) {
         emoji.text = "😮"
         viewFadeOut(fadeOutTime: fadeOutTime)
         audience.send(emoji: EmojiName.Surprising, receiver: deviceName!)
+        runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCelebrateButton(_ sender: UIButton) {
         emoji.text = "🎉"
         viewFadeOut(fadeOutTime: fadeOutTime)
         audience.send(emoji: EmojiName.Congrats, receiver: deviceName!)
+        runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapFireButton(_ sender: UIButton) {
         emoji.text = "🔥"
         viewFadeOut(fadeOutTime: fadeOutTime)
         audience.send(emoji: EmojiName.LEGO, receiver: deviceName!)
+        runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCuriousbutton(_ sender: UIButton) {
         emoji.text = "🤔"
         viewFadeOut(fadeOutTime: fadeOutTime)
         audience.send(emoji: EmojiName.Idk, receiver: deviceName!)
+        runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapGoodButton(_ sender: UIButton) {
         emoji.text = "👍"
         viewFadeOut(fadeOutTime: fadeOutTime)
         audience.send(emoji: EmojiName.Good, receiver: deviceName!)
+        runHaptic(isHapticOn: isHapticOn)
     }
 
     func viewFadeOut(fadeOutTime: Int) {
@@ -71,5 +88,11 @@ class AudienceViewController: UIViewController {
             self.emoji.alpha = 0
         })
     }
-
+    
+    func runHaptic(isHapticOn: Bool){
+        if isHapticOn {
+            impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .rigid)
+            impactFeedbackGenerator?.impactOccurred()
+        }
+    }
 }
