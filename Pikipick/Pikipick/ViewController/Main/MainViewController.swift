@@ -4,7 +4,7 @@
 //
 //  Created by 황정현 on 2022/07/14.
 //
-
+import SwiftUI
 import UIKit
 
 class MainViewController: UIViewController {
@@ -40,6 +40,13 @@ class MainViewController: UIViewController {
 			}
 		}
 	}
-	
+    // 2. Create a UIHostingController
+    let swiftUIController = UIHostingController(rootView: PresentationView())
+    
+    @IBAction func goToPresentationView(_ sender: Any) {
+        // 3. Push the UIHostingController
+               navigationController?.pushViewController(swiftUIController, animated: true)
+    }
+    
 }
 
