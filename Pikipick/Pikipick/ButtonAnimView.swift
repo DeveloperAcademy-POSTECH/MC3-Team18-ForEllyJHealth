@@ -18,18 +18,27 @@ struct ButtonAnimView: View {
     @State var finishedAnimationCouter = 0
     @State var counter = 0
     @Binding var emoji: Emoji
+    @ObservedObject var presenter: SessionPresenter
     
     var body: some View {
         ZStack{
             ForEach(finishedAnimationCouter...counter, id:\.self) { i in
                 ConfettiContainer(animate:$animate[i], emoji: $emoji, finishedAnimationCouter:$finishedAnimationCouter)
             }
-            Button(emoji.emoticon){
+//            Button(emoji.emoticon){
+//                animate[counter].toggle()
+//                animate.append(false)
+//                counter += 1
+//            }
+        }
+        .onChange(of: presenter.receivedEmoji ?? EmojiName.Good, perform: { receivedEmoji in
+            if(emojiIs(emojiName: receivedEmoji.rawValue) == emoji.emoticon)
+            {
                 animate[counter].toggle()
                 animate.append(false)
                 counter += 1
             }
-        }
+        })
     }
 }
 

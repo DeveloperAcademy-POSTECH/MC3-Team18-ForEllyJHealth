@@ -39,3 +39,22 @@ func emojiIs(emojiName: String) -> String {
         return "*NIL*"
     }
 }
+
+func emojiStrIs(emoji: String) -> String {
+    switch emoji {
+    case "👏":
+        return "Marvelous"
+    case "😮":
+        return "Surprising"
+    case "🎉":
+        return "Congrats"
+    case "🔥":
+        return "LEGO"
+    case "🤔":
+        return "Idk"
+    case "👍":
+        return "Good"
+    default:
+        return "*NIL*"
+    }
+}
