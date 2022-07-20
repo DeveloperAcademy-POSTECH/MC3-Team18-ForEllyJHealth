@@ -69,6 +69,7 @@
                     <navigationItem key="navigationItem" id="EAx-mT-nuX"/>
                     <connections>
                         <outlet property="participateButton" destination="Wot-aw-bzL" id="GMq-bX-EZK"/>
+                        <outlet property="presentationButton" destination="5XN-5x-Jfa" id="JNi-uX-R0F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
