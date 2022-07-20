@@ -20,14 +20,16 @@ class ParticipateViewController: UIViewController {
     }
     
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "Segue" {
-			let cell = sender as! UITableViewCell
+		if segue.identifier == Segue.audience.identifier {
+			let cell = sender as? UITableViewCell ?? UITableViewCell()
 			let indexPath = tableView.indexPath(for: cell)
-			let audienceVC = segue.destination as! AudienceViewController
-			audienceVC.deviceName = devices[indexPath!.row]
-			if let indexPath = indexPath {
-				audienceVC.deviceName = devices[indexPath.row]
+			if let audienceVC = segue.destination as? AudienceViewController {
+				audienceVC.deviceName = devices[indexPath!.row]
+				if let indexPath = indexPath {
+					audienceVC.deviceName = devices[indexPath.row]
+				}
 			}
+			
 		}
 	}
 }
