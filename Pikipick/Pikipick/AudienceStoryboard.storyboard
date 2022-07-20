@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QxJ-Wu-8WC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audience View Controller-->
+        <scene sceneID="khZ-Ka-qqc">
+            <objects>
+                <viewController storyboardIdentifier="AudienceViewController" id="QxJ-Wu-8WC" customClass="AudienceViewController" customModule="Pikipick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aii-lK-AiX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의 발표입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXn-b8-4iA">
+                                <rect key="frame" x="158.5" y="68" width="97.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A17-La-NMV" userLabel="Emoji">
+                                <rect key="frame" x="207" y="354" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fpL-3l-XJW">
+                                <rect key="frame" x="72" y="402" width="270" height="400"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3u8-cD-whc">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2n-lj-uLJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="LXd-RJ-Qfa"/>
+                                                    <constraint firstAttribute="height" constant="120" id="Nzq-b0-bpZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" subtitle="대단해요" titleAlignment="center">
+                                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="👏">
+                                                            <attributes>
+                                                                <font key="NSFont" size="28" name="AppleColorEmoji"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tabClapButton:" destination="QxJ-Wu-8WC" eventType="touchUpInside" id="Zl5-X0-var"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ji9-f7-dbj">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="0Iz-JD-ifI"/>
+                                                    <constraint firstAttribute="width" constant="120" id="e4x-dS-xc9"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" subtitle="놀라워요" titleAlignment="center">
+                                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="😮">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tabSurpriseButton:" destination="QxJ-Wu-8WC" eventType="touchUpInside" id="mx0-Ck-QKL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bqb-uU-95g">
+                                        <rect key="frame" x="0.0" y="140" width="270" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-h2-fxH">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="3uc-Xb-giy"/>
+                                                    <constraint firstAttribute="width" constant="120" id="oAh-Ll-G78"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" subtitle="축하해요" titleAlignment="center">
+                                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🎉">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapCelebrateButton:" destination="QxJ-Wu-8WC" eventType="touchUpInside" id="z8b-b2-plH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnV-Nk-VgM">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="gg2-LA-sju"/>
+                                                    <constraint firstAttribute="height" constant="120" id="yDR-fi-8ym"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" subtitle="가즈아" titleAlignment="center">
+                                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🔥">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapFireButton:" destination="QxJ-Wu-8WC" eventType="touchUpInside" id="nCb-75-1Op"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="V1Q-h2-fxH" firstAttribute="top" secondItem="bqb-uU-95g" secondAttribute="topMargin" id="k2i-OK-5Se"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4lk-vR-2mS">
+                                        <rect key="frame" x="0.0" y="280" width="270" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g2-lT-4P6">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="VXb-zT-4Cl"/>
+                                                    <constraint firstAttribute="width" constant="120" id="ovV-Jg-Y6b"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" subtitle="모르겠어요" titleAlignment="center">
+                                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🤔">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapCuriousbutton:" destination="QxJ-Wu-8WC" eventType="touchUpInside" id="xC1-V2-VM6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgp-5h-Xfz">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="XIr-6t-1Ew"/>
+                                                    <constraint firstAttribute="height" constant="120" id="gsS-Z8-NPv"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" subtitle="좋아요" titleAlignment="center">
+                                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="👍">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapGoodButton:" destination="QxJ-Wu-8WC" eventType="touchUpInside" id="1zO-6y-yfu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6g2-lT-4P6" firstAttribute="top" secondItem="4lk-vR-2mS" secondAttribute="topMargin" id="yEn-7e-12t"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dxh-ZG-qMc"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fpL-3l-XJW" firstAttribute="centerX" secondItem="aii-lK-AiX" secondAttribute="centerX" id="KP5-nZ-Gkv"/>
+                            <constraint firstItem="Dxh-ZG-qMc" firstAttribute="bottom" secondItem="fpL-3l-XJW" secondAttribute="bottom" constant="60" id="PX4-kz-462"/>
+                            <constraint firstItem="A17-La-NMV" firstAttribute="bottom" secondItem="fpL-3l-XJW" secondAttribute="top" constant="-48" id="SxV-RT-cvw"/>
+                            <constraint firstItem="XXn-b8-4iA" firstAttribute="centerX" secondItem="Dxh-ZG-qMc" secondAttribute="centerX" id="jtW-08-c30"/>
+                            <constraint firstItem="XXn-b8-4iA" firstAttribute="top" secondItem="Dxh-ZG-qMc" secondAttribute="top" constant="24" id="m7j-3O-C6W"/>
+                            <constraint firstItem="A17-La-NMV" firstAttribute="centerX" secondItem="Dxh-ZG-qMc" secondAttribute="centerX" id="zsp-YB-WnQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emoji" destination="A17-La-NMV" id="EwN-84-0Mg"/>
+                        <outlet property="titleLabel" destination="XXn-b8-4iA" id="vpb-bg-7Xo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJ0-u6-s0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+</document>
