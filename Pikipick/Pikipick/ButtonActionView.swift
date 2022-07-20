@@ -30,8 +30,8 @@ struct ButtonActionView: View {
     
     var body: some View {
         HStack {
-            ForEach(0 ..< emoji.count, id:\.self){ i in
-                ButtonAnimView(presenter: presenter, emoji: $emoji[i])
+            ForEach(0 ..< emoji.count, id:\.self){ index in
+                ButtonAnimView(presenter: presenter, emoji: $emoji[index])
             }
         }
         .onAppear(){
