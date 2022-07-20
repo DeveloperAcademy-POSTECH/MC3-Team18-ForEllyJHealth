@@ -49,7 +49,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="goToPresentationView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cih-XR-anh"/>
+                                            <action selector="presentationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sxx-jm-IBB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -68,7 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EAx-mT-nuX"/>
                     <connections>
-                        <outlet property="participateButton" destination="Wot-aw-bzL" id="IgT-pl-4gO"/>
+                        <outlet property="participateButton" destination="Wot-aw-bzL" id="GMq-bX-EZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

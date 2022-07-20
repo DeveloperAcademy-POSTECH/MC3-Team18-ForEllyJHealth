@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
 	}
 
 	@IBAction private func participateButtonTapped(_ sender: UIButton) {
+		participateButton.isUserInteractionEnabled = false
 		LocalNetworkPrivacy().checkAccessState { granted in
 			if granted {
 				let participateVC = self.storyboard?.instantiateViewController(withIdentifier: "ParticipateViewController")
@@ -38,15 +39,21 @@ class MainViewController: UIViewController {
 			} else {
 				self.showSettingAlert()
 			}
+			self.participateButton.isUserInteractionEnabled = true
 		}
 	}
-    // 2. Create a UIHostingController
-    let swiftUIController = UIHostingController(rootView: PresentationView())
     
-    @IBAction func goToPresentationView(_ sender: Any) {
-        // 3. Push the UIHostingController
-               navigationController?.pushViewController(swiftUIController, animated: true)
-    }
-    
+	@IBAction private func presentationButtonTapped(_ sender: UIButton) {
+		participateButton.isUserInteractionEnabled = false
+		LocalNetworkPrivacy().checkAccessState { granted in
+			if granted {
+				let swiftUIController = UIHostingController(rootView: PresentationView())
+				self.navigationController?.pushViewController(swiftUIController, animated: true)
+			} else {
+				self.showSettingAlert()
+			}
+			self.participateButton.isUserInteractionEnabled = true
+		}
+	}
 }
 
