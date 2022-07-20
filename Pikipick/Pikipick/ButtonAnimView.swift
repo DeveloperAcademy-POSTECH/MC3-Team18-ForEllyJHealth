@@ -4,6 +4,7 @@
 //
 //  Created by Jun.Mac on 2022/07/19.
 //
+
 import SwiftUI
 
 struct Movement{

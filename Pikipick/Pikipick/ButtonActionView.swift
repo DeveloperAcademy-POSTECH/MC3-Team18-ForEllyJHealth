@@ -4,8 +4,9 @@
 //
 //  Created by Jun.Mac on 2022/07/20.
 //
-import SwiftUI
+
 import Combine
+import SwiftUI
 
 struct Emoji: Hashable {
     var emoticon: String
