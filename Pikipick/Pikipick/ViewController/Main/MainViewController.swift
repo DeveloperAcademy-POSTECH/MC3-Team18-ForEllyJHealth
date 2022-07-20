@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 	@IBOutlet weak var participateButton: UIButton!
+	@IBOutlet weak var presentationButton: UIButton!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,11 @@ class MainViewController: UIViewController {
 	}
 
 	@IBAction private func participateButtonTapped(_ sender: UIButton) {
+		participateButton.alpha = 0.8
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+			self.participateButton.alpha = 1
+		}
+		participateButton.isUserInteractionEnabled = false
 		LocalNetworkPrivacy().checkAccessState { granted in
 			if granted {
 				let participateVC = self.storyboard?.instantiateViewController(withIdentifier: "ParticipateViewController")
@@ -38,15 +44,25 @@ class MainViewController: UIViewController {
 			} else {
 				self.showSettingAlert()
 			}
+			self.participateButton.isUserInteractionEnabled = true
 		}
 	}
-    // 2. Create a UIHostingController
-    let swiftUIController = UIHostingController(rootView: PresentationView())
     
-    @IBAction func goToPresentationView(_ sender: Any) {
-        // 3. Push the UIHostingController
-               navigationController?.pushViewController(swiftUIController, animated: true)
-    }
-    
+	@IBAction private func presentationButtonTapped(_ sender: UIButton) {
+		presentationButton.alpha = 0.8
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+			self.presentationButton.alpha = 1
+		}
+		presentationButton.isUserInteractionEnabled = false
+		LocalNetworkPrivacy().checkAccessState { granted in
+			if granted {
+				let swiftUIController = UIHostingController(rootView: PresentationView())
+				self.navigationController?.pushViewController(swiftUIController, animated: true)
+			} else {
+				self.showSettingAlert()
+			}
+			self.presentationButton.isUserInteractionEnabled = true
+		}
+	}
 }
 
