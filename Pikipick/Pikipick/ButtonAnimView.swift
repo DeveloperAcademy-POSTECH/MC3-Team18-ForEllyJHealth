@@ -14,29 +14,31 @@ struct Movement{
 }
 
 struct ButtonAnimView: View {
+    @ObservedObject var presenter: SessionPresenter
+    
     @State var animate = [false]
     @State var finishedAnimationCouter = 0
     @State var counter = 0
     @Binding var emoji: Emoji
-    @ObservedObject var presenter: SessionPresenter
     
     var body: some View {
         ZStack{
             ForEach(finishedAnimationCouter...counter, id:\.self) { i in
                 ConfettiContainer(animate:$animate[i], emoji: $emoji, finishedAnimationCouter:$finishedAnimationCouter)
             }
-//            Button(emoji.emoticon){
-//                animate[counter].toggle()
-//                animate.append(false)
-//                counter += 1
-//            }
+            Button(emoji.emoticon){
+                animate[counter].toggle()
+                animate.append(false)
+                counter += 1
+            }
         }
-        .onChange(of: presenter.receivedEmoji ?? EmojiName.Good, perform: { receivedEmoji in
+        .onChange(of: presenter.receivedEmoji ?? EmojiName.Nil, perform: { receivedEmoji in
             if(emojiIs(emojiName: receivedEmoji.rawValue) == emoji.emoticon)
             {
                 animate[counter].toggle()
                 animate.append(false)
                 counter += 1
+                presenter.receivedEmoji = nil
             }
         })
     }
