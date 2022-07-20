@@ -13,7 +13,6 @@ class ParticipateViewController: UIViewController {
 	
     private var detector = PresenterDetector()
     
-	var devices = [String]()
 	private var presenterList = [MCPeerID]()
     
     let waitTime: TimeInterval = 0.3
