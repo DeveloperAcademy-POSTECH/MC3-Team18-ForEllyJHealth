@@ -4,6 +4,8 @@
 //
 //  Created by Jun.Mac on 2022/07/20.
 //
+
+import Combine
 import SwiftUI
 
 struct Emoji: Hashable {
@@ -12,6 +14,10 @@ struct Emoji: Hashable {
 }
 
 struct ButtonActionView: View {
+    
+    @StateObject var presenter = SessionPresenter()
+    
+    @State var currentEmoji: String = ""
     @State private var counter: Int = 0
     @State var emoji = [
         Emoji(emoticon: "👏"),
@@ -24,9 +30,20 @@ struct ButtonActionView: View {
     
     var body: some View {
         HStack {
-            ForEach(0 ..< emoji.count, id:\.self){ i in
-            ButtonAnimView(emoji: $emoji[i])
+            ForEach(0 ..< emoji.count, id:\.self){ index in
+                ButtonAnimView(presenter: presenter, emoji: $emoji[index])
             }
+        }
+        .onAppear(){
+            print("BROWSING START!")
+            presenter.startBrowsing()
+            presenter.startAdvertise()
+        }
+        .onDisappear(){
+            print("BROWSING STOP!")
+            presenter.stopAdvertise()
+            presenter.stopBrowsing()
+            presenter.sessionDisconnect()
         }
     }
 }
