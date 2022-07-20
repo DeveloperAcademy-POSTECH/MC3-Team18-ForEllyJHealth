@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
 
 	@IBAction private func participateButtonTapped(_ sender: UIButton) {
 		participateButton.alpha = 0.8
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
 			self.participateButton.alpha = 1
 		}
 		participateButton.isUserInteractionEnabled = false
@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
     
 	@IBAction private func presentationButtonTapped(_ sender: UIButton) {
 		presentationButton.alpha = 0.8
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
 			self.presentationButton.alpha = 1
 		}
 		presentationButton.isUserInteractionEnabled = false
