@@ -1,5 +1,5 @@
 //
-//  LocalNetworkTest.swift
+//  LocalNetworkPrivacy.swift
 //  Pikipick
 //
 //  Created by 황정현 on 2022/07/22.
