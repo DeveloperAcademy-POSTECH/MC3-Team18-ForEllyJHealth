@@ -61,6 +61,7 @@ class MainViewController: UIViewController {
 			if granted {
 				let swiftUIController = UIHostingController(rootView: PresentationView())
 				self.navigationController?.pushViewController(swiftUIController, animated: true)
+                self.navigationController?.isNavigationBarHidden = true
 			} else {
 				self.showSettingAlert()
 			}
