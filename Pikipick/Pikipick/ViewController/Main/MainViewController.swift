@@ -10,7 +10,8 @@ import UIKit
 class MainViewController: UIViewController {
 	@IBOutlet weak var participateButton: UIButton!
 	@IBOutlet weak var presentationButton: UIButton!
-	
+    let localNetworkAuth = LocalNetworkAuthorization()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,23 +32,24 @@ class MainViewController: UIViewController {
 		self.present(alert, animated: true, completion: nil)
 	}
 
-	@IBAction private func participateButtonTapped(_ sender: UIButton) {
+    @IBAction private func participateButtonTapped(_ sender: UIButton) {
 		participateButton.alpha = 0.8
 		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
 			self.participateButton.alpha = 1
 		}
 		participateButton.isUserInteractionEnabled = false
 		presentationButton.isUserInteractionEnabled = false
-		LocalNetworkPrivacy().checkAccessState { granted in
-			if granted {
-				let participateVC = self.storyboard?.instantiateViewController(withIdentifier: "ParticipateViewController")
-				self.navigationController?.pushViewController(participateVC ?? UIViewController(), animated: true)
-			} else {
-				self.showSettingAlert()
-			}
-			self.participateButton.isUserInteractionEnabled = true
-			self.presentationButton.isUserInteractionEnabled = true
-		}
+        
+        localNetworkAuth.requestAuthorization { granted in
+            if granted {
+                let participateVC = self.storyboard?.instantiateViewController(withIdentifier: "ParticipateViewController")
+                self.navigationController?.pushViewController(participateVC ?? UIViewController(), animated: true)
+            } else {
+                self.showSettingAlert()
+            }
+            self.participateButton.isUserInteractionEnabled = true
+            self.presentationButton.isUserInteractionEnabled = true
+        }
 	}
     
 	@IBAction private func presentationButtonTapped(_ sender: UIButton) {
@@ -57,17 +59,18 @@ class MainViewController: UIViewController {
 		}
 		participateButton.isUserInteractionEnabled = false
 		presentationButton.isUserInteractionEnabled = false
-		LocalNetworkPrivacy().checkAccessState { granted in
-			if granted {
-				let swiftUIController = UIHostingController(rootView: PresentationView())
-				self.navigationController?.pushViewController(swiftUIController, animated: true)
+        
+        localNetworkAuth.requestAuthorization { granted in
+            if granted {
+                let swiftUIController = UIHostingController(rootView: PresentationView())
+                self.navigationController?.pushViewController(swiftUIController, animated: true)
                 self.navigationController?.isNavigationBarHidden = true
-			} else {
-				self.showSettingAlert()
-			}
-			self.participateButton.isUserInteractionEnabled = true
-			self.presentationButton.isUserInteractionEnabled = true
-		}
+            } else {
+                self.showSettingAlert()
+            }
+            self.participateButton.isUserInteractionEnabled = true
+            self.presentationButton.isUserInteractionEnabled = true
+        }
 	}
 }
 
