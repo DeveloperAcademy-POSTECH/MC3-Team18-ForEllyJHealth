@@ -37,6 +37,7 @@ class MainViewController: UIViewController {
 			self.participateButton.alpha = 1
 		}
 		participateButton.isUserInteractionEnabled = false
+		presentationButton.isUserInteractionEnabled = false
 		LocalNetworkPrivacy().checkAccessState { granted in
 			if granted {
 				let participateVC = self.storyboard?.instantiateViewController(withIdentifier: "ParticipateViewController")
@@ -45,6 +46,7 @@ class MainViewController: UIViewController {
 				self.showSettingAlert()
 			}
 			self.participateButton.isUserInteractionEnabled = true
+			self.presentationButton.isUserInteractionEnabled = true
 		}
 	}
     
@@ -53,6 +55,7 @@ class MainViewController: UIViewController {
 		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
 			self.presentationButton.alpha = 1
 		}
+		participateButton.isUserInteractionEnabled = false
 		presentationButton.isUserInteractionEnabled = false
 		LocalNetworkPrivacy().checkAccessState { granted in
 			if granted {
@@ -61,6 +64,7 @@ class MainViewController: UIViewController {
 			} else {
 				self.showSettingAlert()
 			}
+			self.participateButton.isUserInteractionEnabled = true
 			self.presentationButton.isUserInteractionEnabled = true
 		}
 	}
