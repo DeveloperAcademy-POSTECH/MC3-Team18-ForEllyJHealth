@@ -17,6 +17,11 @@ struct PresentationView: View {
             Spacer()
             ButtonActionView()
         }
+        .onAppear(perform: {
+            AppUtility.lockOrientation(UIInterfaceOrientationMask.landscape)
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+            UINavigationController.attemptRotationToDeviceOrientation()
+        })
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -31,7 +36,11 @@ struct PresentationView: View {
         }
         .alert("알람타이틀",isPresented: $showingAlert) {
             Button("나가기", role: .destructive) {
-                dismiss()
+                AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait)
+                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
+                    dismiss()
+                })
             }
         } message: {
             Text("샘플입니다.")
