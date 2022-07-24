@@ -19,6 +19,7 @@
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
+		3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05413288BF5BF00BE9E39 /* AppUtility.swift */; };
 		3AF05410288AC44700BE9E39 /* LocalNetworkPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0540F288AC44700BE9E39 /* LocalNetworkPrivacy.swift */; };
 		70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCE92887DDB700B08306 /* PresentationView.swift */; };
 		70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */; };
@@ -45,6 +46,7 @@
 		3AB219C9287FE94400945A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AF05413288BF5BF00BE9E39 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		3AF0540F288AC44700BE9E39 /* LocalNetworkPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPrivacy.swift; sourceTree = "<group>"; };
 		70EFFCE92887DDB700B08306 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */,
 				70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */,
 				E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */,
+				3AF05413288BF5BF00BE9E39 /* AppUtility.swift */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
 				E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */,
@@ -237,6 +240,7 @@
 			files = (
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
+				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
 				3AF05410288AC44700BE9E39 /* LocalNetworkPrivacy.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
