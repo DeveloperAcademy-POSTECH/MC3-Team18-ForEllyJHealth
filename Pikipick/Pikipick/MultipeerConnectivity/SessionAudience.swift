@@ -41,12 +41,23 @@ class SessionAudience: NSObject, ObservableObject {
     @Published var connectedPeers: [MCPeerID] = []
     
     // MARK: 이모지 전송
-    /* 이모지 전송
-     - 연결된 peer가 존재한다면, 특정 peer 선택 후 이모지를 전송합니다
-     */
     func sendEmoji(sendEmoji: String, receiver: MCPeerID) {
         log.info("sendEmoji: \(String(describing: sendEmoji)) to \(receiver.displayName)")
         let sendData = UUID().uuidString + sendEmoji
+        // Is there any Connected Peers more than 1
+        if (!session.connectedPeers.isEmpty) {
+            do {
+                try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
+            } catch {
+                log.error("Error for sending: \(String(describing: error))")
+            }
+        }
+    }
+    
+    // MARK: 질문 전송
+    func sendQuestion(sendQuestion: String, receiver: MCPeerID) {
+        log.info("sendEmoji: \(String(describing: sendQuestion)) to \(receiver.displayName)")
+        let sendData = myPeerId.displayName + sendQuestion
         // Is there any Connected Peers more than 1
         if (!session.connectedPeers.isEmpty) {
             do {
