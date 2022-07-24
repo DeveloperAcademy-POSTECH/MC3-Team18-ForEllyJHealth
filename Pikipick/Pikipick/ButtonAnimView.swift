@@ -35,7 +35,7 @@ struct ButtonAnimView: View {
         }
         .onChange(of: presenter.receivedData ?? "", perform: { receivedData in
             let emojiData = receivedData.substring(from: 36, to: receivedData.count-1)
-            if(emojiData == emoji.emoticon)
+            if emojiData == emoji.emoticon
             {
                 animate[counter].toggle()
                 animate.append(false)
