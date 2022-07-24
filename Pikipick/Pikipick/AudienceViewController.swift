@@ -48,37 +48,37 @@ class AudienceViewController: UIViewController {
     @IBAction func tabClapButton(_ sender: UIButton) {
         emoji.text = "👏"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Marvelous, receiver: deviceName!)
+        audience.send(emoji: emojiStrIs(emoji: emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tabSurpriseButton(_ sender: UIButton) {
         emoji.text = "😮"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Surprising, receiver: deviceName!)
+        audience.send(emoji: emojiStrIs(emoji: emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCelebrateButton(_ sender: UIButton) {
         emoji.text = "🎉"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Congrats, receiver: deviceName!)
+        audience.send(emoji: emojiStrIs(emoji: emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapFireButton(_ sender: UIButton) {
         emoji.text = "🔥"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.LEGO, receiver: deviceName!)
+        audience.send(emoji: emojiStrIs(emoji: emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCuriousbutton(_ sender: UIButton) {
         emoji.text = "🤔"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Idk, receiver: deviceName!)
+        audience.send(emoji: emojiStrIs(emoji: emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapGoodButton(_ sender: UIButton) {
         emoji.text = "👍"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Good, receiver: deviceName!)
+        audience.send(emoji: emojiStrIs(emoji: emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
 

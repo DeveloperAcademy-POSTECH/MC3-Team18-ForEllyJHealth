@@ -34,7 +34,7 @@ struct ButtonAnimView: View {
             }
         }
         .onChange(of: presenter.receivedEmoji ?? EmojiName.Nil, perform: { receivedEmoji in
-            if(emojiIs(emojiName: receivedEmoji.rawValue) == emoji.emoticon)
+            if(receivedEmoji.emojiIs == emoji.emoticon)
             {
                 animate[counter].toggle()
                 animate.append(false)
