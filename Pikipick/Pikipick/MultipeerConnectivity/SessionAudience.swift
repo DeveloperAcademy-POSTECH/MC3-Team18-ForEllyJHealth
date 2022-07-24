@@ -44,13 +44,13 @@ class SessionAudience: NSObject, ObservableObject {
     /* 이모지 전송
      - 연결된 peer가 존재한다면, 특정 peer 선택 후 이모지를 전송합니다
      */
-    func send(emoji: String, receiver: MCPeerID) {
-        log.info("sendEmoji: \(String(describing: emoji)) to \(receiver.displayName)")
+    func send(sendData: String, receiver: MCPeerID) {
+        log.info("sendEmoji: \(String(describing: sendData)) to \(receiver.displayName)")
 
         // Is there any Connected Peers more than 1
         if (!session.connectedPeers.isEmpty) {
             do {
-                try session.send(emoji.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
+                try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
             } catch {
                 log.error("Error for sending: \(String(describing: error))")
             }
