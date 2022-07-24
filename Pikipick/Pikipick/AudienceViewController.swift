@@ -48,37 +48,37 @@ class AudienceViewController: UIViewController {
     @IBAction func tabClapButton(_ sender: UIButton) {
         emoji.text = "👏"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(sendData: emojiStrIs(emoji: UUID().uuidString + (emoji.text ?? "")), receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tabSurpriseButton(_ sender: UIButton) {
         emoji.text = "😮"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(sendData: emojiStrIs(emoji: UUID().uuidString + (emoji.text ?? "")), receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCelebrateButton(_ sender: UIButton) {
         emoji.text = "🎉"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(sendData: emojiStrIs(emoji: UUID().uuidString + (emoji.text ?? "")), receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapFireButton(_ sender: UIButton) {
         emoji.text = "🔥"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(sendData: emojiStrIs(emoji: UUID().uuidString + (emoji.text ?? "")), receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCuriousbutton(_ sender: UIButton) {
         emoji.text = "🤔"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(sendData: emojiStrIs(emoji: UUID().uuidString + (emoji.text ?? "")), receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapGoodButton(_ sender: UIButton) {
         emoji.text = "👍"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(sendData:  UUID().uuidString + (emoji.text ?? ""), receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
 
