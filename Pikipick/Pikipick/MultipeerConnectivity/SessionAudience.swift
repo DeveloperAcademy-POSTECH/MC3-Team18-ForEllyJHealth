@@ -45,12 +45,11 @@ class SessionAudience: NSObject, ObservableObject {
         log.info("sendEmoji: \(String(describing: sendEmoji)) to \(receiver.displayName)")
         let sendData = UUID().uuidString + sendEmoji
         // Is there any Connected Peers more than 1
-        if !session.connectedPeers.isEmpty {
-            do {
-                try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
-            } catch {
-                log.error("Error for sending: \(String(describing: error))")
-            }
+        guard session.connectedPeers.isEmpty else { return }
+        do {
+            try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
+        } catch {
+            log.error("Error for sending: \(String(describing: error))")
         }
     }
     
@@ -59,12 +58,11 @@ class SessionAudience: NSObject, ObservableObject {
         log.info("sendEmoji: \(String(describing: sendQuestion)) to \(receiver.displayName)")
         let sendData = myPeerId.displayName + sendQuestion
         // Is there any Connected Peers more than 1
-        if !session.connectedPeers.isEmpty {
-            do {
-                try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
-            } catch {
-                log.error("Error for sending: \(String(describing: error))")
-            }
+        guard session.connectedPeers.isEmpty else { return }
+        do {
+            try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
+        } catch {
+            log.error("Error for sending: \(String(describing: error))")
         }
     }
     
