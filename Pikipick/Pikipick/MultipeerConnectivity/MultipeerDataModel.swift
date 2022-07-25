@@ -22,10 +22,11 @@ func sendDataTypeIs(identifier: String) -> SendData {
     }
 }
 
+// PeerID + 질문 -> 질문으로 변환
 func questionIs (data: String) -> String {
     guard let strIndex = data.firstIndex(of: "|") else { return "NIL"}
-    let index = data.distance(from: data.startIndex, to: strIndex)
-    let question = data.substring(from: index+1, to: data.count - 1)
+    let identifierLength = data.distance(from: data.startIndex, to: strIndex)
+    let question = data.substring(from: identifierLength+1, to: data.count - 1)
     
     return question
 }
