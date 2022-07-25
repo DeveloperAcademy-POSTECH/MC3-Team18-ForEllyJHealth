@@ -43,6 +43,8 @@ class SessionPresenter: NSObject, ObservableObject {
     
     @Published var receivedQuestionList: [String]? = nil
     
+    @Published var isVoteOpen: Bool = false
+    
     override init() {
         session = MCSession(peer: myPeerId, securityIdentity: nil, encryptionPreference: .none)
         serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: serviceType)
