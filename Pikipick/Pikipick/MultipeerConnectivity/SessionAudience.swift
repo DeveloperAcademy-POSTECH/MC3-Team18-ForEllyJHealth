@@ -45,7 +45,7 @@ class SessionAudience: NSObject, ObservableObject {
         log.info("sendEmoji: \(String(describing: sendEmoji)) to \(receiver.displayName)")
         let sendData = UUID().uuidString + sendEmoji
         // Is there any Connected Peers more than 1
-        guard session.connectedPeers.isEmpty else { return }
+        guard !session.connectedPeers.isEmpty else { return }
         do {
             try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
         } catch {
@@ -58,7 +58,7 @@ class SessionAudience: NSObject, ObservableObject {
         log.info("sendEmoji: \(String(describing: sendQuestion)) to \(receiver.displayName)")
         let sendData = myPeerId.displayName + sendQuestion
         // Is there any Connected Peers more than 1
-        guard session.connectedPeers.isEmpty else { return }
+        guard !session.connectedPeers.isEmpty else { return }
         do {
             try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
         } catch {
