@@ -17,23 +17,23 @@ let minusDetectorSuffixNum = presenterSuffix.count + 1
 
 // MARK: 발신 및 수신할 이모지의 케이스
 enum EmojiName: String, CaseIterable {
-    case Marvelous, Surprising, Congrats, LEGO, Idk, Good, Nil
+    case marvelous, surprising, congrats, lego, idk, good, empty
     
     var emojiIs: String {
         switch self {
-        case .Marvelous:
+        case .marvelous:
             return "👏"
-        case .Surprising:
+        case .surprising:
             return "😮"
-        case .Congrats:
+        case .congrats:
             return "🎉"
-        case .LEGO:
+        case .lego:
             return "🔥"
-        case .Idk:
+        case .idk:
             return "🤔"
-        case .Good:
+        case .good:
             return "👍"
-        case .Nil:
+        case .empty:
             return ""
         }
     }
@@ -42,17 +42,17 @@ enum EmojiName: String, CaseIterable {
 func emojiStrIs(emoji: String) -> String {
     switch emoji {
     case "👏":
-        return "Marvelous"
+        return "marvelous"
     case "😮":
-        return "Surprising"
+        return "surprising"
     case "🎉":
-        return "Congrats"
+        return "congrats"
     case "🔥":
-        return "LEGO"
+        return "lego"
     case "🤔":
-        return "Idk"
+        return "idk"
     case "👍":
-        return "Good"
+        return "good"
     default:
         return "*NIL*"
     }
