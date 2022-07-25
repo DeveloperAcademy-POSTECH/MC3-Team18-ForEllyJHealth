@@ -41,6 +41,8 @@ class SessionPresenter: NSObject, ObservableObject {
     // MARK: 현재 수신한 데이터
     @Published var receivedData: String? = nil
     
+    @Published var receivedQuestionList: [String]? = nil
+    
     override init() {
         session = MCSession(peer: myPeerId, securityIdentity: nil, encryptionPreference: .none)
         serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: serviceType)
@@ -131,7 +133,17 @@ extension SessionPresenter: MCSessionDelegate {
         if let string = String(data: data, encoding: .utf8) {
             log.info("didReceive Emoji \(string)")
             DispatchQueue.main.async {
-                self.receivedData = string
+                let identifier = string.substring(from: 0, to: 3)
+                
+                switch sendDataTypeIs(identifier: identifier) {
+                case .question:
+                    self.receivedQuestionList?.append(questionIs(data: string))
+                case .vote:
+                    break
+                case .emoji:
+                    self.receivedData = string
+                    break
+                }
             }
         } else {
             log.info("didReceive invalid value \(data.count) bytes")
