@@ -56,7 +56,7 @@ class SessionAudience: NSObject, ObservableObject {
     // MARK: 질문 전송
     func sendQuestion(sendQuestion: String, receiver: MCPeerID) {
         log.info("sendEmoji: \(String(describing: sendQuestion)) to \(receiver.displayName)")
-        let sendData = myPeerId.displayName + sendQuestion
+        let sendData = "QQQ" + myPeerId.displayName + "|" + sendQuestion
         // Is there any Connected Peers more than 1
         guard !session.connectedPeers.isEmpty else { return }
         do {
