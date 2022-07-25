@@ -41,9 +41,11 @@ class SessionPresenter: NSObject, ObservableObject {
     // MARK: 현재 수신한 데이터
     @Published var receivedData: String? = nil
     
-    @Published var receivedQuestionList: [String]? = nil
+    @Published var receivedQuestionList: [String]? = []
     
     @Published var isVoteOpen: Bool = false
+    
+    @Published var receivedVoteResult: [Vote: Int]? = [:]
     
     override init() {
         session = MCSession(peer: myPeerId, securityIdentity: nil, encryptionPreference: .none)
@@ -82,6 +84,10 @@ class SessionPresenter: NSObject, ObservableObject {
     
     func sessionDisconnect() {
         session.disconnect()
+    }
+    
+    func receivedVoteListClear() {
+        receivedVoteResult?.removeAll()
     }
 }
 
