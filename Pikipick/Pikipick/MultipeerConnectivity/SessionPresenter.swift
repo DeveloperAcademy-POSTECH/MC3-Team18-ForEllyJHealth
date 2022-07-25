@@ -41,11 +41,11 @@ class SessionPresenter: NSObject, ObservableObject {
     // MARK: 현재 수신한 데이터
     @Published var receivedData: String? = nil
     
-    @Published var receivedQuestionList: [String]? = []
+    @Published var receivedQuestionList: [String] = []
     
     @Published var isVoteOpen: Bool = false
     
-    @Published var receivedVoteResult: [Vote: Int]? = [:]
+    @Published var receivedVoteResult: [String: Int] = [:]
     
     override init() {
         session = MCSession(peer: myPeerId, securityIdentity: nil, encryptionPreference: .none)
@@ -87,7 +87,22 @@ class SessionPresenter: NSObject, ObservableObject {
     }
     
     func receivedVoteListClear() {
-        receivedVoteResult?.removeAll()
+        receivedVoteResult.removeAll()
+    }
+    
+    func voteResultAppend(data: String) {
+        guard isVoteOpen else { return }
+        guard let receivedVote = voteIs(data: data) else { return }
+        
+        let votedPeer = receivedVote.first?.key ?? ""
+        let vote = receivedVote.first?.value ?? -1
+        
+        if (receivedVoteResult.keys.contains(votedPeer)) {
+            receivedVoteResult[votedPeer] = vote
+            receivedVoteResult.updateValue(vote, forKey: votedPeer)
+        } else {
+            receivedVoteResult[votedPeer] = vote
+        }
     }
 }
 
@@ -145,8 +160,9 @@ extension SessionPresenter: MCSessionDelegate {
                 
                 switch sendDataTypeIs(identifier: identifier) {
                 case .question:
-                    self.receivedQuestionList?.append(questionIs(data: string))
+                    self.receivedQuestionList.append(questionIs(data: string))
                 case .vote:
+                    self.voteResultAppend(data: string)
                     break
                 case .emoji:
                     self.receivedData = string
