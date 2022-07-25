@@ -12,7 +12,7 @@
 		3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */; };
 		3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C92886DA06002393E6 /* SessionAudience.swift */; };
 		3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5CC2886DA5A002393E6 /* String+.swift */; };
-		3A867678288ED61C00209733 /* MultipeerStringTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A867677288ED61C00209733 /* MultipeerStringTransition.swift */; };
+		3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A867677288ED61C00209733 /* MultipeerDataModel.swift */; };
 		3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BD287FE94300945A02 /* AppDelegate.swift */; };
 		3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BF287FE94300945A02 /* SceneDelegate.swift */; };
 		3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C1287FE94300945A02 /* MainViewController.swift */; };
@@ -38,7 +38,7 @@
 		3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterDetector.swift; sourceTree = "<group>"; };
 		3A5AE5C92886DA06002393E6 /* SessionAudience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAudience.swift; sourceTree = "<group>"; };
 		3A5AE5CC2886DA5A002393E6 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		3A867677288ED61C00209733 /* MultipeerStringTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerStringTransition.swift; sourceTree = "<group>"; };
+		3A867677288ED61C00209733 /* MultipeerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataModel.swift; sourceTree = "<group>"; };
 		3AB219BA287FE94300945A02 /* Pikipick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pikipick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB219BD287FE94300945A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB219BF287FE94300945A02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 				3A5AE5C92886DA06002393E6 /* SessionAudience.swift */,
 				3A5AE5C52886D817002393E6 /* SessionPresenter.swift */,
 				3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */,
-				3A867677288ED61C00209733 /* MultipeerStringTransition.swift */,
+				3A867677288ED61C00209733 /* MultipeerDataModel.swift */,
 			);
 			path = MultipeerConnectivity;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
-				3A867678288ED61C00209733 /* MultipeerStringTransition.swift in Sources */,
+				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
