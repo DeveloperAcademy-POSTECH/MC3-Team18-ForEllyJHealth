@@ -48,37 +48,37 @@ class AudienceViewController: UIViewController {
     @IBAction func tabClapButton(_ sender: UIButton) {
         emoji.text = "👏"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Marvelous, receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tabSurpriseButton(_ sender: UIButton) {
         emoji.text = "😮"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Surprising, receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCelebrateButton(_ sender: UIButton) {
         emoji.text = "🎉"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Congrats, receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapFireButton(_ sender: UIButton) {
         emoji.text = "🔥"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.LEGO, receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCuriousbutton(_ sender: UIButton) {
         emoji.text = "🤔"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Idk, receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapGoodButton(_ sender: UIButton) {
         emoji.text = "👍"
         viewFadeOut(fadeOutTime: fadeOutTime)
-        audience.send(emoji: EmojiName.Good, receiver: deviceName!)
+        audience.sendEmoji(sendEmoji: (emoji.text ?? ""), receiver: deviceName!)
         runHaptic(isHapticOn: isHapticOn)
     }
 
@@ -95,4 +95,6 @@ class AudienceViewController: UIViewController {
             impactFeedbackGenerator?.impactOccurred()
         }
     }
+    
+    
 }

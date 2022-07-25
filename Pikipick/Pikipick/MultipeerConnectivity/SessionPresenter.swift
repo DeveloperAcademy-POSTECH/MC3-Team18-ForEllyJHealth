@@ -38,8 +38,8 @@ class SessionPresenter: NSObject, ObservableObject {
     
     // 현재 연결된 Peer의 리스트
     @Published var connectedPeers: [MCPeerID] = []
-    // MARK: 현재 수신한 이모지
-    @Published var receivedEmoji: EmojiName? = nil
+    // MARK: 현재 수신한 데이터
+    @Published var receivedData: String? = nil
     
     override init() {
         session = MCSession(peer: myPeerId, securityIdentity: nil, encryptionPreference: .none)
@@ -88,7 +88,7 @@ extension SessionPresenter: MCNearbyServiceAdvertiserDelegate {
         log.info("didReceiveInvitationFromPeer \(peerID)")
         
         // MARK: Accept Invitation
-        if(!peerID.displayName.contains(presenterSuffix)) {
+        if !peerID.displayName.contains(presenterSuffix) {
             invitationHandler(true, session)
         }
     }
@@ -99,7 +99,7 @@ extension SessionPresenter: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
         log.info("ServiceBrowser found peer: \(peerID)")
         //MARK: Invite Peer who We Found
-        if(!peerID.displayName.contains(presenterSuffix)) {
+        if !peerID.displayName.contains(presenterSuffix) {
             browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 10)
         }
     }
@@ -128,10 +128,10 @@ extension SessionPresenter: MCSessionDelegate {
      - peer로부터 이모지를 수신한 경우, currentEmoji의 정보를 갱신합니다
      */
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        if let string = String(data: data, encoding: .utf8), let emoji = EmojiName(rawValue: string) {
+        if let string = String(data: data, encoding: .utf8) {
             log.info("didReceive Emoji \(string)")
             DispatchQueue.main.async {
-                self.receivedEmoji = emoji
+                self.receivedData = string
             }
         } else {
             log.info("didReceive invalid value \(data.count) bytes")

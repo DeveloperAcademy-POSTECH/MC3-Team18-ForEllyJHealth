@@ -19,6 +19,7 @@
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
+		3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */; };
 		3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05413288BF5BF00BE9E39 /* AppUtility.swift */; };
 		3AF05410288AC44700BE9E39 /* LocalNetworkPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0540F288AC44700BE9E39 /* LocalNetworkPrivacy.swift */; };
 		70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCE92887DDB700B08306 /* PresentationView.swift */; };
@@ -46,6 +47,7 @@
 		3AB219C9287FE94400945A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 		3AF05413288BF5BF00BE9E39 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		3AF0540F288AC44700BE9E39 /* LocalNetworkPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPrivacy.swift; sourceTree = "<group>"; };
 		70EFFCE92887DDB700B08306 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
@@ -134,8 +136,8 @@
 				3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */,
 				3AB219CE287FE94400945A02 /* Info.plist */,
 				3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */,
+				3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */,
 				E276ACFE2885742900D14369 /* Settings.bundle */,
-				3AF0540F288AC44700BE9E39 /* LocalNetworkPrivacy.swift */,
 			);
 			path = Pikipick;
 			sourceTree = "<group>";
@@ -238,11 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
-				3AF05410288AC44700BE9E39 /* LocalNetworkPrivacy.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
 				70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */,
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
