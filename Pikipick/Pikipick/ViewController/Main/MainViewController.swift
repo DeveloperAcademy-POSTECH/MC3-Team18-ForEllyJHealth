@@ -10,12 +10,27 @@ import UIKit
 class MainViewController: UIViewController {
 	@IBOutlet weak var participateButton: UIButton!
 	@IBOutlet weak var presentationButton: UIButton!
-    let localNetworkAuth = LocalNetworkAuthorization()
+	@IBOutlet weak var mainImage: UIImageView!
+	@IBOutlet weak var mainView: UIView!
+	@IBOutlet weak var lineView: UIView!
+	let localNetworkAuth = LocalNetworkAuthorization()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+		
+		mainImage.translatesAutoresizingMaskIntoConstraints = false
+		mainImage.widthAnchor.constraint(equalTo: mainView.widthAnchor, multiplier: CGFloat(1.1)).isActive = true
+		mainImage.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 0).isActive = true
+		mainImage.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: -20).isActive = true
+		mainImage.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: 20).isActive = true
+		
+		lineView.translatesAutoresizingMaskIntoConstraints = false
+		lineView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 70).isActive = true
+		lineView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -70).isActive = true
+		
 		participateButton.layer.cornerRadius = participateButton.frame.height/2
+		presentationButton.layer.cornerRadius = participateButton.frame.height/2
     }
 	
 	func showSettingAlert() {
