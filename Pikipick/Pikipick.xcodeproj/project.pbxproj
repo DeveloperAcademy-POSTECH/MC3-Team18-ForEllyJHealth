@@ -13,6 +13,7 @@
 		3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5CC2886DA5A002393E6 /* String+.swift */; };
 		3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A867677288ED61C00209733 /* MultipeerDataModel.swift */; };
 		3A86767A288EDF3A00209733 /* MultipeerVoteDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A867679288EDF3A00209733 /* MultipeerVoteDataModel.swift */; };
+		3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17E5A28904A510099F483 /* PresentationMenuButtonView.swift */; };
 		3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BD287FE94300945A02 /* AppDelegate.swift */; };
 		3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BF287FE94300945A02 /* SceneDelegate.swift */; };
 		3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C1287FE94300945A02 /* MainViewController.swift */; };
@@ -20,7 +21,7 @@
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
-		3AC11CCF2890133D00194A05 /* PresentationMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC11CCE2890133D00194A05 /* PresentationMenuButtonView.swift */; };
+		3AC11CCF2890133D00194A05 /* PresentationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC11CCE2890133D00194A05 /* PresentationMenuView.swift */; };
 		3AC11CD228903F5D00194A05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC11CD028903F5D00194A05 /* Constants.swift */; };
 		3AC11CD328903F5D00194A05 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC11CD128903F5D00194A05 /* Segment.swift */; };
 		3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */; };
@@ -42,6 +43,7 @@
 		3A5AE5CC2886DA5A002393E6 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		3A867677288ED61C00209733 /* MultipeerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataModel.swift; sourceTree = "<group>"; };
 		3A867679288EDF3A00209733 /* MultipeerVoteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerVoteDataModel.swift; sourceTree = "<group>"; };
+		3AA17E5A28904A510099F483 /* PresentationMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationMenuButtonView.swift; sourceTree = "<group>"; };
 		3AB219BA287FE94300945A02 /* Pikipick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pikipick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB219BD287FE94300945A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB219BF287FE94300945A02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		3AB219C9287FE94400945A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB219CC287FE94400945A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AC11CCE2890133D00194A05 /* PresentationMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationMenuButtonView.swift; sourceTree = "<group>"; };
+		3AC11CCE2890133D00194A05 /* PresentationMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationMenuView.swift; sourceTree = "<group>"; };
 		3AC11CD028903F5D00194A05 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Pikipick/Model/Constants.swift; sourceTree = SOURCE_ROOT; };
 		3AC11CD128903F5D00194A05 /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Segment.swift; path = Pikipick/Model/Segment.swift; sourceTree = SOURCE_ROOT; };
 		3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
@@ -135,7 +137,8 @@
 				70EFFCE92887DDB700B08306 /* PresentationView.swift */,
 				70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */,
 				70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */,
-				3AC11CCE2890133D00194A05 /* PresentationMenuButtonView.swift */,
+				3AC11CCE2890133D00194A05 /* PresentationMenuView.swift */,
+				3AA17E5A28904A510099F483 /* PresentationMenuButtonView.swift */,
 				E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */,
 				3AF05413288BF5BF00BE9E39 /* AppUtility.swift */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
@@ -260,6 +263,7 @@
 			files = (
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
 				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
+				3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
@@ -270,7 +274,7 @@
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3AC11CD328903F5D00194A05 /* Segment.swift in Sources */,
 				3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */,
-				3AC11CCF2890133D00194A05 /* PresentationMenuButtonView.swift in Sources */,
+				3AC11CCF2890133D00194A05 /* PresentationMenuView.swift in Sources */,
 				3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */,
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,
 				3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */,
