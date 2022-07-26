@@ -38,6 +38,7 @@ struct PresentationMenuButtonView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.secondaryColor)
                         .frame(width: isExpanded ? 422 : 230, height: 40, alignment: .trailing)
+                        .animation(.easeInOut(duration: 0.1), value: isExpanded)
                 }
                 HStack(spacing: 0) {
                     Spacer()
