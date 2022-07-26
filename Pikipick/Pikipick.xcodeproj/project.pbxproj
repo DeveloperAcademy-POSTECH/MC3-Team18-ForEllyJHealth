@@ -15,6 +15,7 @@
 		3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A867677288ED61C00209733 /* MultipeerDataModel.swift */; };
 		3A86767A288EDF3A00209733 /* MultipeerVoteDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A867679288EDF3A00209733 /* MultipeerVoteDataModel.swift */; };
 		3AA17E5D28904E0F0099F483 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17E5C28904E0F0099F483 /* HapticManager.swift */; };
+		3AA17E5F289052A60099F483 /* HapticTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17E5E289052A60099F483 /* HapticTestView.swift */; };
 		3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BD287FE94300945A02 /* AppDelegate.swift */; };
 		3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BF287FE94300945A02 /* SceneDelegate.swift */; };
 		3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C1287FE94300945A02 /* MainViewController.swift */; };
@@ -44,6 +45,7 @@
 		3A867677288ED61C00209733 /* MultipeerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataModel.swift; sourceTree = "<group>"; };
 		3A867679288EDF3A00209733 /* MultipeerVoteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerVoteDataModel.swift; sourceTree = "<group>"; };
 		3AA17E5C28904E0F0099F483 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		3AA17E5E289052A60099F483 /* HapticTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticTestView.swift; sourceTree = "<group>"; };
 		3AB219BA287FE94300945A02 /* Pikipick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pikipick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB219BD287FE94300945A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB219BF287FE94300945A02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */,
 				70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */,
 				E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */,
+				3AA17E5E289052A60099F483 /* HapticTestView.swift */,
 				3AF05413288BF5BF00BE9E39 /* AppUtility.swift */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
@@ -275,6 +278,7 @@
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,
 				3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */,
 				3AA17E5D28904E0F0099F483 /* HapticManager.swift in Sources */,
+				3AA17E5F289052A60099F483 /* HapticTestView.swift in Sources */,
 				70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
 				3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */,
