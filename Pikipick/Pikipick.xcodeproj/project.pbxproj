@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4F8B882890323300B78D95 /* TestPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B872890323300B78D95 /* TestPresentationView.swift */; };
+		2D4F8B8A289038C500B78D95 /* HomePresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B89289038C500B78D95 /* HomePresentationView.swift */; };
 		3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C22886D73F002393E6 /* Constants.swift */; };
 		3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C52886D817002393E6 /* SessionPresenter.swift */; };
 		3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D4F8B872890323300B78D95 /* TestPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresentationView.swift; sourceTree = "<group>"; };
+		2D4F8B89289038C500B78D95 /* HomePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentationView.swift; sourceTree = "<group>"; };
 		3A5AE5C22886D73F002393E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A5AE5C52886D817002393E6 /* SessionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionPresenter.swift; sourceTree = "<group>"; };
 		3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterDetector.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4F8B84289031FF00B78D95 /* PresentationSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F8B872890323300B78D95 /* TestPresentationView.swift */,
+				2D4F8B89289038C500B78D95 /* HomePresentationView.swift */,
+			);
+			path = PresentationSubViews;
+			sourceTree = "<group>";
+		};
 		3A5AE5C12886D730002393E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +181,7 @@
 		E2B6B246288190A20034E0DD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2D4F8B84289031FF00B78D95 /* PresentationSubViews */,
 				E2B6B247288190B90034E0DD /* Main */,
 			);
 			path = ViewController;
@@ -260,6 +274,7 @@
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
+				2D4F8B882890323300B78D95 /* TestPresentationView.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
@@ -267,6 +282,7 @@
 				70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */,
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */,
+				2D4F8B8A289038C500B78D95 /* HomePresentationView.swift in Sources */,
 				3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */,
 				3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */,
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,
