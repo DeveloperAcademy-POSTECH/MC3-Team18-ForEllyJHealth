@@ -94,6 +94,7 @@
 				3A5AE5C52886D817002393E6 /* SessionPresenter.swift */,
 				3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */,
 				3A867677288ED61C00209733 /* MultipeerDataModel.swift */,
+				3A5AE5C12886D730002393E6 /* Model */,
 				3A867679288EDF3A00209733 /* MultipeerVoteDataModel.swift */,
 			);
 			path = MultipeerConnectivity;
@@ -130,7 +131,6 @@
 				70DE708C28900325009E98A9 /* Utils */,
 				3A5AE5CB2886DA48002393E6 /* Extensions */,
 				3A5AE5C42886D7FD002393E6 /* MultipeerConnectivity */,
-				3A5AE5C12886D730002393E6 /* Model */,
 				E2B6B246288190A20034E0DD /* ViewController */,
 				70EFFCE92887DDB700B08306 /* PresentationView.swift */,
 				70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */,

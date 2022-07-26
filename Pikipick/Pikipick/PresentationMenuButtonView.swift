@@ -41,25 +41,41 @@ struct PresentationMenuButtonView: View {
                 }
                 HStack(spacing: 0) {
                     Spacer()
-                    Button(action: {
-                        print("Expandable button tapped!!!")
-                        isExpanded.toggle()
-                        
-                    }) {
-                        Image(isExpanded ? "icn_chevron_right_32px" : "icn_chevron_left_32px")
-                            .resizable()
-                            .frame(width: 32, height: 32)
-                    }.animation(.spring(), value: scale)
-                    if isExpanded {
-                        MenuButtons(buttonName: "CLOSE", buttonColor: Color.closeButtonColor)
-                        MenuButtons(buttonName: "VOTE", buttonColor: .white)
-                        MenuButtons(buttonName: "Q&A", buttonColor: .white)
+                    Group {
+                        Button(action: {
+                            print("Expandable button tapped!!!")
+                            isExpanded.toggle()
+                            
+                        }) {
+                            Image(isExpanded ? "icn_chevron_right_32px" : "icn_chevron_left_32px")
+                                .resizable()
+                                .frame(width: 32, height: 32)
+                        }.animation(.spring(), value: scale)
+                            
+                        if isExpanded {
+                            Divider()
+                                .frame(height: 32)
+                                .overlay(Color.dividerColor)
+                            MenuButtons(buttonName: "CLOSE", buttonColor: Color.closeButtonColor)
+                            Divider()
+                                .frame(height: 32)
+                                .overlay(Color.dividerColor)
+                            MenuButtons(buttonName: "VOTE", buttonColor: .white)
+                            Divider()
+                                .frame(height: 32)
+                                .overlay(Color.dividerColor)
+                            MenuButtons(buttonName: "Q&A", buttonColor: .white)
+                        }
+                        Divider()
+                            .frame(height: 32)
+                            .overlay(Color.dividerColor)
+                        Text(deviceName)
+                            .frame(width: 166)
+                            .foregroundColor(.white)
+                            .font(.system(size: 17))
+                            .padding([.horizontal], 16)
                     }
-                    Text(deviceName)
-                        .frame(width: 166)
-                        .foregroundColor(.white)
-                        .font(.system(size: 17))
-                        .padding([.horizontal], 16)
+                    
                 }
             }
             .padding([.top], 24)
