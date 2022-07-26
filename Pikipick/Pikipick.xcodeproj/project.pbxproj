@@ -23,6 +23,7 @@
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
 		3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */; };
 		3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05413288BF5BF00BE9E39 /* AppUtility.swift */; };
+		70DE708E28900325009E98A9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE708D28900325009E98A9 /* Extensions.swift */; };
 		70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCE92887DDB700B08306 /* PresentationView.swift */; };
 		70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */; };
 		70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */; };
@@ -52,6 +53,7 @@
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 		3AF05413288BF5BF00BE9E39 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		70DE708D28900325009E98A9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		70EFFCE92887DDB700B08306 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
 		70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAnimView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		3AB219BC287FE94300945A02 /* Pikipick */ = {
 			isa = PBXGroup;
 			children = (
+				70DE708C28900325009E98A9 /* Utils */,
 				3A5AE5CB2886DA48002393E6 /* Extensions */,
 				3A5AE5C42886D7FD002393E6 /* MultipeerConnectivity */,
 				3A5AE5C12886D730002393E6 /* Model */,
@@ -144,6 +147,14 @@
 				E276ACFE2885742900D14369 /* Settings.bundle */,
 			);
 			path = Pikipick;
+			sourceTree = "<group>";
+		};
+		70DE708C28900325009E98A9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				70DE708D28900325009E98A9 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E08EFF842886A0C700582C83 /* Recovered References */ = {
@@ -245,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
+				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
