@@ -13,10 +13,12 @@ enum SendData: String, CaseIterable {
 
 func sendDataType(identifier: String) -> SendData {
     switch identifier {
-    case "QQQ":
+    case "QUE":
         return SendData.question
-    case "VVV":
+    case "VOT":
         return SendData.vote
+    case "EMO":
+        return SendData.emoji
     default:
         return SendData.emoji
     }

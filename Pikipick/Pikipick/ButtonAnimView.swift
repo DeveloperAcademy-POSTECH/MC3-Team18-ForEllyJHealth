@@ -22,7 +22,7 @@ struct ButtonAnimView: View {
     @State var counter = 0
     @Binding var emoji: Emoji
     
-    private let uuidLength = 36
+    private let prefixLength = 39 // Emoji Identifier(3) + uuidLength(36)
     
     var body: some View {
         ZStack{
@@ -37,7 +37,7 @@ struct ButtonAnimView: View {
         }
         .onChange(of: presenter.receivedData ?? "", perform: { receivedData in
             let dataEndIndex = receivedData.count - 1
-            let emojiData = receivedData.substring(from: uuidLength, to: dataEndIndex)
+            let emojiData = receivedData.substring(from: prefixLength, to: dataEndIndex)
             if emojiData == emoji.emoticon
             {
                 animate[counter].toggle()
