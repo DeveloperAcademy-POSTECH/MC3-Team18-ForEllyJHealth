@@ -13,4 +13,5 @@ extension Color {
     static let backgroundColor = Color("backgroundColor")
     static let primaryGradient = LinearGradient(gradient: Gradient(colors: [Color("primaryColorSaturation"), Color("primaryColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)
     static let secondaryGradient = LinearGradient(gradient: Gradient(colors: [Color("secondaryColor"), Color("secondaryColorSaturation")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    static let closeButtonColor = Color("closeButtonColor")
 }
