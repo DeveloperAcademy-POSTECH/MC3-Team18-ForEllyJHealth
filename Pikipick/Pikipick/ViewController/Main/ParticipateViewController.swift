@@ -70,7 +70,7 @@ class ParticipateViewController: UIViewController {
 extension ParticipateViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if detector.connectedPeers.isEmpty {
-			emptyMessage("현재 연결 가능한 기기가 없습니다.")
+			emptyMessage()
 		} else {
 			restore()
 		}
@@ -103,9 +103,13 @@ extension ParticipateViewController: UITableViewDelegate {
 }
 
 extension ParticipateViewController {
-	func emptyMessage(_ message: String) {
-		let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-		messageLabel.text = message
+	func emptyMessage() {
+		let message = "🤔\nThere is no connectable device."
+		let attributedString = NSMutableAttributedString(string: message)
+		attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 56), range: (message as NSString).range(of: "🤔"))
+		let messageLabel = UILabel()
+		messageLabel.numberOfLines = 2
+		messageLabel.attributedText = attributedString
 		messageLabel.textAlignment = .center
 		
 		tableView.backgroundView = messageLabel
