@@ -9,6 +9,7 @@ import MultipeerConnectivity
 import UIKit
 
 class ParticipateViewController: UIViewController {
+	@IBOutlet weak var guideMessageLabel: UILabel!
 	@IBOutlet weak var tableView: UITableView!
 	
     private var detector = PresenterDetector()
@@ -22,6 +23,8 @@ class ParticipateViewController: UIViewController {
 
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
+		
+//		guideMessageLabel.layer.cornerRadius = 30
         
         detector.startBrowsing()
         initRefresh()
@@ -107,6 +110,7 @@ extension ParticipateViewController {
 		let message = "🤔\nThere is no connectable device."
 		let attributedString = NSMutableAttributedString(string: message)
 		attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 56), range: (message as NSString).range(of: "🤔"))
+		attributedString.addAttribute(.foregroundColor, value: UIColor.white, range: (message as NSString).range(of: "\nThere is no connectable device."))
 		let messageLabel = UILabel()
 		messageLabel.numberOfLines = 2
 		messageLabel.attributedText = attributedString

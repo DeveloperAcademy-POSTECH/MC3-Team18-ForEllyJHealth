@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -121,15 +120,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="발표자를 선택해서 입장해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD7-bT-GW2">
-                                <rect key="frame" x="97.5" y="833" width="219.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a presenter device." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD7-bT-GW2">
+                                <rect key="frame" x="0.0" y="813.5" width="414" height="82.5"/>
+                                <color key="backgroundColor" name="secondaryColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="adk-Ku-ye3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="769.5" id="zi8-l1-p7c"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="TeH-qs-xaW" style="IBUITableViewCellStyleDefault" id="NRe-lp-02c">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -142,11 +146,12 @@
                                                     <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="gL4-hE-sje" kind="show" identifier="AudienceSegue" id="uAg-xW-dgm"/>
                                         </connections>
@@ -155,24 +160,28 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VLo-Xn-en7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="adk-Ku-ye3" firstAttribute="leading" secondItem="SD7-bT-GW2" secondAttribute="leading" id="4Gk-xg-TPc"/>
+                            <constraint firstItem="SD7-bT-GW2" firstAttribute="leading" secondItem="VLo-Xn-en7" secondAttribute="leading" id="Hrq-uE-sxN"/>
                             <constraint firstItem="adk-Ku-ye3" firstAttribute="top" secondItem="VLo-Xn-en7" secondAttribute="top" id="J3w-xZ-bCx"/>
-                            <constraint firstItem="VLo-Xn-en7" firstAttribute="bottom" secondItem="SD7-bT-GW2" secondAttribute="bottom" constant="8" id="WNh-AX-he5"/>
-                            <constraint firstItem="SD7-bT-GW2" firstAttribute="centerX" secondItem="VLo-Xn-en7" secondAttribute="centerX" id="gLd-aJ-MWe"/>
-                            <constraint firstItem="SD7-bT-GW2" firstAttribute="top" secondItem="adk-Ku-ye3" secondAttribute="bottom" constant="20" id="kaJ-50-dbY"/>
+                            <constraint firstItem="adk-Ku-ye3" firstAttribute="trailing" secondItem="SD7-bT-GW2" secondAttribute="trailing" id="O28-Wi-wUw"/>
+                            <constraint firstItem="SD7-bT-GW2" firstAttribute="top" secondItem="adk-Ku-ye3" secondAttribute="bottom" id="SGU-qK-l2b"/>
+                            <constraint firstAttribute="bottom" secondItem="SD7-bT-GW2" secondAttribute="bottom" id="bGP-9b-lUr"/>
+                            <constraint firstItem="SD7-bT-GW2" firstAttribute="trailing" secondItem="VLo-Xn-en7" secondAttribute="trailing" id="eXT-jC-jSC"/>
                             <constraint firstItem="VLo-Xn-en7" firstAttribute="trailing" secondItem="adk-Ku-ye3" secondAttribute="trailing" id="lS8-UM-h3r"/>
                             <constraint firstItem="adk-Ku-ye3" firstAttribute="leading" secondItem="VLo-Xn-en7" secondAttribute="leading" id="mg1-IF-C2G"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6m3-FN-mAy"/>
                     <connections>
+                        <outlet property="guideMessageLabel" destination="SD7-bT-GW2" id="AmT-Kc-ehR"/>
                         <outlet property="tableView" destination="adk-Ku-ye3" id="sHF-Og-VRN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97Q-tz-86I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257" y="124"/>
+            <point key="canvasLocation" x="1256.521739130435" y="123.88392857142857"/>
         </scene>
         <!--AudienceViewController-->
         <scene sceneID="alH-Ov-hsi">
@@ -209,8 +218,5 @@
         <namedColor name="secondaryColor">
             <color red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
