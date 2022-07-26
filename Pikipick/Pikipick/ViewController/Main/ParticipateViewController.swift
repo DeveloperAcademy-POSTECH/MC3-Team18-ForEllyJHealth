@@ -9,7 +9,6 @@ import MultipeerConnectivity
 import UIKit
 
 class ParticipateViewController: UIViewController {
-	@IBOutlet weak var guideMessageLabel: UILabel!
 	@IBOutlet weak var tableView: UITableView!
 	
     private var detector = PresenterDetector()
@@ -24,7 +23,15 @@ class ParticipateViewController: UIViewController {
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
 		
-//		guideMessageLabel.layer.cornerRadius = 30
+		let guideMessageLabel = UILabel(frame: CGRect(x: 0, y: view.frame.height-88, width: view.frame.width, height: 88))
+		guideMessageLabel.text = "Please select a presenter device."
+		guideMessageLabel.textColor = UIColor.white
+		guideMessageLabel.backgroundColor = UIColor(named: "secondaryColor")
+		guideMessageLabel.textAlignment = .center
+		guideMessageLabel.clipsToBounds = true
+		guideMessageLabel.layer.cornerRadius = 30
+		
+		view.addSubview(guideMessageLabel)
         
         detector.startBrowsing()
         initRefresh()
