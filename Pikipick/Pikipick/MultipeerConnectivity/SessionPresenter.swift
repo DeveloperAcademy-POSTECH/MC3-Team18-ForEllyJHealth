@@ -97,7 +97,7 @@ class SessionPresenter: NSObject, ObservableObject {
         let votedPeer = receivedVote.first?.key ?? ""
         let vote = receivedVote.first?.value ?? -1
         
-        if (receivedVoteResult.keys.contains(votedPeer)) {
+        if receivedVoteResult.keys.contains(votedPeer) {
             receivedVoteResult[votedPeer] = vote
             receivedVoteResult.updateValue(vote, forKey: votedPeer)
         } else {

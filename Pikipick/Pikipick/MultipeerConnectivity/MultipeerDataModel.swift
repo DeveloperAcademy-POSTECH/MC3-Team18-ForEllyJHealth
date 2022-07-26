@@ -26,7 +26,7 @@ func sendDataType(identifier: String) -> SendData {
 func extractQuestion (data: String) -> String {
     guard let strIndex = data.firstIndex(of: "|") else { return "NIL"}
     let identifierLength = data.distance(from: data.startIndex, to: strIndex)
-    let question = data.substring(from: identifierLength+1, to: data.count - 1)
+    let question = data.substring(from: identifierLength + 1, to: data.count - 1)
     
     return question
 }
