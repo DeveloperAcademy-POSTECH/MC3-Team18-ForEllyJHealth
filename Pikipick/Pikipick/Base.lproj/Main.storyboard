@@ -101,9 +101,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="EAx-mT-nuX"/>
                     <connections>
+                        <outlet property="appNameLabel" destination="2U9-pC-7Mk" id="r9z-Yk-YMD"/>
+                        <outlet property="descriptionLabel" destination="VBa-mw-NQ8" id="bnc-6Y-svN"/>
                         <outlet property="lineView" destination="yqh-kZ-JKl" id="iar-kI-2cC"/>
                         <outlet property="mainImage" destination="23q-nV-zzj" id="pqp-X5-gCj"/>
-                        <outlet property="mainView" destination="8bC-Xf-vdC" id="GhW-kX-DhJ"/>
                         <outlet property="participateButton" destination="Wot-aw-bzL" id="GMq-bX-EZK"/>
                         <outlet property="presentationButton" destination="5XN-5x-Jfa" id="JNi-uX-R0F"/>
                     </connections>
