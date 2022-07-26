@@ -43,9 +43,9 @@ class SessionAudience: NSObject, ObservableObject {
     // MARK: 이모지 전송
     func sendEmoji(sendEmoji: String, receiver: MCPeerID) {
         log.info("sendEmoji: \(String(describing: sendEmoji)) to \(receiver.displayName)")
-        let sendData = UUID().uuidString + sendEmoji
+        let sendData = "EMO" + UUID().uuidString + sendEmoji
         // Is there any Connected Peers more than 1
-        guard session.connectedPeers.isEmpty else { return }
+        guard !session.connectedPeers.isEmpty else { return }
         do {
             try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
         } catch {
@@ -55,10 +55,23 @@ class SessionAudience: NSObject, ObservableObject {
     
     // MARK: 질문 전송
     func sendQuestion(sendQuestion: String, receiver: MCPeerID) {
-        log.info("sendEmoji: \(String(describing: sendQuestion)) to \(receiver.displayName)")
-        let sendData = myPeerId.displayName + sendQuestion
+        log.info("sendQuestion: \(String(describing: sendQuestion)) to \(receiver.displayName)")
+        let sendData = "QUE" + myPeerId.displayName + "|" + sendQuestion
         // Is there any Connected Peers more than 1
-        guard session.connectedPeers.isEmpty else { return }
+        guard !session.connectedPeers.isEmpty else { return }
+        do {
+            try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
+        } catch {
+            log.error("Error for sending: \(String(describing: error))")
+        }
+    }
+    
+    // MARK: 투표 결과 전송
+    func sendVote(sendVote: String, receiver: MCPeerID) {
+        log.info("sendVote: \(String(describing: sendVote)) to \(receiver.displayName)")
+        let sendData = "VOT" + myPeerId.displayName + "|" + sendVote
+        // Is there any Connected Peers more than 1
+        guard !session.connectedPeers.isEmpty else { return }
         do {
             try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
         } catch {

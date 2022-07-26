@@ -41,6 +41,12 @@ class SessionPresenter: NSObject, ObservableObject {
     // MARK: 현재 수신한 데이터
     @Published var receivedData: String? = nil
     
+    @Published var receivedQuestionList: [String] = []
+    
+    @Published var isVoteOpen: Bool = false
+    
+    @Published var receivedVoteResult: [String: Int] = [:]
+    
     override init() {
         session = MCSession(peer: myPeerId, securityIdentity: nil, encryptionPreference: .none)
         serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: serviceType)
@@ -78,6 +84,25 @@ class SessionPresenter: NSObject, ObservableObject {
     
     func sessionDisconnect() {
         session.disconnect()
+    }
+    
+    func clearReceivedVoteList() {
+        receivedVoteResult.removeAll()
+    }
+    
+    func appendVoteResult(data: String) {
+        guard isVoteOpen else { return }
+        guard let receivedVote = extractVote(data: data) else { return }
+        
+        let votedPeer = receivedVote.first?.key ?? ""
+        let vote = receivedVote.first?.value ?? -1
+        
+        if receivedVoteResult.keys.contains(votedPeer) {
+            receivedVoteResult[votedPeer] = vote
+            receivedVoteResult.updateValue(vote, forKey: votedPeer)
+        } else {
+            receivedVoteResult[votedPeer] = vote
+        }
     }
 }
 
@@ -131,7 +156,18 @@ extension SessionPresenter: MCSessionDelegate {
         if let string = String(data: data, encoding: .utf8) {
             log.info("didReceive Emoji \(string)")
             DispatchQueue.main.async {
-                self.receivedData = string
+                let identifier = string.substring(from: 0, to: 3)
+                
+                switch sendDataType(identifier: identifier) {
+                case .question:
+                    self.receivedQuestionList.append(extractQuestion(data: string))
+                case .vote:
+                    self.appendVoteResult(data: string)
+                    break
+                case .emoji:
+                    self.receivedData = string
+                    break
+                }
             }
         } else {
             log.info("didReceive invalid value \(data.count) bytes")
