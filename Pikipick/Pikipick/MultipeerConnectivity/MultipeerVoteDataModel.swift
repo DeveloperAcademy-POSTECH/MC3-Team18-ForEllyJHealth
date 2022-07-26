@@ -12,7 +12,7 @@ enum Vote: Int, CaseIterable {
 }
 
 // PeerID + 투표 결과 -> [PeerID: 투표 결과] 형태로 변환
-func voteIs (data: String) -> [String: Int]? {
+func extractVote (data: String) -> [String: Int]? {
     guard let strIndex = data.firstIndex(of: "|") else { return ["NIL PEER": -1]}
     let peerNameLastIndex = data.distance(from: data.startIndex, to: strIndex)
     let peerName = data.substring(from: 0, to: peerNameLastIndex)

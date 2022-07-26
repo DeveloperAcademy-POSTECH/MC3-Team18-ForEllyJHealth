@@ -11,7 +11,7 @@ enum SendData: String, CaseIterable {
     case question, vote, emoji
 }
 
-func sendDataTypeIs(identifier: String) -> SendData {
+func sendDataType(identifier: String) -> SendData {
     switch identifier {
     case "QQQ":
         return SendData.question
@@ -23,7 +23,7 @@ func sendDataTypeIs(identifier: String) -> SendData {
 }
 
 // PeerID + 질문 -> 질문으로 변환
-func questionIs (data: String) -> String {
+func extractQuestion (data: String) -> String {
     guard let strIndex = data.firstIndex(of: "|") else { return "NIL"}
     let identifierLength = data.distance(from: data.startIndex, to: strIndex)
     let question = data.substring(from: identifierLength+1, to: data.count - 1)

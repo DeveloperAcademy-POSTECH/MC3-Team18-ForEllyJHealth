@@ -86,13 +86,13 @@ class SessionPresenter: NSObject, ObservableObject {
         session.disconnect()
     }
     
-    func receivedVoteListClear() {
+    func clearReceivedVoteList() {
         receivedVoteResult.removeAll()
     }
     
-    func voteResultAppend(data: String) {
+    func appendVoteResult(data: String) {
         guard isVoteOpen else { return }
-        guard let receivedVote = voteIs(data: data) else { return }
+        guard let receivedVote = extractVote(data: data) else { return }
         
         let votedPeer = receivedVote.first?.key ?? ""
         let vote = receivedVote.first?.value ?? -1
@@ -158,11 +158,11 @@ extension SessionPresenter: MCSessionDelegate {
             DispatchQueue.main.async {
                 let identifier = string.substring(from: 0, to: 3)
                 
-                switch sendDataTypeIs(identifier: identifier) {
+                switch sendDataType(identifier: identifier) {
                 case .question:
-                    self.receivedQuestionList.append(questionIs(data: string))
+                    self.receivedQuestionList.append(extractQuestion(data: string))
                 case .vote:
-                    self.voteResultAppend(data: string)
+                    self.appendVoteResult(data: string)
                     break
                 case .emoji:
                     self.receivedData = string
