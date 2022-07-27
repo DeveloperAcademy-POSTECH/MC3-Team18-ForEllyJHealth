@@ -51,7 +51,7 @@ struct PresentationMenuButtonView: View {
                 .font(.system(.caption))
                 .foregroundColor(buttonTextColor)
         }
-        .frame(width:64, height: 24)
+        .frame(width:64)
     }
 }
 
