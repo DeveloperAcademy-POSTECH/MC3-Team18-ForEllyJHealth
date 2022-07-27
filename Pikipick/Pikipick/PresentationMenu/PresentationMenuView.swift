@@ -38,7 +38,6 @@ struct PresentationMenuView: View {
                             .frame(height: buttonWH)
                             .overlay(dividerColor)
                         Text(deviceName.count > txtMaxLength ? deviceName.substring(from: 0, to: txtMaxLength) : deviceName)
-                            .fixedSize(horizontal: false, vertical: true)
                             .frame(minWidth: 36)
                             .foregroundColor(.white)
                             .padding([.horizontal])
