@@ -18,8 +18,8 @@ struct PresentationMenuView: View {
     private let txtMaxLength = 18
     
     var body: some View {
-        VStack {
-            ZStack {
+        ZStack {
+            VStack {
                 HStack(spacing: 0) {
                     Spacer()
                     HStack(spacing: 0) {
@@ -50,10 +50,9 @@ struct PresentationMenuView: View {
                     .background(RoundedRectangle(cornerRadius: 10)
                         .fill(Color.secondaryColor)
                         .animation(.easeInOut(duration: 0.1), value: isExpanded))
-                }
+                }.padding([.top])
+                Spacer()
             }
-            .padding([.top])
-            Spacer()
         }
     }
 }
