@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-enum mode: String {
+enum Mode: String {
     case home, votelist, vote, question
 }
 
 struct TestPresentationView: View {
     
-    @State var viewMode: mode = .home
-    @State var selectedVoteType : voteType = .yesNo
+    @State var viewMode: Mode = .home
+    @State var selectedVoteType : VoteType = .yesNo
     
     private let buttonSize: CGFloat = 4
     

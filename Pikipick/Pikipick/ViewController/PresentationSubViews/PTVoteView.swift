@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-enum voteType: CaseIterable {
-    
+enum VoteType: CaseIterable {
     case yesNo, opt2, opt3, opt4
+    
     var options: [String] {
         switch self {
         case .yesNo:
@@ -22,6 +22,7 @@ enum voteType: CaseIterable {
             return ["emoji_one_32px", "emoji_two_32px", "emoji_three_32px", "emoji_four_32px"]
         }
     }
+    
     // MARK: 데이터 처리를 위해서 -> 딕셔너리에 할당된 이넘의 케이스를 넣어주어야함
     var emojiTag: [String] {
         switch self {
@@ -38,7 +39,9 @@ enum voteType: CaseIterable {
 }
 
 struct PTVoteView: View {
-    let selectedVoteType : voteType
+    
+    let selectedVoteType : VoteType
+    
     var body: some View {
         HStack {
             
