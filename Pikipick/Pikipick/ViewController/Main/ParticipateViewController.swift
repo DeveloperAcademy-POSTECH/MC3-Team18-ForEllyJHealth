@@ -9,7 +9,7 @@ import MultipeerConnectivity
 import UIKit
 import SwiftUI
 
-class ParticipateViewController: UIViewController {
+class ParticipateViewController: UIViewController, UITableViewDelegate {
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var refreshButton: UIButton!
@@ -132,10 +132,6 @@ extension ParticipateViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 56
 	}
-	
-}
-
-extension ParticipateViewController: UITableViewDelegate {
 	
 }
 
