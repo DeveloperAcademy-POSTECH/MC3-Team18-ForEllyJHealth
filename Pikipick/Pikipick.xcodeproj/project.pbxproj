@@ -31,6 +31,7 @@
 		E21D99362887D4070065CB2A /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D99352887D4070065CB2A /* Segment.swift */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
+		E2C2563C2890844100BF75FC /* ParticipateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2563B2890844100BF75FC /* ParticipateTableViewCell.swift */; };
 		E2CDA1AA2890692C00A0C565 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C1287FE94300945A02 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		E276ACFE2885742900D14369 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E2B6B249288191400034E0DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
+		E2C2563B2890844100BF75FC /* ParticipateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		3AB219BC287FE94300945A02 /* Pikipick */ = {
 			isa = PBXGroup;
 			children = (
+				E2C2563A2890841A00BF75FC /* Cells */,
 				70DE708C28900325009E98A9 /* Utils */,
 				3A5AE5CB2886DA48002393E6 /* Extensions */,
 				3A5AE5C42886D7FD002393E6 /* MultipeerConnectivity */,
@@ -180,6 +183,14 @@
 				E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		E2C2563A2890841A00BF75FC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E2C2563B2890844100BF75FC /* ParticipateTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
 				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
+				E2C2563C2890844100BF75FC /* ParticipateTableViewCell.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,

@@ -7,12 +7,12 @@
 
 import MultipeerConnectivity
 import UIKit
+import SwiftUI
 
 class ParticipateViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 	
     private var detector = PresenterDetector()
-    
 	private var presenterList = [MCPeerID]()
     
     let waitTime: TimeInterval = 0.3
@@ -32,7 +32,7 @@ class ParticipateViewController: UIViewController {
 		guideMessageLabel.layer.cornerRadius = 30
 		
 		view.addSubview(guideMessageLabel)
-        
+		
         detector.startBrowsing()
         initRefresh()
     }
@@ -60,6 +60,7 @@ class ParticipateViewController: UIViewController {
         refresh.endRefreshing()
         DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
             self.tableView.reloadData()
+			self.tableView.separatorStyle = .none
         }
     }
     
@@ -100,12 +101,17 @@ extension ParticipateViewController: UITableViewDataSource {
 	}
     
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+		let cell = tableView.dequeueReusableCell(withIdentifier: "ParticipateTableViewCell", for: indexPath) as! ParticipateTableViewCell
         let presenterStrLength = presenterList[indexPath.row].displayName.count
-        cell.textLabel?.text = presenterList[indexPath.row].displayName.substring(from: 0, to: presenterStrLength - minusPresenterSuffixNum)
+        cell.deviceName.text = presenterList[indexPath.row].displayName.substring(from: 0, to: presenterStrLength - minusPresenterSuffixNum)
 		
 		return cell
 	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 56
+	}
+	
 }
 
 extension ParticipateViewController: UITableViewDelegate {
