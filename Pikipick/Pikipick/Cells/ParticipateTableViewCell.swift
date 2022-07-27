@@ -10,9 +10,11 @@ import UIKit
 class ParticipateTableViewCell: UITableViewCell {
 	@IBOutlet weak var deviceName: UILabel!
 	@IBOutlet weak var iconButton: UIButton!
+	
 	override class func awakeFromNib() {
 		super.awakeFromNib()
 	}
+	
 	override func setSelected(_ selected: Bool, animated: Bool) {
 		super.setSelected(selected, animated: animated)
 		
@@ -20,6 +22,7 @@ class ParticipateTableViewCell: UITableViewCell {
 		contentView.layer.cornerRadius = 25
 		iconButton.layer.cornerRadius = 17
 	}
+	
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
