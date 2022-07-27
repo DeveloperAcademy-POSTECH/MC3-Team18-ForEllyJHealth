@@ -11,6 +11,7 @@
 		3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */; };
 		3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C92886DA06002393E6 /* SessionAudience.swift */; };
 		3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5CC2886DA5A002393E6 /* String+.swift */; };
+		3A75CF38289143BB009686CA /* MenuButtonViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75CF37289143BB009686CA /* MenuButtonViewType.swift */; };
 		3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A867677288ED61C00209733 /* MultipeerDataModel.swift */; };
 		3A86767A288EDF3A00209733 /* MultipeerVoteDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A867679288EDF3A00209733 /* MultipeerVoteDataModel.swift */; };
 		3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17E5A28904A510099F483 /* PresentationMenuButtonView.swift */; };
@@ -41,6 +42,7 @@
 		3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterDetector.swift; sourceTree = "<group>"; };
 		3A5AE5C92886DA06002393E6 /* SessionAudience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAudience.swift; sourceTree = "<group>"; };
 		3A5AE5CC2886DA5A002393E6 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		3A75CF37289143BB009686CA /* MenuButtonViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonViewType.swift; sourceTree = "<group>"; };
 		3A867677288ED61C00209733 /* MultipeerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerDataModel.swift; sourceTree = "<group>"; };
 		3A867679288EDF3A00209733 /* MultipeerVoteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerVoteDataModel.swift; sourceTree = "<group>"; };
 		3AA17E5A28904A510099F483 /* PresentationMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationMenuButtonView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				3AC11CD028903F5D00194A05 /* Constants.swift */,
 				3AC11CD128903F5D00194A05 /* Segment.swift */,
+				3A75CF37289143BB009686CA /* MenuButtonViewType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
 				3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
+				3A75CF38289143BB009686CA /* MenuButtonViewType.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,

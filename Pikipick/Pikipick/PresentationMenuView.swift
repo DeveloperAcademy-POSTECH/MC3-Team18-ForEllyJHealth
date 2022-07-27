@@ -7,26 +7,6 @@
 
 import SwiftUI
 
-struct MenuButtonListView: View {
-    
-    var dividerColor: Color
-    
-    private let closeButtonColor = Color.closeButtonColor
-    private let defaultTextColor = Color.white
-    
-    var body: some View {
-        Divider()
-            .overlay(dividerColor)
-        PresentationMenuButtonView(buttonName: "CLOSE", buttonTextColor: closeButtonColor,transferViewType: ViewType.close)
-        Divider()
-            .overlay(dividerColor)
-        PresentationMenuButtonView(buttonName: "VOTE", buttonTextColor: defaultTextColor, transferViewType: ViewType.vote)
-        Divider()
-            .overlay(dividerColor)
-        PresentationMenuButtonView(buttonName: "Q&A", buttonTextColor: defaultTextColor, transferViewType: ViewType.question)
-    }
-}
-
 struct PresentationMenuView: View {
     @State var isExpanded = false
     @State private var scale = 1.0
@@ -52,7 +32,7 @@ struct PresentationMenuView: View {
                         }.animation(.spring(), value: scale)
                         
                         if isExpanded {
-                            MenuButtonListView(dividerColor: dividerColor)
+                            PresentationMenuButtonListView(dividerColor: dividerColor)
                                 .frame(height:buttonWH)
                         }
                         
