@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PresentationMenuView: View {
     @State var isExpanded = false
-    @State private var scale = 1.0
     
     var deviceName: String
     
@@ -29,8 +28,7 @@ struct PresentationMenuView: View {
                             Image(isExpanded ? "icn_chevron_right_32px" : "icn_chevron_left_32px")
                                 .resizable()
                                 .frame(width: buttonWH, height: buttonWH)
-                        }.animation(.spring(), value: scale)
-                        
+                        }
                         if isExpanded {
                             PresentationMenuButtonListView(dividerColor: dividerColor)
                                 .frame(height:buttonWH)
