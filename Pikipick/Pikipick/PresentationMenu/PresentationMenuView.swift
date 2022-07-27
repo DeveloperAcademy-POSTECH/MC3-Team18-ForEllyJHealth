@@ -20,7 +20,7 @@ struct PresentationMenuView: View {
     var body: some View {
         ZStack {
             VStack {
-                HStack(spacing: 0) {
+                HStack() {
                     Spacer()
                     HStack(spacing: 0) {
                         Button(action: {
@@ -58,10 +58,9 @@ struct PresentationMenuView: View {
 
 struct PresentationMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        let testTxt = "Preview Test Text"
-        let txtMaxLength = 18
+        let testTxt = "Preview Test Text__"
         
-        PresentationMenuView(deviceName: testTxt.count > txtMaxLength ? testTxt.substring(from: 0, to: txtMaxLength) : testTxt)
+        PresentationMenuView(deviceName:testTxt)
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
