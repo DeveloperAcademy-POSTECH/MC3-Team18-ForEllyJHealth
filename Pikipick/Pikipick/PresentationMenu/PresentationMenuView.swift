@@ -13,7 +13,7 @@ struct PresentationMenuView: View {
     var deviceName: String
     
     private let dividerColor = Color.dividerColor
-    private let buttonWH: CGFloat = 32
+    private let buttonWH: CGFloat = 44
     private let txtMaxLength = 18
     
     var body: some View {
@@ -22,21 +22,29 @@ struct PresentationMenuView: View {
                 HStack() {
                     Spacer()
                     HStack(spacing: 0) {
+                        
                         Button(action: {
-                            isExpanded.toggle()
+                            withAnimation {
+                                isExpanded.toggle()
+                            }
                         }) {
                             Image(isExpanded ? "icn_chevron_right_32px" : "icn_chevron_left_32px")
                                 .resizable()
                                 .frame(width: buttonWH, height: buttonWH)
                         }
-                        if isExpanded {
+                        
+                        HStack(spacing: 0) {
                             PresentationMenuButtonListView(dividerColor: dividerColor)
                                 .frame(height:buttonWH)
                         }
+                        .scaleEffect(x: isExpanded ? 1 : 0, y: 1, anchor: .center)
+                        .frame(width: isExpanded ? 192 : 0)
+                        .opacity(isExpanded ? 1 : 0)
                         
                         Divider()
                             .frame(height: buttonWH)
                             .overlay(dividerColor)
+                        
                         Text(deviceName.count > txtMaxLength ? deviceName.substring(from: 0, to: txtMaxLength) : deviceName)
                             .frame(minWidth: 36)
                             .foregroundColor(.white)
@@ -45,7 +53,7 @@ struct PresentationMenuView: View {
                     }
                     .background(RoundedRectangle(cornerRadius: 10)
                         .fill(Color.secondaryColor)
-                        .animation(.easeInOut(duration: 0.1), value: isExpanded))
+                        .animation(.default, value: isExpanded))
                 }.padding(.top)
                 Spacer()
             }

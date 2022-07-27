@@ -26,13 +26,13 @@
 		3AC11CD328903F5D00194A05 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC11CD128903F5D00194A05 /* Segment.swift */; };
 		3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */; };
 		3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05413288BF5BF00BE9E39 /* AppUtility.swift */; };
+		3AF62F332891D2A0003A0EE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F322891D2A0003A0EE4 /* Constants.swift */; };
 		70DE708E28900325009E98A9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE708D28900325009E98A9 /* Extensions.swift */; };
 		70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCE92887DDB700B08306 /* PresentationView.swift */; };
 		70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */; };
 		70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */; };
 		E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */; };
 		E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */; };
-		E21D99362887D4070065CB2A /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D99352887D4070065CB2A /* Segment.swift */; };
 		E265439528919D3600CA8D59 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265439428919D3600CA8D59 /* UIButton+.swift */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
@@ -63,6 +63,7 @@
 		3AC11CD128903F5D00194A05 /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Segment.swift; path = Pikipick/Model/Segment.swift; sourceTree = SOURCE_ROOT; };
 		3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 		3AF05413288BF5BF00BE9E39 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		3AF62F322891D2A0003A0EE4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Model/Constants.swift; sourceTree = "<group>"; };
 		70DE708D28900325009E98A9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		70EFFCE92887DDB700B08306 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 		3AB219BC287FE94300945A02 /* Pikipick */ = {
 			isa = PBXGroup;
 			children = (
+				3AF62F322891D2A0003A0EE4 /* Constants.swift */,
 				E2C2563A2890841A00BF75FC /* Cells */,
 				70DE708C28900325009E98A9 /* Utils */,
 				3A5AE5CB2886DA48002393E6 /* Extensions */,
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				E2B6B249288191400034E0DD /* SettingTableViewController.swift */,
+				E21D99352887D4070065CB2A /* Segment.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -291,9 +294,7 @@
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
 				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
 				3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */,
-				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				3A75CF38289143BB009686CA /* MenuButtonViewType.swift in Sources */,
-				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				E2C2563C2890844100BF75FC /* ParticipateTableViewCell.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
@@ -315,6 +316,7 @@
 				E2CDA1AA2890692C00A0C565 /* MainViewController.swift in Sources */,
 				3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */,
 				E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */,
+				3AF62F332891D2A0003A0EE4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
