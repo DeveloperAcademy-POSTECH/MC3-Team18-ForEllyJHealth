@@ -65,7 +65,8 @@ struct TestPresentationView: View {
             case .vote:
                 PTVoteView(selectedVoteType: selectedVoteType)
             case .question:
-                Text("question")
+                PTQuestionView()
+                
             }
         }
 //        .ignoresSafeArea()

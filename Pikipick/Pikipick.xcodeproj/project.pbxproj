@@ -11,6 +11,8 @@
 		2D4F8B8A289038C500B78D95 /* HomePresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B89289038C500B78D95 /* HomePresentationView.swift */; };
 		2D4F8B8C28903A2B00B78D95 /* PTVoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8B28903A2B00B78D95 /* PTVoteListView.swift */; };
 		2D4F8B8E2890C1DB00B78D95 /* PTVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8D2890C1DB00B78D95 /* PTVoteView.swift */; };
+		2D4F8B9028919DFF00B78D95 /* PTQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8F28919DFF00B78D95 /* PTQuestionView.swift */; };
+		2D4F8B922891A4A900B78D95 /* QuestionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */; };
 		3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C22886D73F002393E6 /* Constants.swift */; };
 		3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C52886D817002393E6 /* SessionPresenter.swift */; };
 		3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */; };
@@ -43,6 +45,8 @@
 		2D4F8B89289038C500B78D95 /* HomePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentationView.swift; sourceTree = "<group>"; };
 		2D4F8B8B28903A2B00B78D95 /* PTVoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTVoteListView.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
 		2D4F8B8D2890C1DB00B78D95 /* PTVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTVoteView.swift; sourceTree = "<group>"; };
+		2D4F8B8F28919DFF00B78D95 /* PTQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTQuestionView.swift; sourceTree = "<group>"; };
+		2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionButtonView.swift; sourceTree = "<group>"; };
 		3A5AE5C22886D73F002393E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A5AE5C52886D817002393E6 /* SessionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionPresenter.swift; sourceTree = "<group>"; };
 		3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterDetector.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				2D4F8B8D2890C1DB00B78D95 /* PTVoteView.swift */,
 				2D4F8B8B28903A2B00B78D95 /* PTVoteListView.swift */,
 				2D4F8B89289038C500B78D95 /* HomePresentationView.swift */,
+				2D4F8B8F28919DFF00B78D95 /* PTQuestionView.swift */,
+				2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */,
 			);
 			path = PresentationSubViews;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
 				2D4F8B8C28903A2B00B78D95 /* PTVoteListView.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
+				2D4F8B922891A4A900B78D95 /* QuestionButtonView.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
 				2D4F8B882890323300B78D95 /* TestPresentationView.swift in Sources */,
@@ -294,6 +301,7 @@
 				3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */,
 				3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */,
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,
+				2D4F8B9028919DFF00B78D95 /* PTQuestionView.swift in Sources */,
 				3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */,
 				70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
