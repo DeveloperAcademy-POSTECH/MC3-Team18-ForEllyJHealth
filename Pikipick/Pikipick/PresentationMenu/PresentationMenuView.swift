@@ -14,7 +14,7 @@ struct PresentationMenuView: View {
     var deviceName: String
     
     private let dividerColor = Color.dividerColor
-    private let buttonWH: CGFloat = 28
+    private let buttonWH: CGFloat = 32
     private let txtMaxLength = 18
     
     var body: some View {
@@ -49,7 +49,7 @@ struct PresentationMenuView: View {
                     .background(RoundedRectangle(cornerRadius: 10)
                         .fill(Color.secondaryColor)
                         .animation(.easeInOut(duration: 0.1), value: isExpanded))
-                }.padding([.top])
+                }.padding(.top)
                 Spacer()
             }
         }
