@@ -11,6 +11,8 @@ import SwiftUI
 
 class ParticipateViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var backButton: UIButton!
+	@IBOutlet weak var refreshButton: UIButton!
 	
     private var detector = PresenterDetector()
 	private var presenterList = [MCPeerID]()
@@ -31,6 +33,9 @@ class ParticipateViewController: UIViewController {
 		guideMessageLabel.clipsToBounds = true
 		guideMessageLabel.layer.cornerRadius = 30
 		
+		backButton.layer.cornerRadius = 25
+		refreshButton.layer.cornerRadius = 25
+		
 		view.addSubview(guideMessageLabel)
 		
         detector.startBrowsing()
@@ -46,7 +51,16 @@ class ParticipateViewController: UIViewController {
         detector.stopBrowsing()
         detector.sessionDisconnect()
     }
-    
+	
+	@IBAction func backButtonTapped(_ sender: UIButton) {
+		self.navigationController?.popViewController(animated: true)
+	}
+	
+	@IBAction func refresgButtonTapped(_ sender: UIButton) {
+		tableView.reloadData()
+		self.tableView.separatorStyle = .none
+	}
+	
     // https://gigas-blog.tistory.com/44
     func initRefresh() {
         let refresh = UIRefreshControl()
@@ -60,7 +74,6 @@ class ParticipateViewController: UIViewController {
         refresh.endRefreshing()
         DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
             self.tableView.reloadData()
-			self.tableView.separatorStyle = .none
         }
     }
     
