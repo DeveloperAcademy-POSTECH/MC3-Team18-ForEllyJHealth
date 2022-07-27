@@ -43,7 +43,6 @@ struct PresentationMenuView: View {
                             .fixedSize(horizontal: false, vertical: true)
                             .frame(minWidth: 36)
                             .foregroundColor(.white)
-                            .font(.system(size: 17))
                             .padding([.horizontal])
                             .padding([.vertical], 8)
                     }

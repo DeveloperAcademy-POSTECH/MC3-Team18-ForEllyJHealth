@@ -34,8 +34,6 @@ struct PresentationMenuButtonView: View {
     var buttonTextColor: Color
     var transferViewType: MenuButtonViewType
     
-    private let fontSize = CGFloat(12)
-    
     var body: some View {
         Button(action: {
             switch transferViewType {
@@ -50,7 +48,7 @@ struct PresentationMenuButtonView: View {
             }
         }) {
             Text(buttonName)
-                .font(.system(size: fontSize))
+                .font(.system(.caption))
                 .foregroundColor(buttonTextColor)
         }
         .frame(width:64, height: 24)
