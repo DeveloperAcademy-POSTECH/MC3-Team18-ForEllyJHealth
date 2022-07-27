@@ -23,8 +23,8 @@
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
 		3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */; };
 		3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05413288BF5BF00BE9E39 /* AppUtility.swift */; };
-		702D7475289154EC00F96A7E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702D7474289154EB00F96A7E /* Home.swift */; };
-		70DE708E28900325009E98A9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE708D28900325009E98A9 /* Extensions.swift */; };
+		7036AE6A2891A5D400D86CDA /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036AE692891A5D400D86CDA /* UIScreen+.swift */; };
+		70DE708E28900325009E98A9 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE708D28900325009E98A9 /* Color+.swift */; };
 		70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCE92887DDB700B08306 /* PresentationView.swift */; };
 		70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */; };
 		70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */; };
@@ -54,8 +54,8 @@
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 		3AF05413288BF5BF00BE9E39 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
-		702D7474289154EB00F96A7E /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		70DE708D28900325009E98A9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7036AE692891A5D400D86CDA /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
+		70DE708D28900325009E98A9 /* Color+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		70EFFCE92887DDB700B08306 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
 		70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAnimView.swift; sourceTree = "<group>"; };
@@ -103,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				3A5AE5CC2886DA5A002393E6 /* String+.swift */,
+				7036AE692891A5D400D86CDA /* UIScreen+.swift */,
+				70DE708D28900325009E98A9 /* Color+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -127,7 +129,6 @@
 		3AB219BC287FE94300945A02 /* Pikipick */ = {
 			isa = PBXGroup;
 			children = (
-				70DE708C28900325009E98A9 /* Utils */,
 				3A5AE5CB2886DA48002393E6 /* Extensions */,
 				3A5AE5C42886D7FD002393E6 /* MultipeerConnectivity */,
 				3A5AE5C12886D730002393E6 /* Model */,
@@ -136,7 +137,6 @@
 				70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */,
 				70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */,
 				E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */,
-				702D7474289154EB00F96A7E /* Home.swift */,
 				3AF05413288BF5BF00BE9E39 /* AppUtility.swift */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
@@ -150,14 +150,6 @@
 				E276ACFE2885742900D14369 /* Settings.bundle */,
 			);
 			path = Pikipick;
-			sourceTree = "<group>";
-		};
-		70DE708C28900325009E98A9 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				70DE708D28900325009E98A9 /* Extensions.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		E08EFF842886A0C700582C83 /* Recovered References */ = {
@@ -259,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
-				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
+				70DE708E28900325009E98A9 /* Color+.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
@@ -271,10 +263,10 @@
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */,
 				3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */,
-				702D7475289154EC00F96A7E /* Home.swift in Sources */,
 				3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */,
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,
 				3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */,
+				7036AE6A2891A5D400D86CDA /* UIScreen+.swift in Sources */,
 				70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
 				3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */,

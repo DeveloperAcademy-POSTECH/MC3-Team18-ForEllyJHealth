@@ -10,7 +10,7 @@ import SwiftUI
 struct Movement{
     var x: CGFloat
     var y: CGFloat
-    var z: CGFloat
+    var size: CGFloat
     var opacity: Double
 }
 
@@ -61,23 +61,24 @@ struct ButtonAnimView: View {
 }
 
 struct ConfettiContainer: View {
-    @State var movement = Movement(x: 0, y: 0, z: 1, opacity: 0)
+    @State var movement = Movement(x: 0, y: 0, size: 0.3, opacity: 0)
     @State var animationValues: [Bool] = Array(repeating: false, count: 6)
     @Binding var animate:Bool
     @Binding var emoji: Emoji
     @Binding var finishedAnimationCouter:Int
-
+    
     var body: some View{
         ZStack{
             Text(emoji.emoticon)
                 .offset(x: movement.x, y: movement.y)
-                .scaleEffect(movement.z)
+                .scaleEffect(movement.size)
                 .opacity(movement.opacity)
                 .onChange(of: animate) { _ in
                     withAnimation(Animation.easeOut(duration: 0.4)) {
                         movement.opacity = 1
-                        movement.x = CGFloat.random(in: -300...400)
-                        movement.y = -300 * CGFloat.random(in: 0.3...0.8)
+                        movement.size = 6 * movement.size
+                        movement.x = UIScreen.screenWidth * CGFloat.random(in: -0.7...0.7)
+                        movement.y = -UIScreen.screenHeight * CGFloat.random(in: 0.4...0.8)
                     }
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {

@@ -56,5 +56,6 @@ struct ButtonActionView: View {
 struct ButtonActionView_Previews: PreviewProvider {
     static var previews: some View {
         ButtonActionView()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
