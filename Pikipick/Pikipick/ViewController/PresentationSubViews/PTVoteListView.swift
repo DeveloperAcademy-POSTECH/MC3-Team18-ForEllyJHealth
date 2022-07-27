@@ -10,7 +10,7 @@ import SwiftUI
 struct PTVoteListView: View {
     
     @Binding var selectedVoteType: VoteType
-    @Binding var viewMode: Mode
+    @Binding var viewMode: ViewMode
     
     private let voteTypeList : [VoteType] = [VoteType.yesNo, VoteType.opt2, VoteType.opt3, VoteType.opt4]
     
