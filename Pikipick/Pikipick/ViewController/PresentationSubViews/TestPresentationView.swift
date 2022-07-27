@@ -14,6 +14,7 @@ enum mode: String {
 struct TestPresentationView: View {
     
     @State var viewMode: mode = .home
+    @State var selectedVoteType : voteType = .yesNo
     var body: some View {
         
         ZStack{
@@ -23,11 +24,14 @@ struct TestPresentationView: View {
                         viewMode = .home
                     } label: {
                         ZStack{
+                            Color.secondaryGradient
+                                .frame(width: 44, height: 44, alignment: .center)
+                                .clipShape(Circle())
+
+
                             Circle()
                                 .strokeBorder(Color("secondaryColor"), lineWidth: 1)
                                 .frame(width: 44, height: 44, alignment: .center)
-                                .foregroundColor(.black)
-                            // TODO: 그라데이션 적용 필요
                             
                             Image("icn_chevron_left_32px")
                                 .frame(width: 32, height: 32)
@@ -39,12 +43,15 @@ struct TestPresentationView: View {
                         .padding()
                         .frame(height: 44, alignment: .center)
                     // TODO: 프레임 최솟값 사용할지 확인 필요.
-                        .background(Color("secondaryColor"))
+                        .background(Color.secondaryColor)
                         .cornerRadius(10)
                 }
                 Spacer()
             }
             .padding()
+            
+            
+            
             
             switch viewMode {
             case .home:
@@ -52,18 +59,19 @@ struct TestPresentationView: View {
             case .votelist:
                 VStack{
                     Spacer()
-                    PTVoteListView()
+                    PTVoteListView(selectedVoteType: $selectedVoteType, viewMode: $viewMode)
                         .padding(.bottom)
                 }
             case .vote:
-                Text("question")
-                
+                PTVoteView(selectedVoteType: selectedVoteType)
             case .question:
                 Text("question")
             }
         }
 //        .ignoresSafeArea()
         .edgesIgnoringSafeArea([.leading])
+        //뷰 오리엔테이션 추적가능? 오케이 적용가능
+        
         // MARK: 좋은 방식 없을까?
 //        ignoresSafeArea(.container, edges: .top)
         .background(Color("backgroundColor"))

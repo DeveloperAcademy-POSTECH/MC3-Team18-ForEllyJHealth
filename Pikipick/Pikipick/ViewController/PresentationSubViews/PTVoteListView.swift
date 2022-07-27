@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct PTVoteListView: View {
+    
+    @Binding var selectedVoteType: voteType
+    @Binding var viewMode: mode
+
+    private let voteTypeList : [voteType] = [voteType.yesNo, voteType.opt2, voteType.opt3, voteType.opt4]
+    
     var body: some View {
         HStack {
             // YesNo
             Button {
-                
+                selectedVoteType = voteTypeList[0]
+                viewMode = .vote
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color("secondaryColor"), lineWidth: 1)
+                        .stroke(Color.secondaryColor, lineWidth: 1)
                     GeometryReader{ g in
                         VStack {
                             HStack {
@@ -44,15 +51,16 @@ struct PTVoteListView: View {
                     .padding()
                 }//zstack
                 
-                .background(.black)
-                // TODO: 그라데이션 적용 필요
+                .background(Color.secondaryGradient)
                 .aspectRatio(0.8, contentMode: .fit)
                 .cornerRadius(20)
             }
             // 234
-            ForEach (2 ..< 5) { idx in
+            ForEach (1 ..< 4) { idx in
                 Button {
-                    
+                    selectedVoteType = voteTypeList[idx]
+                    viewMode = .vote
+
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
@@ -63,14 +71,13 @@ struct PTVoteListView: View {
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                             .padding()
                         
-                        Text(String(idx))
+                        Text(String(idx + 1))
                             .font(.system(size: 96))
                             .bold()
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
                             .padding()
                     }
-                    .background(.black)
-                    // TODO: 그라데이션 적용 필요
+                    .background(Color.secondaryGradient)
                     .aspectRatio(0.8, contentMode: .fit)
                     .cornerRadius(20)
                 }
@@ -83,7 +90,7 @@ struct PTVoteListView: View {
 
 struct PTVoteListView_Previews: PreviewProvider {
     static var previews: some View {
-        PTVoteListView()
+        PTVoteListView(selectedVoteType: .constant(.yesNo), viewMode: .constant(.votelist))
             .preferredColorScheme(.dark)
             .previewInterfaceOrientation(.landscapeLeft)
     }
