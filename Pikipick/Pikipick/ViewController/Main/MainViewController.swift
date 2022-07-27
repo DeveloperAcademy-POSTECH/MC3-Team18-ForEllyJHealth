@@ -10,12 +10,36 @@ import UIKit
 class MainViewController: UIViewController {
 	@IBOutlet weak var participateButton: UIButton!
 	@IBOutlet weak var presentationButton: UIButton!
-    let localNetworkAuth = LocalNetworkAuthorization()
+	@IBOutlet weak var mainImage: UIImageView!
+	@IBOutlet weak var lineView: UIView!
+	@IBOutlet weak var appNameLabel: UILabel!
+	@IBOutlet weak var descriptionLabel: UILabel!
+	let localNetworkAuth = LocalNetworkAuthorization()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+		
+		mainImage.translatesAutoresizingMaskIntoConstraints = false
+		mainImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -20).isActive = true
+		mainImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
+		mainImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: CGFloat(1.1)).isActive = true
+		if view.frame.size.height < 844 {
+			mainImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -(view.frame.height/7)).isActive = true
+		} else if view.frame.size.height > 1000 {
+			mainImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -(view.frame.height/5)).isActive = true
+			appNameLabel.font = UIFont.boldSystemFont(ofSize: view.frame.size.height/25)
+			descriptionLabel.font = UIFont.boldSystemFont(ofSize: view.frame.size.height/25)
+		} else {
+			mainImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+		}
+		
+		lineView.translatesAutoresizingMaskIntoConstraints = false
+		lineView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70).isActive = true
+		lineView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70).isActive = true
+		
 		participateButton.layer.cornerRadius = participateButton.frame.height/2
+		presentationButton.layer.cornerRadius = participateButton.frame.height/2
     }
 	
 	func showSettingAlert() {

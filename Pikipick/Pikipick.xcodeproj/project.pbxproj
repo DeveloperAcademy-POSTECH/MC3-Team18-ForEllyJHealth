@@ -17,7 +17,6 @@
 		3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17E5A28904A510099F483 /* PresentationMenuButtonView.swift */; };
 		3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BD287FE94300945A02 /* AppDelegate.swift */; };
 		3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219BF287FE94300945A02 /* SceneDelegate.swift */; };
-		3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C1287FE94300945A02 /* MainViewController.swift */; };
 		3AB219C5287FE94300945A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C3287FE94300945A02 /* Main.storyboard */; };
 		3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */; };
 		3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219C9287FE94400945A02 /* Assets.xcassets */; };
@@ -35,6 +34,7 @@
 		E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
+		E2CDA1AA2890692C00A0C565 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB219C1287FE94300945A02 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -277,6 +277,7 @@
 				3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				3A75CF38289143BB009686CA /* MenuButtonViewType.swift in Sources */,
+				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
@@ -293,6 +294,7 @@
 				3AC11CD228903F5D00194A05 /* Constants.swift in Sources */,
 				70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
+				E2CDA1AA2890692C00A0C565 /* MainViewController.swift in Sources */,
 				3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */,
 				E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */,
 			);
