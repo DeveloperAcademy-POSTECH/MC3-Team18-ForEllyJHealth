@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomePresentationView: View {
-    @Binding var viewMode: Mode
+    @Binding var viewMode: ViewMode
     
     var body: some View {
         HStack{
