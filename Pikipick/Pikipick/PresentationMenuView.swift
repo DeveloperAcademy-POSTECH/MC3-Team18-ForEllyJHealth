@@ -7,38 +7,44 @@
 
 import SwiftUI
 
+struct MenuButtonListView: View {
+    
+    var dividerColor: Color
+    
+    private let closeButtonColor = Color.closeButtonColor
+    private let defaultTextColor = Color.white
+    
+    var body: some View {
+        Divider()
+            .overlay(dividerColor)
+        PresentationMenuButtonView(buttonName: "CLOSE", buttonTextColor: closeButtonColor,transferViewType: ViewType.close)
+        Divider()
+            .overlay(dividerColor)
+        PresentationMenuButtonView(buttonName: "VOTE", buttonTextColor: defaultTextColor, transferViewType: ViewType.vote)
+        Divider()
+            .overlay(dividerColor)
+        PresentationMenuButtonView(buttonName: "Q&A", buttonTextColor: defaultTextColor, transferViewType: ViewType.question)
+    }
+}
+
 struct PresentationMenuView: View {
     @State var isExpanded = false
     @State private var scale = 1.0
     
     var deviceName: String
-    private let buttonWH = CGFloat(32)
-    private let textHorPadding = CGFloat(16)
-    private let viewHorPadding = CGFloat(24)
-    private let deviceNameWidth = CGFloat(166)
-    private let defaultTextColor = Color.white
-    private let closeButtonColor = Color.closeButtonColor
-    private let bgNonExpandedFrameWidth = CGFloat(230)
-    private let bgExpandedFrameWidth = CGFloat(422)
-    private let bgHeight = CGFloat(40)
+    
+    private let dividerColor = Color.dividerColor
+    private let buttonWH: CGFloat = 28
+    private let txtMaxLength = 18
     
     var body: some View {
-        VStack(spacing: 0) {
+        VStack {
             ZStack {
-                HStack {
-                    Spacer()
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.secondaryColor)
-                        .frame(width: isExpanded ? bgExpandedFrameWidth : bgNonExpandedFrameWidth, height: bgHeight, alignment: .trailing)
-                        .animation(.easeInOut(duration: 0.1), value: isExpanded)
-                }
                 HStack(spacing: 0) {
                     Spacer()
-                    Group {
+                    HStack(spacing: 0) {
                         Button(action: {
-                            print("Expandable button tapped!!!")
                             isExpanded.toggle()
-                            
                         }) {
                             Image(isExpanded ? "icn_chevron_right_32px" : "icn_chevron_left_32px")
                                 .resizable()
@@ -46,41 +52,40 @@ struct PresentationMenuView: View {
                         }.animation(.spring(), value: scale)
                         
                         if isExpanded {
-                            Divider()
-                                .frame(height: buttonWH)
-                                .overlay(Color.dividerColor)
-                            PresentationMenuButtonView(buttonName: "CLOSE", buttonTextColor: closeButtonColor)
-                            Divider()
-                                .frame(height: buttonWH)
-                                .overlay(Color.dividerColor)
-                            PresentationMenuButtonView(buttonName: "VOTE", buttonTextColor: defaultTextColor)
-                            Divider()
-                                .frame(height: buttonWH)
-                                .overlay(Color.dividerColor)
-                            PresentationMenuButtonView(buttonName: "Q&A", buttonTextColor: defaultTextColor)
+                            MenuButtonListView(dividerColor: dividerColor)
+                                .frame(height:buttonWH)
                         }
+                        
                         Divider()
                             .frame(height: buttonWH)
-                            .overlay(Color.dividerColor)
+                            .overlay(dividerColor)
                         Text(deviceName)
-                            .frame(width: deviceNameWidth)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(minWidth: 36)
                             .foregroundColor(.white)
                             .font(.system(size: 17))
-                            .padding([.horizontal], textHorPadding)
+                            .padding([.horizontal])
+                            .padding([.vertical], 8)
                     }
-                    
+                    .background(RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.secondaryColor)
+                        .animation(.easeInOut(duration: 0.1), value: isExpanded))
                 }
             }
-            .padding([.top], viewHorPadding)
+            .padding([.top])
             Spacer()
         }
         .background(.black)
     }
+    
 }
 
 struct PresentationMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        PresentationMenuView(deviceName: "AAA - IOS - POS - 111")
+        let testTxt = "Preview Test Text"
+        let txtMaxLength = 18
+        
+        PresentationMenuView(deviceName: testTxt.count > txtMaxLength ? testTxt.substring(from: 0, to: txtMaxLength) : testTxt)
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
