@@ -15,6 +15,9 @@ struct TestPresentationView: View {
     
     @State var viewMode: mode = .home
     @State var selectedVoteType : voteType = .yesNo
+    
+    private let buttonSize: CGFloat = 4
+    
     var body: some View {
         
         ZStack{
@@ -25,23 +28,19 @@ struct TestPresentationView: View {
                     } label: {
                         ZStack{
                             Color.secondaryGradient
-                                .frame(width: 44, height: 44, alignment: .center)
+                                .frame(width: buttonSize, height: buttonSize, alignment: .center)
                                 .clipShape(Circle())
-
-
                             Circle()
                                 .strokeBorder(Color("secondaryColor"), lineWidth: 1)
-                                .frame(width: 44, height: 44, alignment: .center)
-                            
+                                .frame(width: buttonSize, height: buttonSize, alignment: .center)
                             Image("icn_chevron_left_32px")
-                                .frame(width: 32, height: 32)
                         }
                     }
                     Spacer()
                     Text("Cool's")
                         .foregroundColor(.white)
                         .padding()
-                        .frame(height: 44, alignment: .center)
+                        .frame(height: buttonSize, alignment: .center)
                     // TODO: 프레임 최솟값 사용할지 확인 필요.
                         .background(Color.secondaryColor)
                         .cornerRadius(10)
@@ -49,9 +48,6 @@ struct TestPresentationView: View {
                 Spacer()
             }
             .padding()
-            
-            
-            
             
             switch viewMode {
             case .home:
@@ -66,15 +62,11 @@ struct TestPresentationView: View {
                 PTVoteView(selectedVoteType: selectedVoteType)
             case .question:
                 PTQuestionView()
-                
             }
         }
-//        .ignoresSafeArea()
         .edgesIgnoringSafeArea([.leading])
-        //뷰 오리엔테이션 추적가능? 오케이 적용가능
-        
-        // MARK: 좋은 방식 없을까?
-//        ignoresSafeArea(.container, edges: .top)
+        // TODO: 뷰 오리엔테이션 추적가능? 오케이 적용가능
+        //        ignoresSafeArea(.container, edges: .top)
         .background(Color("backgroundColor"))
         .accentColor(Color("primaryColor"))
     }

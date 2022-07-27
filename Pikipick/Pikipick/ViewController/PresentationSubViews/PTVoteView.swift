@@ -22,7 +22,7 @@ enum voteType: CaseIterable {
             return ["emoji_one_32px", "emoji_two_32px", "emoji_three_32px", "emoji_four_32px"]
         }
     }
-    // TODO: 딕셔너리에 할당된 이넘의 케이스를 넣어주어야함.
+    // MARK: 데이터 처리를 위해서 -> 딕셔너리에 할당된 이넘의 케이스를 넣어주어야함
     var emojiTag: [String] {
         switch self {
         case .yesNo:
@@ -74,12 +74,7 @@ struct PTVoteView: View {
                 }// zstack
                 .padding()
                 .accentColor(Color("primaryColor"))
-                
-                
             }
-            
-            
-            
         } // hstack
         
     }

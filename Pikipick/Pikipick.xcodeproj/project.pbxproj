@@ -92,9 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				2D4F8B872890323300B78D95 /* TestPresentationView.swift */,
+				2D4F8B89289038C500B78D95 /* HomePresentationView.swift */,
 				2D4F8B8D2890C1DB00B78D95 /* PTVoteView.swift */,
 				2D4F8B8B28903A2B00B78D95 /* PTVoteListView.swift */,
-				2D4F8B89289038C500B78D95 /* HomePresentationView.swift */,
 				2D4F8B8F28919DFF00B78D95 /* PTQuestionView.swift */,
 				2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */,
 			);

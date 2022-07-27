@@ -11,7 +11,7 @@ struct PTVoteListView: View {
     
     @Binding var selectedVoteType: voteType
     @Binding var viewMode: mode
-
+    
     private let voteTypeList : [voteType] = [voteType.yesNo, voteType.opt2, voteType.opt3, voteType.opt4]
     
     var body: some View {
@@ -41,7 +41,6 @@ struct PTVoteListView: View {
                             }
                         }
                         
-                        //라인 그려야함.
                         Path() { path in
                             path.move(to: CGPoint(x: 10, y: g.size.height * 0.85))
                             path.addLine(to: CGPoint(x: g.size.width * 0.9, y: g.size.height * 0.2))
@@ -60,7 +59,6 @@ struct PTVoteListView: View {
                 Button {
                     selectedVoteType = voteTypeList[idx]
                     viewMode = .vote
-
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
