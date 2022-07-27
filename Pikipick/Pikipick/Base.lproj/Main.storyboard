@@ -164,10 +164,11 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySj-oX-QR8">
-                                <rect key="frame" x="16" y="54" width="50" height="46"/>
+                                <rect key="frame" x="16" y="54" width="50" height="50"/>
                                 <color key="backgroundColor" name="secondaryColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Rg1-Cu-JB4"/>
+                                    <constraint firstAttribute="height" constant="50" id="wxi-Ki-Va0"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icn_chevron_left_32px"/>
@@ -176,10 +177,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpf-c9-l7x">
-                                <rect key="frame" x="324" y="54" width="50" height="46"/>
+                                <rect key="frame" x="324" y="54" width="50" height="50"/>
                                 <color key="backgroundColor" name="secondaryColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5BV-07-7c8"/>
+                                    <constraint firstAttribute="height" constant="50" id="YXb-bn-EMQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icn_autorenew_24px" title=""/>

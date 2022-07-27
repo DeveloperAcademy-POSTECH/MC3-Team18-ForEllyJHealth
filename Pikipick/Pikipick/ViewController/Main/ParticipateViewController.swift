@@ -33,8 +33,15 @@ class ParticipateViewController: UIViewController {
 		guideMessageLabel.clipsToBounds = true
 		guideMessageLabel.layer.cornerRadius = 30
 		
-		backButton.layer.cornerRadius = 25
-		refreshButton.layer.cornerRadius = 25
+		backButton.applyGradient(colours: [UIColor(named: "gradientFirstColor") ?? UIColor.black, UIColor.black], locations: [0.0, 1.0])
+		backButton.layer.cornerRadius = backButton.frame.height/2
+		backButton.layer.borderColor = UIColor(named: "secondaryColor")?.cgColor
+		backButton.layer.borderWidth = 1
+		
+		refreshButton.applyGradient(colours: [UIColor(named: "gradientFirstColor") ?? UIColor.black, UIColor.black], locations: [0.0, 1.0])
+		refreshButton.layer.cornerRadius = refreshButton.frame.height/2
+		refreshButton.layer.borderColor = UIColor(named: "secondaryColor")?.cgColor
+		refreshButton.layer.borderWidth = 1
 		
 		view.addSubview(guideMessageLabel)
 		
@@ -66,15 +73,16 @@ class ParticipateViewController: UIViewController {
         let refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(updateUI(refresh:)), for: .valueChanged)
         refresh.attributedTitle = NSAttributedString(string: "RELOAD")
-        
         tableView.refreshControl = refresh
+		self.tableView.separatorStyle = .none
     }
     
     @objc func updateUI(refresh: UIRefreshControl) {
         refresh.endRefreshing()
-        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-            self.tableView.reloadData()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
+//            self.tableView.reloadData()
+//        }
+		self.tableView.reloadData()
     }
     
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
