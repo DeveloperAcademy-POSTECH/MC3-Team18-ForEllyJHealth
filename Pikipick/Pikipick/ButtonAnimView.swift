@@ -34,6 +34,18 @@ struct ButtonAnimView: View {
                 animate.append(false)
                 counter += 1
             }
+            .padding(8)
+            .background {
+                Circle()
+                    .fill(Color.black)
+                    .frame(width: 44, height: 44, alignment: .center)
+                Circle()
+                    .fill(Color.secondary)
+                    .frame(width: 40, height: 40, alignment: .center)
+                Circle()
+                    .fill(Color.secondaryGradient)
+                    .frame(width: 36, height: 36, alignment: .center)
+            }
         }
         .onChange(of: presenter.receivedData ?? "", perform: { receivedData in
             let dataEndIndex = receivedData.count - 1
@@ -50,10 +62,11 @@ struct ButtonAnimView: View {
 
 struct ConfettiContainer: View {
     @State var movement = Movement(x: 0, y: 0, z: 1, opacity: 0)
+    @State var animationValues: [Bool] = Array(repeating: false, count: 6)
     @Binding var animate:Bool
     @Binding var emoji: Emoji
     @Binding var finishedAnimationCouter:Int
-        
+
     var body: some View{
         ZStack{
             Text(emoji.emoticon)
@@ -82,3 +95,62 @@ struct ConfettiContainer: View {
         }
     }
 }
+
+//struct AnimatedEmoji: View{
+//    var emoji: String
+//    var color: Color = .blue
+//    // MARK: Animation Properties
+//    @State var animationValues: [Bool] = Array(repeating: false, count: 6)
+//    var body: some View{
+//        ZStack{
+//            Text(emoji)
+//                .font(.system(size: 25))
+//                .padding(7)
+//                .background {
+//                    Circle()
+//                        .fill(color)
+//                }
+//                .scaleEffect(animationValues[2] ? 1 : 0.01)
+//                .overlay {
+//                    Circle()
+//                        .stroke(color,lineWidth: animationValues[1] ? 0 : 100)
+//                        .clipShape(Circle())
+//                        .scaleEffect(animationValues[0] ? 1.6 : 0.01)
+//                }
+//                // MARK: Random Circles
+//                .overlay {
+//                    ZStack{
+//                        ForEach(1...20,id: \.self){index in
+//                            Circle()
+//                                .fill(color)
+//                                .frame(width: .random(in: 3...5), height: .random(in: 3...5))
+//                                .offset(x: .random(in: -5...5), y: .random(in: -5...5))
+//                                .offset(x: animationValues[3] ? 45 : 10)
+//                                .rotationEffect(.init(degrees: Double(index) * 18.0))
+//                                .scaleEffect(animationValues[2] ? 1 : 0.01)
+//                                .opacity(animationValues[4] ? 0 : 1)
+//                        }
+//                    }
+//                }
+//        }
+//        .onAppear {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1){
+//                withAnimation(.easeInOut(duration: 0.35)){
+//                    animationValues[0] = true
+//                }
+//                withAnimation(.easeInOut(duration: 0.45).delay(0.06)){
+//                    animationValues[1] = true
+//                }
+//                withAnimation(.easeInOut(duration: 0.35).delay(0.3)){
+//                    animationValues[2] = true
+//                }
+//                withAnimation(.easeInOut(duration: 0.35).delay(0.4)){
+//                    animationValues[3] = true
+//                }
+//                withAnimation(.easeInOut(duration: 0.55).delay(0.55)){
+//                    animationValues[4] = true
+//                }
+//            }
+//        }
+//    }
+//}

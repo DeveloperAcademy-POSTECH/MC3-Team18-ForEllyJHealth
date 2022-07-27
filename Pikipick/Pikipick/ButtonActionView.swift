@@ -34,6 +34,11 @@ struct ButtonActionView: View {
                 ButtonAnimView(presenter: presenter, emoji: $emoji[index])
             }
         }
+        .background(){
+            RoundedRectangle(cornerRadius: 50)
+                .fill(Color.secondary)
+                .frame(width: 318, height: 64, alignment: .center)
+        }
         .onAppear(){
             print("BROWSING START!")
             presenter.startBrowsing()

@@ -23,6 +23,7 @@
 		3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB219CB287FE94400945A02 /* LaunchScreen.storyboard */; };
 		3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */; };
 		3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05413288BF5BF00BE9E39 /* AppUtility.swift */; };
+		702D7475289154EC00F96A7E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702D7474289154EB00F96A7E /* Home.swift */; };
 		70DE708E28900325009E98A9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE708D28900325009E98A9 /* Extensions.swift */; };
 		70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCE92887DDB700B08306 /* PresentationView.swift */; };
 		70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */; };
@@ -53,6 +54,7 @@
 		3AB219CE287FE94400945A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 		3AF05413288BF5BF00BE9E39 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		702D7474289154EB00F96A7E /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		70DE708D28900325009E98A9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		70EFFCE92887DDB700B08306 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */,
 				70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */,
 				E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */,
+				702D7474289154EB00F96A7E /* Home.swift */,
 				3AF05413288BF5BF00BE9E39 /* AppUtility.swift */,
 				3AB219BD287FE94300945A02 /* AppDelegate.swift */,
 				3AB219BF287FE94300945A02 /* SceneDelegate.swift */,
@@ -268,6 +271,7 @@
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */,
 				3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */,
+				702D7475289154EC00F96A7E /* Home.swift in Sources */,
 				3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */,
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,
 				3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */,
