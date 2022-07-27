@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D4F8B882890323300B78D95 /* TestPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B872890323300B78D95 /* TestPresentationView.swift */; };
 		2D4F8B8A289038C500B78D95 /* HomePresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B89289038C500B78D95 /* HomePresentationView.swift */; };
+		2D4F8B8C28903A2B00B78D95 /* PTVoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8B28903A2B00B78D95 /* PTVoteListView.swift */; };
 		3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C22886D73F002393E6 /* Constants.swift */; };
 		3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C52886D817002393E6 /* SessionPresenter.swift */; };
 		3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		2D4F8B872890323300B78D95 /* TestPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresentationView.swift; sourceTree = "<group>"; };
 		2D4F8B89289038C500B78D95 /* HomePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentationView.swift; sourceTree = "<group>"; };
+		2D4F8B8B28903A2B00B78D95 /* PTVoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTVoteListView.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
 		3A5AE5C22886D73F002393E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A5AE5C52886D817002393E6 /* SessionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionPresenter.swift; sourceTree = "<group>"; };
 		3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterDetector.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				2D4F8B872890323300B78D95 /* TestPresentationView.swift */,
+				2D4F8B8B28903A2B00B78D95 /* PTVoteListView.swift */,
 				2D4F8B89289038C500B78D95 /* HomePresentationView.swift */,
 			);
 			path = PresentationSubViews;
@@ -271,6 +274,7 @@
 			files = (
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
 				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
+				2D4F8B8C28903A2B00B78D95 /* PTVoteListView.swift in Sources */,
 				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,

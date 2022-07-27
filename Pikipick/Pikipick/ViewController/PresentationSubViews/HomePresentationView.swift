@@ -13,7 +13,7 @@ struct HomePresentationView: View {
     var body: some View {
         HStack{
             Button(){
-                viewMode = .vote
+                viewMode = .votelist
             } label: {
                 Text("투표")
                     .padding()
@@ -22,7 +22,6 @@ struct HomePresentationView: View {
             
             Button(){
                 viewMode = .question
-
             } label: {
                 Text("질문")
                     .padding()
