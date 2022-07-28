@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QxJ-Wu-8WC">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,18 +14,17 @@
             <objects>
                 <viewController storyboardIdentifier="AudienceViewController" id="QxJ-Wu-8WC" customClass="AudienceViewController" customModule="Pikipick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aii-lK-AiX">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFT-PZ-3Ek">
-                                <rect key="frame" x="16" y="68" width="358" height="56"/>
+                                <rect key="frame" x="16" y="68" width="343" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAA - iOS - POS - 111" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXn-b8-4iA">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
                                         <color key="backgroundColor" name="secondaryColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="6j9-Jy-aWW"/>
-                                            <constraint firstAttribute="width" constant="358" id="yOO-76-uG5"/>
+                                            <constraint firstAttribute="height" constant="56" id="mls-qi-Bac"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,7 +41,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="pcM-Z4-h4W"/>
                                             <constraint firstAttribute="width" constant="44" id="u9b-Gn-R2M"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="uvw-yU-2nI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
@@ -57,12 +55,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="358" id="06z-cx-f7o"/>
                                     <constraint firstAttribute="height" constant="56" id="3BC-KD-0lm"/>
                                     <constraint firstItem="XXn-b8-4iA" firstAttribute="centerX" secondItem="hFT-PZ-3Ek" secondAttribute="centerX" id="7AY-rP-owE"/>
-                                    <constraint firstItem="2tW-MS-KDq" firstAttribute="centerY" secondItem="XXn-b8-4iA" secondAttribute="centerY" id="NYF-Cx-PLK"/>
                                     <constraint firstItem="XXn-b8-4iA" firstAttribute="centerY" secondItem="hFT-PZ-3Ek" secondAttribute="centerY" id="bH7-a5-xal"/>
+                                    <constraint firstAttribute="trailing" secondItem="XXn-b8-4iA" secondAttribute="trailing" id="o9N-gh-4um"/>
                                     <constraint firstItem="2tW-MS-KDq" firstAttribute="leading" secondItem="hFT-PZ-3Ek" secondAttribute="leading" constant="10" id="vPN-pk-G5o"/>
+                                    <constraint firstItem="2tW-MS-KDq" firstAttribute="top" secondItem="hFT-PZ-3Ek" secondAttribute="top" constant="6" id="zfN-hm-cyF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -72,7 +70,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sba-8d-ueb">
-                                <rect key="frame" x="35" y="459" width="320" height="33"/>
+                                <rect key="frame" x="35" y="431" width="305" height="33"/>
                                 <color key="backgroundColor" name="secondaryColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="1Wt-SH-xYW"/>
@@ -87,17 +85,30 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-MF-jiy">
-                                <rect key="frame" x="16" y="750" width="358" height="60"/>
+                                <rect key="frame" x="16" y="722" width="343" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="k8u-A4-XkO"/>
+                                    <constraint firstAttribute="height" constant="56" id="k8u-A4-XkO"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Send ">
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Send a question">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="SFProText-Semibold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="baseBackgroundColor" name="secondaryColor"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7M-IH-6X3">
-                                <rect key="frame" x="16" y="507" width="358" height="227"/>
+                                <rect key="frame" x="16" y="479" width="343" height="227"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -109,7 +120,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcJ-e4-kSA">
-                                <rect key="frame" x="16" y="507" width="358" height="227"/>
+                                <rect key="frame" x="16" y="479" width="343" height="227"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="227" id="P3M-Lp-HL5"/>
                                 </constraints>
@@ -124,7 +135,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjR-bp-EyC">
-                                <rect key="frame" x="95" y="184" width="200" height="200"/>
+                                <rect key="frame" x="87.666666666666686" y="190" width="200" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzv-Nt-GXV">
                                         <rect key="frame" x="30" y="30" width="140" height="140"/>
@@ -138,8 +149,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="PIKIPICK">
                                                     <attributes>
-                                                        <font key="NSFont" size="28" name="SFProDisplay-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <font key="NSFont" size="24" name="SFCompactRounded-Bold"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -147,6 +157,8 @@
                                             <color key="baseBackgroundColor" name="secondaryColor"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="cancelPressing:" destination="QxJ-Wu-8WC" eventType="touchUpInside" id="hMd-fb-ief"/>
+                                            <action selector="cancelPressing:" destination="QxJ-Wu-8WC" eventType="touchDragExit" id="yIT-eD-fYJ"/>
                                             <action selector="pressButton:" destination="QxJ-Wu-8WC" eventType="touchDown" id="Ao1-8d-Adt"/>
                                             <outletCollection property="gestureRecognizers" destination="rKr-u6-LaL" appends="YES" id="Nfy-51-Bqx"/>
                                         </connections>
@@ -174,13 +186,15 @@
                             <constraint firstItem="f7M-IH-6X3" firstAttribute="leading" secondItem="J0U-2D-ZcQ" secondAttribute="leading" constant="16" id="6KT-tw-0Q6"/>
                             <constraint firstItem="f7M-IH-6X3" firstAttribute="top" secondItem="sba-8d-ueb" secondAttribute="bottom" constant="16" id="6ql-wz-hT7"/>
                             <constraint firstItem="hFT-PZ-3Ek" firstAttribute="leading" secondItem="gcJ-e4-kSA" secondAttribute="leading" id="DGL-3W-rgr"/>
+                            <constraint firstItem="J0U-2D-ZcQ" firstAttribute="trailing" secondItem="hFT-PZ-3Ek" secondAttribute="trailing" constant="16" id="Kvq-Tj-8Lc"/>
+                            <constraint firstItem="sba-8d-ueb" firstAttribute="top" secondItem="kjR-bp-EyC" secondAttribute="bottom" constant="41" id="QnP-BV-HDb"/>
                             <constraint firstItem="gcJ-e4-kSA" firstAttribute="bottom" secondItem="f7M-IH-6X3" secondAttribute="bottom" id="Rok-WX-i8t"/>
                             <constraint firstItem="J0U-2D-ZcQ" firstAttribute="trailing" secondItem="sba-8d-ueb" secondAttribute="trailing" constant="35" id="Tb1-gX-UXe"/>
-                            <constraint firstItem="kjR-bp-EyC" firstAttribute="top" secondItem="hFT-PZ-3Ek" secondAttribute="bottom" constant="60" id="XfX-6t-oBS"/>
                             <constraint firstItem="J0U-2D-ZcQ" firstAttribute="bottom" secondItem="bgF-MF-jiy" secondAttribute="bottom" id="YeY-yK-Biy"/>
                             <constraint firstItem="f7M-IH-6X3" firstAttribute="top" secondItem="gcJ-e4-kSA" secondAttribute="top" id="ZRo-xC-tpX"/>
                             <constraint firstItem="bgF-MF-jiy" firstAttribute="leading" secondItem="J0U-2D-ZcQ" secondAttribute="leading" constant="16" id="a2V-Qg-MOr"/>
                             <constraint firstItem="J0U-2D-ZcQ" firstAttribute="trailing" secondItem="f7M-IH-6X3" secondAttribute="trailing" constant="16" id="e0F-un-NYl"/>
+                            <constraint firstItem="hFT-PZ-3Ek" firstAttribute="leading" secondItem="J0U-2D-ZcQ" secondAttribute="leading" constant="16" id="ebt-hl-lUH"/>
                             <constraint firstItem="hFT-PZ-3Ek" firstAttribute="top" secondItem="J0U-2D-ZcQ" secondAttribute="top" constant="24" id="gHt-hS-HeP"/>
                             <constraint firstItem="bgF-MF-jiy" firstAttribute="bottom" secondItem="J0U-2D-ZcQ" secondAttribute="bottom" id="gjj-6l-nat"/>
                             <constraint firstItem="gcJ-e4-kSA" firstAttribute="leading" secondItem="f7M-IH-6X3" secondAttribute="leading" id="gvX-yL-U3X"/>
@@ -193,6 +207,7 @@
                         <outlet property="emojiView" destination="gcJ-e4-kSA" id="87g-CE-kbS"/>
                         <outlet property="longPressGesture" destination="rKr-u6-LaL" id="wA0-gM-cGv"/>
                         <outlet property="segmentControl" destination="sba-8d-ueb" id="l0z-Ty-Ibh"/>
+                        <outlet property="sendButton" destination="Nzv-Nt-GXV" id="fEg-0s-6U0"/>
                         <outlet property="titleLabel" destination="XXn-b8-4iA" id="vpb-bg-7Xo"/>
                         <outlet property="voteView" destination="f7M-IH-6X3" id="pnK-81-R6c"/>
                     </connections>
@@ -211,7 +226,7 @@
             <objects>
                 <viewController id="aYP-B1-tyc" customClass="AudienceViewController" customModule="Pikipick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5lA-23-Owx">
-                        <rect key="frame" x="0.0" y="0.0" width="358" height="227"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="227"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVV-m6-Duj">
@@ -437,7 +452,7 @@
             <objects>
                 <viewController id="bfY-CM-KFp" customClass="AudienceViewController" customModule="Pikipick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6yG-bu-byy">
-                        <rect key="frame" x="0.0" y="0.0" width="358" height="227"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="227"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="e0E-92-a45">
@@ -663,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNS-Ga-Tdo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="667"/>
+            <point key="canvasLocation" x="343" y="667"/>
         </scene>
     </scenes>
     <resources>

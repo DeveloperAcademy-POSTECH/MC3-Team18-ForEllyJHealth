@@ -62,7 +62,6 @@ class ParticipateViewController: UIViewController {
 			if let indexPath = indexPath {
                 audienceVC.deviceName = presenterList[indexPath.row]
 			}
-			
 		}
 	}
 }
