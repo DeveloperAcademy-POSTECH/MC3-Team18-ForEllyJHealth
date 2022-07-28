@@ -24,6 +24,7 @@ struct PresentationView: View {
                     .offset(y: -17)
             }
             .onAppear(perform: {
+                presenter.isVoteOpen = false
                 AppUtility.lockOrientation(UIInterfaceOrientationMask.landscape)
                 UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
                 UINavigationController.attemptRotationToDeviceOrientation()

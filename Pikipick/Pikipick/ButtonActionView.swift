@@ -44,12 +44,6 @@ struct ButtonActionView: View {
             presenter.startBrowsing()
             presenter.startAdvertise()
         }
-        .onDisappear(){
-            print("BROWSING STOP!")
-            presenter.stopAdvertise()
-            presenter.stopBrowsing()
-            presenter.sessionDisconnect()
-        }
     }
 }
 

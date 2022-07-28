@@ -85,7 +85,8 @@ struct PresentationVoteListView: View {
         .padding()
         .accentColor(Color("primaryColor"))
         .onAppear() {
-            presenter.clearReceivedVoteList()
+            presenter.isVoteOpen = true
+//            presenter.clearReceivedVoteList()
         }
     }
 }

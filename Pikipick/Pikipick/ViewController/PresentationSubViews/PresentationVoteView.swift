@@ -112,24 +112,13 @@ struct PTVoteView: View {
             Spacer()
 
         } // hstack
+        .onAppear() {
+            presenter.clearReceivedVoteList()
+        }
         .padding(.top, 60)
         .padding(.bottom)
         
     }
-
-//    func returnVoteType(voteType: VoteType) -> [Int] {
-//        let resultList = self.presenter.voteResult()
-//        switch voteType {
-//        case .yesNo:
-//            return [resultList[0], resultList[1]]
-//        case .opt2:
-//            return [resultList[2], resultList[3]]
-//        case .opt3:
-//            return [resultList[2], resultList[3], resultList[4]]
-//        case .opt4:
-//            return [resultList[2], resultList[3], resultList[4], resultList[5]]
-//        }
-//    }
 
 }
 
