@@ -30,6 +30,7 @@ class QuestionsViewController: UIViewController {
 		
 		textView.becomeFirstResponder()
     }
+    
 	@IBAction func sendButtonTapped(_ sender: UIButton) {
 		audience?.sendQuestion(sendQuestion: textView.text ?? "", receiver: deviceName ?? MCPeerID())
 		self.dismiss(animated: true)
