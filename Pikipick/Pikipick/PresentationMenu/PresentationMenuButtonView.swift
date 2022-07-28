@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PresentationMenuButtonListView: View {
     
-    var dividerColor: Color
+    let dividerColor: Color
     
     private let closeButtonColor = Color.closeButtonColor
     private let defaultTextColor = Color.white
