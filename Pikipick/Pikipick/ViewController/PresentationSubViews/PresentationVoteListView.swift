@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PresentationVoteListView: View {
+    @ObservedObject var presenter: SessionPresenter
     
     @Binding var selectedVoteType: VoteType
     @Binding var viewMode: ViewMode
@@ -83,13 +84,16 @@ struct PresentationVoteListView: View {
         }
         .padding()
         .accentColor(Color("primaryColor"))
+        .onAppear() {
+            presenter.clearReceivedVoteList()
+        }
     }
 }
 
-struct PresentationVoteListView_Previews: PreviewProvider {
-    static var previews: some View {
-        PresentationVoteListView(selectedVoteType: .constant(.yesNo), viewMode: .constant(.votelist))
-            .preferredColorScheme(.dark)
-            .previewInterfaceOrientation(.landscapeLeft)
-    }
-}
+//struct PresentationVoteListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PresentationVoteListView(presenter: , selectedVoteType: .constant(.yesNo), viewMode: .constant(.votelist))
+//            .preferredColorScheme(.dark)
+//            .previewInterfaceOrientation(.landscapeLeft)
+//    }
+//}

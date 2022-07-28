@@ -15,7 +15,7 @@ struct Emoji: Hashable {
 
 struct ButtonActionView: View {
     
-    @StateObject var presenter = SessionPresenter()
+    @ObservedObject var presenter: SessionPresenter
     
     @State var currentEmoji: String = ""
     @State private var counter: Int = 0
@@ -53,9 +53,9 @@ struct ButtonActionView: View {
     }
 }
 
-struct ButtonActionView_Previews: PreviewProvider {
-    static var previews: some View {
-        ButtonActionView()
-            .previewInterfaceOrientation(.landscapeLeft)
-    }
-}
+//struct ButtonActionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ButtonActionView()
+//            .previewInterfaceOrientation(.landscapeLeft)
+//    }
+//}
