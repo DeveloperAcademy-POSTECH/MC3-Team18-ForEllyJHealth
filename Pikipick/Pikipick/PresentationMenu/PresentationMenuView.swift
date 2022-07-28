@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PresentationMenuView: View {
+    @Binding var viewMode: ViewMode
     @State var isExpanded = false
-    
-    var deviceName: String
     
     private let dividerColor = Color.dividerColor
     private let buttonWH: CGFloat = 44
     private let txtMaxCount = 18
+    private let deviceName = UIDevice.current.name
     
     var body: some View {
         ZStack {
@@ -34,7 +34,7 @@ struct PresentationMenuView: View {
                         }
                         
                         HStack(spacing: 0) {
-                            PresentationMenuButtonListView(dividerColor: dividerColor)
+                            PresentationMenuButtonListView(viewMode: $viewMode, dividerColor: dividerColor)
                                 .frame(height:buttonWH)
                         }
                         .scaleEffect(x: isExpanded ? 1 : 0, y: 1, anchor: .center)
@@ -63,9 +63,7 @@ struct PresentationMenuView: View {
 
 struct PresentationMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        let testTxt = "Preview Test Text__"
-        
-        PresentationMenuView(deviceName:testTxt)
+        PresentationMenuView(viewMode: .constant(.home))
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

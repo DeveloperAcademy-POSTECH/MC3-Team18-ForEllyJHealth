@@ -11,7 +11,7 @@ enum ViewMode: String {
     case home, votelist, vote, question
 }
 
-struct TestPresentationView: View {
+struct RootPresentationView: View {
     
     @State var viewMode: ViewMode = .home
     @State var selectedVoteType : VoteType = .yesNo
@@ -19,14 +19,12 @@ struct TestPresentationView: View {
     private let buttonSize: CGFloat = 44
     
     var body: some View {
-        
         ZStack{
             VStack{
                 HStack {
                     switch viewMode {
                     case .home:
                         Spacer()
-                        
                     case .votelist, .question:
                         Group{
                             Button{
@@ -52,7 +50,7 @@ struct TestPresentationView: View {
                         }
                     }
                     
-                    Text("Cool's")
+                    Text(UIDevice.current.name)
                         .foregroundColor(.white)
                         .padding()
                         .frame(height: buttonSize, alignment: .center)
@@ -62,11 +60,13 @@ struct TestPresentationView: View {
                 }
                 Spacer()
             }
+            .navigationBarHidden(true)
             .padding()
             
             switch viewMode {
             case .home:
-                HomePresentationView(viewMode: $viewMode)
+                PresentationView(viewMode: $viewMode)
+                
             case .votelist:
                 VStack{
                     PresentationVoteListView(selectedVoteType: $selectedVoteType, viewMode: $viewMode)
@@ -78,6 +78,8 @@ struct TestPresentationView: View {
             case .question:
                 PresentationQuestionView()
             }
+            
+            
         }
         .edgesIgnoringSafeArea([.leading])
         // TODO: 뷰 오리엔테이션 추적가능? 오케이 적용가능
@@ -90,7 +92,7 @@ struct TestPresentationView: View {
 
 struct TestPresentationView_Previews: PreviewProvider {
     static var previews: some View {
-        TestPresentationView()
+        RootPresentationView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
