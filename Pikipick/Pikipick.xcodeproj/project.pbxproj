@@ -33,7 +33,8 @@
 		3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */; };
 		3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05413288BF5BF00BE9E39 /* AppUtility.swift */; };
 		3AF62F332891D2A0003A0EE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F322891D2A0003A0EE4 /* Constants.swift */; };
-		70DE708E28900325009E98A9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE708D28900325009E98A9 /* Extensions.swift */; };
+		7036AE6A2891A5D400D86CDA /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036AE692891A5D400D86CDA /* UIScreen+.swift */; };
+		70B61A2428927AA3009AB83C /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B61A2328927AA3009AB83C /* Color+.swift */; };
 		70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCE92887DDB700B08306 /* PresentationView.swift */; };
 		70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */; };
 		70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */; };
@@ -76,7 +77,8 @@
 		3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 		3AF05413288BF5BF00BE9E39 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		3AF62F322891D2A0003A0EE4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		70DE708D28900325009E98A9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7036AE692891A5D400D86CDA /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
+		70B61A2328927AA3009AB83C /* Color+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		70EFFCE92887DDB700B08306 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
 		70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAnimView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				3A5AE5CC2886DA5A002393E6 /* String+.swift */,
+				70B61A2328927AA3009AB83C /* Color+.swift */,
+				7036AE692891A5D400D86CDA /* UIScreen+.swift */,
 				E265439428919D3600CA8D59 /* UIButton+.swift */,
 			);
 			path = Extensions;
@@ -176,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				E2C2563A2890841A00BF75FC /* Cells */,
-				70DE708C28900325009E98A9 /* Utils */,
 				3A5AE5CB2886DA48002393E6 /* Extensions */,
 				3A5AE5C42886D7FD002393E6 /* MultipeerConnectivity */,
 				E2B6B246288190A20034E0DD /* ViewController */,
@@ -198,14 +201,6 @@
 				E276ACFE2885742900D14369 /* Settings.bundle */,
 			);
 			path = Pikipick;
-			sourceTree = "<group>";
-		};
-		70DE708C28900325009E98A9 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				70DE708D28900325009E98A9 /* Extensions.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		E08EFF842886A0C700582C83 /* Recovered References */ = {
@@ -344,10 +339,12 @@
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,
 				2D4F8B9028919DFF00B78D95 /* PresentationQuestionView.swift in Sources */,
 				3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */,
+				7036AE6A2891A5D400D86CDA /* UIScreen+.swift in Sources */,
 				70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */,
 				3AB219C0287FE94300945A02 /* SceneDelegate.swift in Sources */,
 				E2CDA1AA2890692C00A0C565 /* MainViewController.swift in Sources */,
 				3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */,
+				70B61A2428927AA3009AB83C /* Color+.swift in Sources */,
 				E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */,
 				3AF62F332891D2A0003A0EE4 /* Constants.swift in Sources */,
 			);
