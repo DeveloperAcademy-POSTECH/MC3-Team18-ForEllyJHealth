@@ -29,7 +29,7 @@ struct PresentationView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        showingAlert = true
+                        showingAlert.toggle()
                     }
                 label: {
                     Image(systemName: "chevron.backward")

@@ -34,18 +34,18 @@ struct ButtonAnimView: View {
                 animate.append(false)
                 counter += 1
             }
-            .padding(8)
             .background {
                 Circle()
                     .fill(Color.black)
                     .frame(width: 44, height: 44, alignment: .center)
                 Circle()
-                    .fill(Color.secondary)
+                    .fill(Color.backgroundColor)
                     .frame(width: 40, height: 40, alignment: .center)
                 Circle()
                     .fill(Color.secondaryGradient)
                     .frame(width: 36, height: 36, alignment: .center)
             }
+            .frame(width: 40)
         }
         .onChange(of: presenter.receivedData ?? "", perform: { receivedData in
             let dataEndIndex = receivedData.count - 1
@@ -65,9 +65,9 @@ struct ConfettiContainer: View {
     @State var movement = Movement(x: 0, y: 0, emojiSize: 0.1, opacity: 0)
     @State var animationValues: [Bool] = Array(repeating: false, count: 5)
     @State var emojiPositionSet = false
-    @Binding var animate:Bool
+    @Binding var animate: Bool
     @Binding var emoji: Emoji
-    @Binding var finishedAnimationCouter:Int
+    @Binding var finishedAnimationCouter: Int
     
     var body: some View{
         ZStack{
@@ -80,8 +80,8 @@ struct ConfettiContainer: View {
                         emojiPositionSet.toggle()
                         movement.opacity = 1
                         movement.emojiSize = 20 * movement.emojiSize
-                        movement.x = UIScreen.halfScreenWidth * CGFloat.random(in: -0.4...0.4)
-                        movement.y = -UIScreen.halfScreenHeight * CGFloat.random(in: 0.4...0.8)
+                        movement.x = UIScreen.screenHalfWidth * CGFloat.random(in: -0.4...0.4)
+                        movement.y = -UIScreen.screenHalfHeight * CGFloat.random(in: 0.4...0.8)
                         withAnimation(.easeInOut(duration: 0.35)){
                             animationValues[0] = true
                         }
@@ -98,7 +98,7 @@ struct ConfettiContainer: View {
                             animationValues[4] = true
                         }
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.42) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                         
                         withAnimation(Animation.easeIn(duration: 3)) {
                             movement.y = 200
