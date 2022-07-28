@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension UIScreen{
+extension UIScreen {
    static let screenWidth = UIScreen.main.bounds.size.width / 4
    static let screenHeight = UIScreen.main.bounds.size.height / 2
    static let screenSize = UIScreen.main.bounds.size
