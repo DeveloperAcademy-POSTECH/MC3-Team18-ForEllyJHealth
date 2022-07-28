@@ -222,10 +222,19 @@ class AudienceViewController: UIViewController {
     }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == Segue.audience.identifier {
-			let questionsVC = segue.destination as! QuestionsViewController
-			questionsVC.audience = audience
-			questionsVC.deviceName = deviceName
-		}
+        if segue.destination is QuestionsViewController {
+                    guard let questionsVC = segue.destination as? QuestionsViewController else { return }
+            questionsVC.audience = self.audience
+            questionsVC.deviceName = self.audience.currentPresenter
+                }
+//		if segue.identifier == Segue.audience.identifier {
+//			let questionsVC = segue.destination as! QuestionsViewController
+//            DispatchQueue.main.async {
+//                questionsVC.text = "HIIII"
+//                questionsVC.audience = self.audience
+//                questionsVC.deviceName = self.audience.currentPresenter ?? MCPeerID()
+//                print(self.audience.currentPresenter?.displayName ?? "eeeee")
+//            }
+//		}
 	}
 }

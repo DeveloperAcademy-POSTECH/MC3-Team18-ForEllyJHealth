@@ -50,7 +50,7 @@ struct PresentationQuestionView: View {
                 }
                 .padding()
                 ScrollView {
-                    Text(selectedIdx == -1 ? "질문을 선택해주세요." : questionListSample[selectedIdx])
+                    Text(selectedIdx == -1 ? "질문을 선택해주세요." : presenter.receivedQuestionList[selectedIdx])
                         .font(.title2)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.leading)

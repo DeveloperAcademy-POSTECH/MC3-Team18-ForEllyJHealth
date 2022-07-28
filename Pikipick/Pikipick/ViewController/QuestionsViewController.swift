@@ -15,7 +15,7 @@ class QuestionsViewController: UIViewController {
 	@IBOutlet weak var sendButton: UIButton!
 	
 	var audience: SessionAudience?
-	var deviceName: MCPeerID?
+    var deviceName: MCPeerID?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class QuestionsViewController: UIViewController {
     }
     
 	@IBAction func sendButtonTapped(_ sender: UIButton) {
-		audience?.sendQuestion(sendQuestion: textView.text ?? "", receiver: deviceName ?? MCPeerID())
-		self.dismiss(animated: true)
+        audience?.sendQuestion(sendQuestion: textView.text ?? "", receiver: deviceName ?? MCPeerID())
+        self.dismiss(animated: true)
 	}
 }
