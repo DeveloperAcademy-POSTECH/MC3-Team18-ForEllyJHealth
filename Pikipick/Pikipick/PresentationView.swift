@@ -13,37 +13,41 @@ struct PresentationView: View {
     @State private var showingAlert = false
     
     var body: some View {
-        VStack{
-            Spacer()
-            ButtonActionView()
-        }
-        .onAppear(perform: {
-            AppUtility.lockOrientation(UIInterfaceOrientationMask.landscape)
-            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
-            UINavigationController.attemptRotationToDeviceOrientation()
-        })
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    showingAlert = true
+        ZStack{
+            Color.backgroundColor.ignoresSafeArea()
+            VStack{
+                Spacer()
+                ButtonActionView()
+                    .offset(y: -17)
+            }
+            .onAppear(perform: {
+                AppUtility.lockOrientation(UIInterfaceOrientationMask.landscape)
+                UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+                UINavigationController.attemptRotationToDeviceOrientation()
+            })
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showingAlert.toggle()
+                    }
+                label: {
+                    Image(systemName: "chevron.backward")
+                    Text("Back")
                 }
-            label: {
-                Image(systemName: "chevron.backward")
-                Text("Back")
+                }
             }
+            .alert("알람타이틀",isPresented: $showingAlert) {
+                Button("나가기", role: .destructive) {
+                    AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait)
+                    UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
+                        dismiss()
+                    })
+                }
+            } message: {
+                Text("샘플입니다.")
             }
-        }
-        .alert("알람타이틀",isPresented: $showingAlert) {
-            Button("나가기", role: .destructive) {
-                AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait)
-                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
-                    dismiss()
-                })
-            }
-        } message: {
-            Text("샘플입니다.")
         }
     }
 }
@@ -51,5 +55,6 @@ struct PresentationView: View {
 struct PresentationView_Previews: PreviewProvider {
     static var previews: some View {
         PresentationView()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
