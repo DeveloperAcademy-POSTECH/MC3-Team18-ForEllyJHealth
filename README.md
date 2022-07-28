@@ -53,7 +53,7 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 
 ## :fireworks: Screenshots
 
-| HomeView | RemoteView | PeerView |
+| HomeView | RemoteView | QuestionView |
 |:---:|:---:|:---:|
 |![App Screenshot](https://user-images.githubusercontent.com/74142881/181611398-b58eb0c9-3760-4094-b4fa-90fe81bf952d.png)|![App Screenshot](https://user-images.githubusercontent.com/74142881/181611778-73a348d4-2e92-41f2-a863-efd67314b51c.png)|![App Screenshot](https://user-images.githubusercontent.com/74142881/181611414-11fcf9b7-3b6e-48fc-9374-f98a048f1c2d.png)|
 
@@ -65,7 +65,7 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 
 | PeedBackView |
 |:---:|
-|![App Screenshot](https://user-images.githubusercontent.com/74142881/181611413-0841e2c0-468e-4967-9a40-529e9e84fe2b.png)|
+|![App Screenshot](https://user-images.githubusercontent.com/74142881/181622420-3bf8b696-9962-4044-af2b-2d050ee59c06.png)|
 
 <br>
 
