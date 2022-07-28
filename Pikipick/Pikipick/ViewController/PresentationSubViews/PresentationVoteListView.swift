@@ -9,10 +9,10 @@ import SwiftUI
 
 struct PresentationVoteListView: View {
     
-    @Binding var selectedVoteType: voteType
-    @Binding var viewMode: mode
+    @Binding var selectedVoteType: VoteType
+    @Binding var viewMode: ViewMode
     
-    private let voteTypeList : [voteType] = [voteType.yesNo, voteType.opt2, voteType.opt3, voteType.opt4]
+    private let voteTypeList : [VoteType] = [VoteType.yesNo, VoteType.opt2, VoteType.opt3, VoteType.opt4]
     
     var body: some View {
         HStack {
@@ -60,7 +60,7 @@ struct PresentationVoteListView: View {
                     selectedVoteType = voteTypeList[idx]
                     viewMode = .vote
                 } label: {
-                    ZStack {
+                    ZStack() {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color("secondaryColor"), lineWidth: 1)
                         

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-enum voteType: CaseIterable {
-    
+enum VoteType: CaseIterable {
     case yesNo, opt2, opt3, opt4
+    
     var options: [String] {
         switch self {
         case .yesNo:
@@ -22,6 +22,33 @@ enum voteType: CaseIterable {
             return ["emoji_one_32px", "emoji_two_32px", "emoji_three_32px", "emoji_four_32px"]
         }
     }
+    
+    var viewSpacing: CGFloat {
+        switch self{
+        case .yesNo:
+            return 32
+        case .opt2:
+            return 32
+        case .opt3:
+            return 24
+        case .opt4:
+            return 16
+        }
+    }
+    
+    var viewRatio: CGFloat {
+        switch self{
+        case .yesNo:
+            return 1.2
+        case .opt2:
+            return 1.2
+        case .opt3:
+            return 1
+        case .opt4:
+            return 0.8
+        }
+    }
+    
     // MARK: 데이터 처리를 위해서 -> 딕셔너리에 할당된 이넘의 케이스를 넣어주어야함
     var emojiTag: [String] {
         switch self {
@@ -37,11 +64,13 @@ enum voteType: CaseIterable {
     }
 }
 
-struct PresentationVoteView: View {
-    let selectedVoteType : voteType
+struct PTVoteView: View {
+    
+    let selectedVoteType : VoteType
+    
     var body: some View {
-        HStack {
-            
+        HStack(spacing: selectedVoteType.viewSpacing) {
+            Spacer()
             ForEach (0 ..< selectedVoteType.options.count) { idx in
                 ZStack(alignment: .top) {
                     
@@ -57,32 +86,46 @@ struct PresentationVoteView: View {
                             .font(.system(size: 96))
                             .bold()
                     }
+                    .aspectRatio(selectedVoteType.viewRatio, contentMode: .fit)
                     .padding(.top, 36)
+
                     
                     ZStack {
                         Circle()
-                            .foregroundColor(.black)
+                        .foregroundColor(.black)
                         Circle()
                             .foregroundColor(Color.backgroundColor)
                             .padding(3)
-                        Circle()
-                            .foregroundColor(.black)
+                        Rectangle()
+                            .overlay(Color.secondaryGradient)
+                            .clipShape(Circle())
                             .padding(6)
                         Image(selectedVoteType.options[idx])
                     }
                     .frame(width: 72, height: 72, alignment: .center)
                 }// zstack
-                .padding()
                 .accentColor(Color("primaryColor"))
-            }
+
+            } //foreach
+            Spacer()
+
         } // hstack
+        .padding(.top, 60)
+        .padding(.bottom)
         
     }
 }
 
 struct PTVoteView_Previews: PreviewProvider {
     static var previews: some View {
-        PresentationVoteView(selectedVoteType: .yesNo)
+        Group{
+        PTVoteView(selectedVoteType: .yesNo)
             .previewInterfaceOrientation(.landscapeLeft)
+        PTVoteView(selectedVoteType: .opt3)
+            .previewInterfaceOrientation(.landscapeLeft)
+        PTVoteView(selectedVoteType: .opt4)
+            .previewInterfaceOrientation(.landscapeLeft)
+        }
+        .preferredColorScheme(.dark)
     }
 }
