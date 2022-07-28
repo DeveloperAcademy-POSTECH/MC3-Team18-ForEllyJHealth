@@ -10,6 +10,7 @@ import UIKit
 
 class AudienceViewController: UIViewController {
     
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emojiView: UIView!
     @IBOutlet weak var voteView: UIView!
@@ -28,6 +29,7 @@ class AudienceViewController: UIViewController {
     @IBOutlet weak var fourButton: UIButton!
     @IBOutlet weak var longPressGesture: UILongPressGestureRecognizer!
     @IBOutlet weak var sendButton: UIButton!
+    
 
     var circularProgressBarView: CircularProgressBarView!
     var circularViewDuration: TimeInterval = 1.5
@@ -48,6 +50,11 @@ class AudienceViewController: UIViewController {
         if let text = deviceName?.displayName {
             titleLabel.text = "\(text.substring(from: 0, to: deviceNameLength))"
         }
+
+        backButton?.applyGradient(colours: [UIColor(named: "gradientFirstColor") ?? UIColor.black, UIColor.black], locations: [0.0, 1.0])
+        backButton?.layer.cornerRadius = backButton.frame.height/2
+        backButton?.layer.borderColor = UIColor(named: "secondaryColor")?.cgColor
+        backButton?.layer.borderWidth = 1
         
         segmentControl?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
         segmentControl?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
@@ -69,6 +76,9 @@ class AudienceViewController: UIViewController {
         audience.sessionDisconnect()
     }
 
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func pressButton(_ sender: UIButton) {
         sendButton.configuration?.background.strokeColor = UIColor(named: "primaryColor")
         setUpCircularProgressBarView()
