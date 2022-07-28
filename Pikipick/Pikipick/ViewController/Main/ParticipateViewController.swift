@@ -94,7 +94,6 @@ class ParticipateViewController: UIViewController, UITableViewDelegate {
 			if let indexPath = indexPath {
                 audienceVC.deviceName = presenterList[indexPath.row]
 			}
-			
 		}
 	}
 }
