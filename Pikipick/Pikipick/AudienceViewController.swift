@@ -88,7 +88,24 @@ class AudienceViewController: UIViewController {
             if emojiView.alpha == 1.0 {
                 audience.sendEmoji(sendEmoji: emoji, receiver: deviceName!)
             } else {
-                audience.sendVote(sendVote: emoji, receiver: deviceName!)
+                var voteResult = 0
+                switch emoji {
+                case "🙆‍♂️":
+                    voteResult = 0
+                case "🙅‍♀️":
+                    voteResult = 1
+                case "1️⃣":
+                    voteResult = 2
+                case "2️⃣":
+                    voteResult = 3
+                case "3️⃣":
+                    voteResult = 4
+                case "4️⃣":
+                    voteResult = 5
+                default:
+                    voteResult = -1
+                }
+                audience.sendVote(sendVote: voteResult, receiver: deviceName!)
             }
             if let existEmoji = emojiButton {
                 existEmoji.configuration?.baseBackgroundColor = UIColor(named: "secondaryColor")
