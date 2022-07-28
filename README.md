@@ -55,23 +55,23 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 
 | HomeView | RemoteView | QuestionView |
 |:---:|:---:|:---:|
-|![App Screenshot](https://user-images.githubusercontent.com/74142881/181611398-b58eb0c9-3760-4094-b4fa-90fe81bf952d.png)|![App Screenshot](https://user-images.githubusercontent.com/74142881/181611778-73a348d4-2e92-41f2-a863-efd67314b51c.png)|![App Screenshot](https://user-images.githubusercontent.com/74142881/181611414-11fcf9b7-3b6e-48fc-9374-f98a048f1c2d.png)|
+|<img align='' alt="HomeView" src="https://user-images.githubusercontent.com/74142881/181611398-b58eb0c9-3760-4094-b4fa-90fe81bf952d.png" width= '500px'/></a>|<img align='' alt="RemoteView" src="https://user-images.githubusercontent.com/74142881/181611778-73a348d4-2e92-41f2-a863-efd67314b51c.png" width= '500px'/></a>|<img align='' alt="QuestionView" src="https://user-images.githubusercontent.com/74142881/181611414-11fcf9b7-3b6e-48fc-9374-f98a048f1c2d.png" width= '500px'/></a>|
 
 <br>
 
 | PresentationView |
 |:---:|
-|![App Screenshot](https://user-images.githubusercontent.com/74142881/181612665-748d6f02-f3de-4d03-90bb-8c25318e3c28.png)|
+|<img align='' alt="PresentationView" src="https://user-images.githubusercontent.com/74142881/181612665-748d6f02-f3de-4d03-90bb-8c25318e3c28.png" width= '700px'/></a>|
 
 | PeedBackView |
 |:---:|
-|![App Screenshot](https://user-images.githubusercontent.com/74142881/181622420-3bf8b696-9962-4044-af2b-2d050ee59c06.png)|
+|<img align='' alt="PeedBackView" src="https://user-images.githubusercontent.com/74142881/181622420-3bf8b696-9962-4044-af2b-2d050ee59c06.png" width= '700px'/></a>|
 
 <br>
 
 | VoteView |
 |:---:|
-|![App Screenshot](https://user-images.githubusercontent.com/74142881/181612965-f21637c6-3d8a-47ab-a6b6-b344abafefbc.png)|
+|<img align='' alt="VoteView" src="https://user-images.githubusercontent.com/74142881/181612965-f21637c6-3d8a-47ab-a6b6-b344abafefbc.png" width= '700px'/></a>|
 
 
 ## :sparkles: Skills & Tech Stack
