@@ -65,6 +65,7 @@ enum VoteType: CaseIterable {
 }
 
 struct PTVoteView: View {
+    @ObservedObject var presenter: SessionPresenter
     
     let selectedVoteType : VoteType
     
@@ -116,16 +117,16 @@ struct PTVoteView: View {
     }
 }
 
-struct PTVoteView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group{
-        PTVoteView(selectedVoteType: .yesNo)
-            .previewInterfaceOrientation(.landscapeLeft)
-        PTVoteView(selectedVoteType: .opt3)
-            .previewInterfaceOrientation(.landscapeLeft)
-        PTVoteView(selectedVoteType: .opt4)
-            .previewInterfaceOrientation(.landscapeLeft)
-        }
-        .preferredColorScheme(.dark)
-    }
-}
+//struct PTVoteView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group{
+//        PTVoteView(selectedVoteType: .yesNo)
+//            .previewInterfaceOrientation(.landscapeLeft)
+//        PTVoteView(selectedVoteType: .opt3)
+//            .previewInterfaceOrientation(.landscapeLeft)
+//        PTVoteView(selectedVoteType: .opt4)
+//            .previewInterfaceOrientation(.landscapeLeft)
+//        }
+//        .preferredColorScheme(.dark)
+//    }
+//}
