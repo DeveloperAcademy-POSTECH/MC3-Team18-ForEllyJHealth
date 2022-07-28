@@ -41,7 +41,6 @@ struct PresentationMenuButtonView: View {
                 print("CloseButton Pressed")
             case .vote:
                 print("VoteButton Pressed")
-                break
             case .question:
                 print("QuestionButton Pressed")
                 break
