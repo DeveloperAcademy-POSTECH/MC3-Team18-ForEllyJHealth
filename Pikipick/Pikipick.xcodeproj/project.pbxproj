@@ -42,6 +42,8 @@
 		E00114DD2892AFAB00117C63 /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E00114DC2892AFAB00117C63 /* SF-Compact-Rounded-Bold.otf */; };
 		E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */; };
 		E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */; };
+		E24F1AD42892FEC900FF5574 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F1AD32892FEC900FF5574 /* QuestionsViewController.swift */; };
+		E24F1AD62892FEE700FF5574 /* QuestionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24F1AD52892FEE700FF5574 /* QuestionsStoryboard.storyboard */; };
 		E265439528919D3600CA8D59 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265439428919D3600CA8D59 /* UIButton+.swift */; };
 		E276ACFF2885742900D14369 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E276ACFE2885742900D14369 /* Settings.bundle */; };
 		E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B24B288191AC0034E0DD /* ParticipateViewController.swift */; };
@@ -90,6 +92,8 @@
 		E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudienceViewController.swift; sourceTree = "<group>"; };
 		E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudienceStoryboard.storyboard; sourceTree = "<group>"; };
 		E21D99352887D4070065CB2A /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		E24F1AD32892FEC900FF5574 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		E24F1AD52892FEE700FF5574 /* QuestionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionsStoryboard.storyboard; sourceTree = "<group>"; };
 		E265439428919D3600CA8D59 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		E276ACFE2885742900D14369 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E2B6B249288191400034E0DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
@@ -206,16 +210,9 @@
 				3AB219C6287FE94300945A02 /* Pikipick.xcdatamodeld */,
 				3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */,
 				E276ACFE2885742900D14369 /* Settings.bundle */,
+				E24F1AD52892FEE700FF5574 /* QuestionsStoryboard.storyboard */,
 			);
 			path = Pikipick;
-			sourceTree = "<group>";
-		};
-		70DE708C28900325009E98A9 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				70DE708D28900325009E98A9 /* Extensions.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		E00114D72892ADF500117C63 /* Font */ = {
@@ -242,6 +239,7 @@
 			children = (
 				2D4F8B84289031FF00B78D95 /* PresentationSubViews */,
 				E2B6B247288190B90034E0DD /* Main */,
+				E24F1AD32892FEC900FF5574 /* QuestionsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -322,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E276ACFF2885742900D14369 /* Settings.bundle in Resources */,
+				E24F1AD62892FEE700FF5574 /* QuestionsStoryboard.storyboard in Resources */,
 				3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */,
 				3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */,
 				E00114D92892AE0800117C63 /* SF-Pro-Display-Bold.otf in Resources */,
@@ -354,6 +353,7 @@
 				3A86767A288EDF3A00209733 /* MultipeerVoteDataModel.swift in Sources */,
 				E265439528919D3600CA8D59 /* UIButton+.swift in Sources */,
 				70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */,
+				E24F1AD42892FEC900FF5574 /* QuestionsViewController.swift in Sources */,
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3AC11CD328903F5D00194A05 /* Segment.swift in Sources */,
 				3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */,
