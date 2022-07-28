@@ -86,7 +86,7 @@ struct PresentationVoteListView: View {
     }
 }
 
-struct PTVoteListView_Previews: PreviewProvider {
+struct PresentationVoteListView_Previews: PreviewProvider {
     static var previews: some View {
         PresentationVoteListView(selectedVoteType: .constant(.yesNo), viewMode: .constant(.votelist))
             .preferredColorScheme(.dark)

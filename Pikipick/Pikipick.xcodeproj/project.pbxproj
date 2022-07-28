@@ -13,7 +13,6 @@
 		2D4F8B8E2890C1DB00B78D95 /* PresentationVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8D2890C1DB00B78D95 /* PresentationVoteView.swift */; };
 		2D4F8B9028919DFF00B78D95 /* PresentationQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8F28919DFF00B78D95 /* PresentationQuestionView.swift */; };
 		2D4F8B922891A4A900B78D95 /* QuestionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */; };
-		3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C22886D73F002393E6 /* Constants.swift */; };
 		3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C52886D817002393E6 /* SessionPresenter.swift */; };
 		3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */; };
 		3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C92886DA06002393E6 /* SessionAudience.swift */; };
@@ -208,6 +207,7 @@
 			children = (
 				E2B6B249288191400034E0DD /* SettingTableViewController.swift */,
 				E21D99352887D4070065CB2A /* Segment.swift */,
+				3A5AE5C22886D73F002393E6 /* Constants.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -312,11 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
-				70DE708E28900325009E98A9 /* Extensions.swift in Sources */,
 				2D4F8B8C28903A2B00B78D95 /* PresentationVoteListView.swift in Sources */,
-				3AB219C2287FE94300945A02 /* MainViewController.swift in Sources */,
 				2D4F8B922891A4A900B78D95 /* QuestionButtonView.swift in Sources */,
-				E21D99362887D4070065CB2A /* Segment.swift in Sources */,
 				3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */,
 				3A75CF38289143BB009686CA /* MenuButtonViewType.swift in Sources */,
 				E2C2563C2890844100BF75FC /* ParticipateTableViewCell.swift in Sources */,
@@ -333,7 +330,6 @@
 				3AC11CD328903F5D00194A05 /* Segment.swift in Sources */,
 				3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */,
 				2D4F8B8A289038C500B78D95 /* HomePresentationView.swift in Sources */,
-				3A5AE5C32886D73F002393E6 /* Constants.swift in Sources */,
 				3AC11CCF2890133D00194A05 /* PresentationMenuView.swift in Sources */,
 				3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */,
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,

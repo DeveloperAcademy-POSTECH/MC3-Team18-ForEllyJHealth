@@ -69,14 +69,14 @@ struct TestPresentationView: View {
                 HomePresentationView(viewMode: $viewMode)
             case .votelist:
                 VStack{
-                    PTVoteListView(selectedVoteType: $selectedVoteType, viewMode: $viewMode)
+                    PresentationVoteListView(selectedVoteType: $selectedVoteType, viewMode: $viewMode)
                         .padding(.top, 60)
                 }
             case .vote:
                 PTVoteView(selectedVoteType: selectedVoteType)
                     .padding(.vertical, 8)
             case .question:
-                PTQuestionView()
+                PresentationQuestionView()
             }
         }
         .edgesIgnoringSafeArea([.leading])

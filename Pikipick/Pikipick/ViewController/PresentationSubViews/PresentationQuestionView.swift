@@ -68,7 +68,7 @@ struct PresentationQuestionView: View {
     }
 }
 
-struct PTQuestionView_Previews: PreviewProvider {
+struct PresentationQuestionView_Previews: PreviewProvider {
     static var previews: some View {
         PresentationQuestionView()
             .preferredColorScheme(.dark)
