@@ -92,12 +92,13 @@ struct PTVoteView: View {
                     
                     ZStack {
                         Circle()
-                            .foregroundColor(.black)
+                        .foregroundColor(.black)
                         Circle()
                             .foregroundColor(Color.backgroundColor)
                             .padding(3)
-                        Circle()
-                            .foregroundColor(.black)
+                        Rectangle()
+                            .overlay(Color.secondaryGradient)
+                            .clipShape(Circle())
                             .padding(6)
                         Image(selectedVoteType.options[idx])
                     }
@@ -117,11 +118,14 @@ struct PTVoteView: View {
 
 struct PTVoteView_Previews: PreviewProvider {
     static var previews: some View {
+        Group{
         PTVoteView(selectedVoteType: .yesNo)
             .previewInterfaceOrientation(.landscapeLeft)
         PTVoteView(selectedVoteType: .opt3)
             .previewInterfaceOrientation(.landscapeLeft)
         PTVoteView(selectedVoteType: .opt4)
             .previewInterfaceOrientation(.landscapeLeft)
+        }
+        .preferredColorScheme(.dark)
     }
 }

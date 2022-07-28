@@ -60,7 +60,7 @@ struct PTVoteListView: View {
                     selectedVoteType = voteTypeList[idx]
                     viewMode = .vote
                 } label: {
-                    ZStack {
+                    ZStack() {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color("secondaryColor"), lineWidth: 1)
                         
