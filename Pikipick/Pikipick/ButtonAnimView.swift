@@ -80,8 +80,8 @@ struct ConfettiContainer: View {
                         emojiPositionSet.toggle()
                         movement.opacity = 1
                         movement.emojiSize = 20 * movement.emojiSize
-                        movement.x = UIScreen.screenWidth * CGFloat.random(in: -0.7...0.7)
-                        movement.y = -UIScreen.screenHeight * CGFloat.random(in: 0.4...0.8)
+                        movement.x = UIScreen.halfScreenWidth * CGFloat.random(in: -0.4...0.4)
+                        movement.y = -UIScreen.halfScreenHeight * CGFloat.random(in: 0.4...0.8)
                         withAnimation(.easeInOut(duration: 0.35)){
                             animationValues[0] = true
                         }
