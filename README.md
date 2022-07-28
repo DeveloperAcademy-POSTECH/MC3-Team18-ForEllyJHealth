@@ -1,3 +1,6 @@
+![img](https://user-images.githubusercontent.com/74142881/181620133-c6f5895e-5b5b-4a76-b62e-542a0c9b071b.png)
+---
+
 # :iphone: Piki Pick 
 
 Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다. 
