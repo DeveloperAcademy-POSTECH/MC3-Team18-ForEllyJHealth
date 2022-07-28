@@ -50,16 +50,16 @@ enum VoteType: CaseIterable {
     }
     
     // MARK: 데이터 처리를 위해서 -> 딕셔너리에 할당된 이넘의 케이스를 넣어주어야함
-    var emojiTag: [String] {
+    var emojiTag: [Vote] {
         switch self {
         case .yesNo:
-            return ["emoji_man_ok_32px", "emoji_woman_no_32px"]
+            return [Vote.yes, Vote.no]
         case .opt2:
-            return ["emoji_one_32px", "emoji_two_32px"]
+            return [Vote.option1, Vote.option2]
         case .opt3:
-            return ["emoji_one_32px", "emoji_two_32px", "emoji_three_32px"]
+            return [Vote.option1, Vote.option2, Vote.option3]
         case .opt4:
-            return ["emoji_one_32px", "emoji_two_32px", "emoji_three_32px", "emoji_four_32px"]
+            return [Vote.option1, Vote.option2, Vote.option3, Vote.option4]
         }
     }
 }
@@ -81,7 +81,8 @@ struct PTVoteView: View {
                             .cornerRadius(30)
                         RoundedRectangle(cornerRadius: 30)
                             .strokeBorder(Color.secondaryColor, lineWidth: 1)
-                        Text("11")
+//                        Text("\(returnVoteType(voteType: selectedVoteType)[idx])")
+                        Text("\(presenter.voteResult()[selectedVoteType.emojiTag[idx]] ?? -1)")
                         // TODO: 인덱스에 맞게 해당 위치에 대한 값을 반환해주어야함.
                             .foregroundColor(.accentColor)
                             .font(.system(size: 96))
