@@ -14,7 +14,7 @@ struct PresentationMenuView: View {
     
     private let dividerColor = Color.dividerColor
     private let buttonWH: CGFloat = 44
-    private let txtMaxLength = 18
+    private let txtMaxCount = 18
     
     var body: some View {
         ZStack {
