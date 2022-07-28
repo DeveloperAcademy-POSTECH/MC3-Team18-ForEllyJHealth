@@ -13,6 +13,8 @@ enum ViewMode: String {
 
 struct RootPresentationView: View {
     
+    @StateObject var presenter = SessionPresenter()
+    
     @State var viewMode: ViewMode = .home
     @State var selectedVoteType : VoteType = .yesNo
     
@@ -65,7 +67,7 @@ struct RootPresentationView: View {
             
             switch viewMode {
             case .home:
-                PresentationView(viewMode: $viewMode)
+                PresentationView(presenter: presenter, viewMode: $viewMode)
                 
             case .votelist:
                 VStack{
@@ -73,10 +75,10 @@ struct RootPresentationView: View {
                         .padding(.top, 60)
                 }
             case .vote:
-                PTVoteView(selectedVoteType: selectedVoteType)
+                PTVoteView(presenter: presenter, selectedVoteType: selectedVoteType)
                     .padding(.vertical, 8)
             case .question:
-                PresentationQuestionView()
+                PresentationQuestionView(presenter: presenter)
             }
             
             

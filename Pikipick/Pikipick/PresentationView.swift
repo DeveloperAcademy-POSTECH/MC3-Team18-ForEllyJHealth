@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PresentationView: View {
     @Environment (\.dismiss) var dismiss
+    @ObservedObject var presenter: SessionPresenter
     @Binding var viewMode: ViewMode
     @State var isPresentationReady : Bool = false
     @State private var showingAlert = false
@@ -19,7 +20,7 @@ struct PresentationView: View {
             PresentationMenuView(viewMode: $viewMode, isExpanded: false)
             VStack{
                 Spacer()
-                ButtonActionView()
+                ButtonActionView(presenter: presenter)
                     .offset(y: -17)
             }
             .onAppear(perform: {
@@ -31,9 +32,9 @@ struct PresentationView: View {
     }
 }
 
-struct PresentationView_Previews: PreviewProvider {
-    static var previews: some View {
-        PresentationView(viewMode: .constant(.question))
-            .previewInterfaceOrientation(.landscapeLeft)
-    }
-}
+//struct PresentationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PresentationView(viewMode: .constant(.question))
+//            .previewInterfaceOrientation(.landscapeLeft)
+//    }
+//}
