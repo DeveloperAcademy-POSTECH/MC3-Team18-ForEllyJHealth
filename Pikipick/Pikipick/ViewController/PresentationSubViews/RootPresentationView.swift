@@ -13,8 +13,9 @@ enum ViewMode: String {
 
 struct RootPresentationView: View {
     
+    @State private var orientation = UIDeviceOrientation.unknown
     @StateObject var presenter = SessionPresenter()
-    
+
     @State var viewMode: ViewMode = .home
     @State var selectedVoteType : VoteType = .yesNo
     
@@ -83,12 +84,18 @@ struct RootPresentationView: View {
             
             
         }
-        .edgesIgnoringSafeArea([.leading])
-        // TODO: 뷰 오리엔테이션 추적가능? 오케이 적용가능
-        
-        //        ignoresSafeArea(.container, edges: .top)
+        .onAppear(perform: {
+            AppUtility.lockOrientation(UIInterfaceOrientationMask.landscape)
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+            UINavigationController.attemptRotationToDeviceOrientation()
+        })
+        .edgesIgnoringSafeArea(orientation == .landscapeRight ? [.leading] : [.trailing])
         .background(Color("backgroundColor"))
         .accentColor(Color("primaryColor"))
+        .onRotate { newOrientation in
+            // https://www.hackingwithswift.com/quick-start/swiftui/how-to-detect-device-rotation
+            orientation = newOrientation
+        }
     }
 }
 

@@ -17,7 +17,6 @@ struct PresentationMenuView: View {
     private let deviceName = UIDevice.current.name
     
     var body: some View {
-        ZStack {
             VStack {
                 HStack() {
                     Spacer()
@@ -54,10 +53,11 @@ struct PresentationMenuView: View {
                     .background(RoundedRectangle(cornerRadius: 10)
                         .fill(Color.secondaryColor)
                         .animation(.default, value: isExpanded))
-                }.padding(.top)
+                    
+                }
+                .padding()
                 Spacer()
             }
-        }
     }
 }
 
