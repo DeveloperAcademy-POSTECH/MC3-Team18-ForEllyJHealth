@@ -44,12 +44,12 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 
 ## :framed_picture: Demo
 
-### [⭐️ PikiPick ⭐️](https://youtu.be/bBylSazJQlQ)유튜브 영상데모 보러가기
-### [⭐️ 사용방법 ⭐️](https://youtu.be/0zftlcXqkXs)시뮬레이터 작동영상 보러가기
+#### [⭐️ PikiPick ⭐️]()유튜브 영상데모
+#### [⭐️ 사용방법 ⭐️]()시뮬레이터 작동영상
 
 ## 🌈 Design Guide 
 
-![DsignGuide]()
+<img width="920" alt="스크린샷" src="https://user-images.githubusercontent.com/74142881/181621937-70aabd64-378a-46bc-a6a7-ed5d7cc8ee24.png">
 
 ## :fireworks: Screenshots
 
