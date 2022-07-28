@@ -7,18 +7,8 @@
 
 import MultipeerConnectivity
 import UIKit
-import SwiftUI
 
 class AudienceViewController: UIViewController {
-    
-    @IBOutlet weak var animatedCountingLabel: UILabel!
-    
-    var circularProgressBarView: CircularProgressBarView!
-    var circularViewDuration: TimeInterval = 1.5
-    
-    private let fadeOutTime = 3
-    var isHapticOn : Bool = true
-    var impactFeedbackGenerator: UIImpactFeedbackGenerator?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emojiView: UIView!
@@ -37,13 +27,17 @@ class AudienceViewController: UIViewController {
     @IBOutlet weak var threeButton: UIButton!
     @IBOutlet weak var fourButton: UIButton!
     @IBOutlet weak var longPressGesture: UILongPressGestureRecognizer!
-    
     @IBOutlet weak var sendButton: UIButton!
-    var beforeButton: UIButton!
- 
+
+    var circularProgressBarView: CircularProgressBarView!
+    var circularViewDuration: TimeInterval = 1.5
+    
+    var isHapticOn : Bool = true
+    var impactFeedbackGenerator: UIImpactFeedbackGenerator?
     
     var emoji: String = ""
     var emojiButton: UIButton!
+    var beforeButton: UIButton!
     
     var deviceName: MCPeerID?
     private var audience = SessionAudience()
@@ -56,27 +50,57 @@ class AudienceViewController: UIViewController {
         }
         
         segmentControl?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
-        
         segmentControl?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
         
         audience.startAdvertise()
         audience.currentPresenter = deviceName
-
     }
     
-    func setUpCircularProgressBarView() {
-        // set view
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UserDefaults.standard.object(forKey: "Haptic_preference") == nil {
+            UserDefaults.standard.set(true, forKey: "Haptic_preference")
+        }
+        isHapticOn = UserDefaults.standard.object(forKey: "Haptic_preference") as? Bool ?? true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        audience.stopAdvertise()
+        audience.sessionDisconnect()
+    }
+
+    @IBAction func pressButton(_ sender: UIButton) {
+        sendButton.configuration?.background.strokeColor = UIColor(named: "primaryColor")
+        setUpCircularProgressBarView()
+    }
+    
+    @IBAction func cancelPressing(_ sender: UIButton) {
         circularProgressBarView = CircularProgressBarView(frame: .zero)
-        // align to the center of the screen
-//        circularProgressBarView.center = view.center
-        // call the animation with circularViewDuration
-        circularProgressBarView.progressAnimation(duration: circularViewDuration)
         circularProgressBarView.createCircularPath()
-        // add this view to the view controller
         view.addSubview(circularProgressBarView)
         circularProgressBarView.translatesAutoresizingMaskIntoConstraints = false
         circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
         circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
+    }
+    
+    @IBAction func sendAction(_ sender: UILongPressGestureRecognizer) {
+        if longPressGesture.state.rawValue == 1 {
+            if emojiView.alpha == 1.0 {
+                audience.sendEmoji(sendEmoji: emoji, receiver: deviceName!)
+            } else {
+                audience.sendVote(sendVote: emoji, receiver: deviceName!)
+            }
+            if let existEmoji = emojiButton {
+                existEmoji.configuration?.baseBackgroundColor = UIColor(named: "secondaryColor")
+            }
+            circularProgressBarView = CircularProgressBarView(frame: .zero)
+            circularProgressBarView.createCircularPath()
+            view.addSubview(circularProgressBarView)
+            circularProgressBarView.translatesAutoresizingMaskIntoConstraints = false
+            circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
+            circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
+            emoji = ""
+        }
     }
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
@@ -87,51 +111,6 @@ class AudienceViewController: UIViewController {
             emojiView.alpha = 0.0
             voteView.alpha = 1.0
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if UserDefaults.standard.object(forKey: "Haptic_preference") == nil {
-            UserDefaults.standard.set(true, forKey: "Haptic_preference")
-        }
-        isHapticOn = UserDefaults.standard.object(forKey: "Haptic_preference") as? Bool ?? true
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        audience.stopAdvertise()
-        audience.sessionDisconnect()
-    }
-    
-    @IBAction func sendIt(_ sender: UILongPressGestureRecognizer) {
-        if longPressGesture.state.rawValue == 1 {
-            print(emoji)
-            if emojiView.alpha == 1.0 {
-                audience.sendEmoji(sendEmoji: emoji, receiver: deviceName!)
-            } else {
-                audience.sendVote(sendVote: emoji, receiver: deviceName!)
-            }
-            sendButton.configuration?.background.strokeColor = UIColor(named: "secondaryColorSaturation")
-            if emojiButton != nil {
-                emojiButton.configuration?.baseBackgroundColor = UIColor(named: "secondaryColor")
-            }
-            circularProgressBarView = CircularProgressBarView(frame: .zero)
-            circularProgressBarView.createCircularPath()
-            view.addSubview(circularProgressBarView)
-            circularProgressBarView.translatesAutoresizingMaskIntoConstraints = false
-            circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
-            circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
-        }
-    }
-    
-    @IBAction func cancelPressing(_ sender: UIButton) {
-//        sendButton.configuration?.background.strokeColor = UIColor(named: "secondaryColorSaturation")
-        circularProgressBarView = CircularProgressBarView(frame: .zero)
-        circularProgressBarView.createCircularPath()
-        view.addSubview(circularProgressBarView)
-        circularProgressBarView.translatesAutoresizingMaskIntoConstraints = false
-        circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
-        circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
     }
     
     @IBAction func tabClapButton(_ sender: UIButton) {
@@ -149,19 +128,15 @@ class AudienceViewController: UIViewController {
     @IBAction func tapFireButton(_ sender: UIButton) {
         emoji = "🔥"
         selectedEmoji(emoji: emoji, button: fireButton, beforeButton: beforeButton)
-        runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapCuriousbutton(_ sender: UIButton) {
         emoji = "🤔"
         selectedEmoji(emoji: emoji, button: curiousButton, beforeButton: beforeButton)
-        runHaptic(isHapticOn: isHapticOn)
     }
     @IBAction func tapGoodButton(_ sender: UIButton) {
         emoji = "👍"
         selectedEmoji(emoji: emoji, button: goodButton, beforeButton: beforeButton)
-        runHaptic(isHapticOn: isHapticOn)
     }
-    
     @IBAction func tapYesButton(_ sender: UIButton) {
         emoji = "🙆‍♂️"
         selectedEmoji(emoji: emoji, button: yesButton, beforeButton: beforeButton)
@@ -187,13 +162,6 @@ class AudienceViewController: UIViewController {
         selectedEmoji(emoji: emoji, button: fourButton, beforeButton: beforeButton)
     }
     
-    @IBAction func pressButton(_ sender: UIButton) {
-        print(emoji)
-        print("시작")
-        sendButton.configuration?.background.strokeColor = UIColor(named: "primaryColor")
-        setUpCircularProgressBarView()
-    }
-    
     func selectedEmoji(emoji: String, button: UIButton!, beforeButton: UIButton?) {
         runHaptic(isHapticOn: isHapticOn)
         if button.configuration?.baseBackgroundColor == UIColor(named: "secondaryColor") && beforeButton?.configuration?.baseBackgroundColor == UIColor(named: "primaryColor"){
@@ -216,18 +184,13 @@ class AudienceViewController: UIViewController {
         }
     }
     
-    
+    func setUpCircularProgressBarView() {
+        circularProgressBarView = CircularProgressBarView(frame: .zero)
+        circularProgressBarView.progressAnimation(duration: circularViewDuration)
+        circularProgressBarView.createCircularPath()
+        view.addSubview(circularProgressBarView)
+        circularProgressBarView.translatesAutoresizingMaskIntoConstraints = false
+        circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
+        circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
+    }
 }
-
-
-
-//class MyLongPressGesture : UILongPressGestureRecognizer{
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
-//        print("진동시작")
-//        // 진동 코드
-//    }
-//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
-//        print("진동끄읕")
-//        // 진동 종료
-//    }
-//}

@@ -215,7 +215,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJ0-u6-s0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="rKr-u6-LaL">
                     <connections>
-                        <action selector="sendIt:" destination="QxJ-Wu-8WC" id="knd-jv-fzo"/>
+                        <action selector="sendAction:" destination="QxJ-Wu-8WC" id="7dp-6c-jFH"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>

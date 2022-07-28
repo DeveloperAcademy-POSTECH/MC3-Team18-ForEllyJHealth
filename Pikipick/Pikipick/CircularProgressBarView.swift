@@ -10,7 +10,6 @@ import UIKit
 // https://cemkazim.medium.com/how-to-create-animated-circular-progress-bar-in-swift-f86c4d22f74b
 class CircularProgressBarView: UIView {
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -34,7 +33,6 @@ class CircularProgressBarView: UIView {
         circleLayer.lineCap = .round
         circleLayer.lineWidth = 14.0
         circleLayer.strokeEnd = 1.0
-        //            circleLayer.strokeColor = UIColor.white.cgColor
         circleLayer.strokeColor = UIColor(named: "secondaryColorSaturation")?.cgColor
         // added circleLayer to layer
         layer.addSublayer(circleLayer)
