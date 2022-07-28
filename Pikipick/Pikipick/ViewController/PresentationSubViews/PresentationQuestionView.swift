@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PTQuestionView: View {
+struct PresentationQuestionView: View {
     
     @State var selectedIdx = -1
     
@@ -70,7 +70,7 @@ struct PTQuestionView: View {
 
 struct PTQuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        PTQuestionView()
+        PresentationQuestionView()
             .preferredColorScheme(.dark)
             .previewInterfaceOrientation(.landscapeLeft)
     }

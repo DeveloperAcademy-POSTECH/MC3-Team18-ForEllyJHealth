@@ -37,7 +37,7 @@ enum voteType: CaseIterable {
     }
 }
 
-struct PTVoteView: View {
+struct PresentationVoteView: View {
     let selectedVoteType : voteType
     var body: some View {
         HStack {
@@ -82,7 +82,7 @@ struct PTVoteView: View {
 
 struct PTVoteView_Previews: PreviewProvider {
     static var previews: some View {
-        PTVoteView(selectedVoteType: .yesNo)
+        PresentationVoteView(selectedVoteType: .yesNo)
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

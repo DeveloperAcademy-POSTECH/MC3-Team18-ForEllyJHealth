@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PTVoteListView: View {
+struct PresentationVoteListView: View {
     
     @Binding var selectedVoteType: voteType
     @Binding var viewMode: mode
@@ -88,7 +88,7 @@ struct PTVoteListView: View {
 
 struct PTVoteListView_Previews: PreviewProvider {
     static var previews: some View {
-        PTVoteListView(selectedVoteType: .constant(.yesNo), viewMode: .constant(.votelist))
+        PresentationVoteListView(selectedVoteType: .constant(.yesNo), viewMode: .constant(.votelist))
             .preferredColorScheme(.dark)
             .previewInterfaceOrientation(.landscapeLeft)
     }
