@@ -11,8 +11,8 @@ struct HomePresentationView: View {
     @Binding var viewMode: mode
     
     var body: some View {
-        HStack{
-            Button(){
+        HStack {
+            Button() {
                 viewMode = .votelist
             } label: {
                 Text("투표")

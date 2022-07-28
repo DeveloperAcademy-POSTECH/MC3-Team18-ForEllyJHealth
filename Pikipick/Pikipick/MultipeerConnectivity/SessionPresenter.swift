@@ -117,7 +117,6 @@ class SessionPresenter: NSObject, ObservableObject {
         }
         return result
     }
-    
     // example use: print(voteResult()[Vote.yes] ?? 0)
 }
 
