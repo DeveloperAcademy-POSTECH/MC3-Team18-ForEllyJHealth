@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4F8B882890323300B78D95 /* RootPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B872890323300B78D95 /* RootPresentationView.swift */; };
+		2D4F8B8A289038C500B78D95 /* HomePresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B89289038C500B78D95 /* HomePresentationView.swift */; };
+		2D4F8B8C28903A2B00B78D95 /* PresentationVoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8B28903A2B00B78D95 /* PresentationVoteListView.swift */; };
+		2D4F8B8E2890C1DB00B78D95 /* PresentationVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8D2890C1DB00B78D95 /* PresentationVoteView.swift */; };
+		2D4F8B9028919DFF00B78D95 /* PresentationQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8F28919DFF00B78D95 /* PresentationQuestionView.swift */; };
+		2D4F8B922891A4A900B78D95 /* QuestionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */; };
 		3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C52886D817002393E6 /* SessionPresenter.swift */; };
 		3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */; };
 		3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C92886DA06002393E6 /* SessionAudience.swift */; };
@@ -41,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D4F8B872890323300B78D95 /* RootPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresentationView.swift; sourceTree = "<group>"; };
+		2D4F8B89289038C500B78D95 /* HomePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentationView.swift; sourceTree = "<group>"; };
+		2D4F8B8B28903A2B00B78D95 /* PresentationVoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationVoteListView.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
+		2D4F8B8D2890C1DB00B78D95 /* PresentationVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationVoteView.swift; sourceTree = "<group>"; };
+		2D4F8B8F28919DFF00B78D95 /* PresentationQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationQuestionView.swift; sourceTree = "<group>"; };
+		2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionButtonView.swift; sourceTree = "<group>"; };
+		3A5AE5C22886D73F002393E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A5AE5C52886D817002393E6 /* SessionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionPresenter.swift; sourceTree = "<group>"; };
 		3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterDetector.swift; sourceTree = "<group>"; };
 		3A5AE5C92886DA06002393E6 /* SessionAudience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAudience.swift; sourceTree = "<group>"; };
@@ -89,6 +102,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4F8B84289031FF00B78D95 /* PresentationSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F8B872890323300B78D95 /* RootPresentationView.swift */,
+				2D4F8B89289038C500B78D95 /* HomePresentationView.swift */,
+				2D4F8B8D2890C1DB00B78D95 /* PresentationVoteView.swift */,
+				2D4F8B8B28903A2B00B78D95 /* PresentationVoteListView.swift */,
+				2D4F8B8F28919DFF00B78D95 /* PresentationQuestionView.swift */,
+				2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */,
+			);
+			path = PresentationSubViews;
+			sourceTree = "<group>";
+		};
 		3A5AE5C12886D730002393E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +207,7 @@
 			children = (
 				E2B6B249288191400034E0DD /* SettingTableViewController.swift */,
 				E21D99352887D4070065CB2A /* Segment.swift */,
+				3A5AE5C22886D73F002393E6 /* Constants.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -188,6 +215,7 @@
 		E2B6B246288190A20034E0DD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2D4F8B84289031FF00B78D95 /* PresentationSubViews */,
 				E2B6B247288190B90034E0DD /* Main */,
 			);
 			path = ViewController;
@@ -284,11 +312,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */,
+				2D4F8B8C28903A2B00B78D95 /* PresentationVoteListView.swift in Sources */,
+				2D4F8B922891A4A900B78D95 /* QuestionButtonView.swift in Sources */,
 				3AA17E5B28904A510099F483 /* PresentationMenuButtonView.swift in Sources */,
 				3A75CF38289143BB009686CA /* MenuButtonViewType.swift in Sources */,
 				E2C2563C2890844100BF75FC /* ParticipateTableViewCell.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
+				2D4F8B882890323300B78D95 /* RootPresentationView.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
+				2D4F8B8E2890C1DB00B78D95 /* PresentationVoteView.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
 				3A86767A288EDF3A00209733 /* MultipeerVoteDataModel.swift in Sources */,
@@ -297,9 +329,11 @@
 				3AB219BE287FE94300945A02 /* AppDelegate.swift in Sources */,
 				3AC11CD328903F5D00194A05 /* Segment.swift in Sources */,
 				3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */,
+				2D4F8B8A289038C500B78D95 /* HomePresentationView.swift in Sources */,
 				3AC11CCF2890133D00194A05 /* PresentationMenuView.swift in Sources */,
 				3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */,
 				70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */,
+				2D4F8B9028919DFF00B78D95 /* PresentationQuestionView.swift in Sources */,
 				3A5AE5CD2886DA5A002393E6 /* String+.swift in Sources */,
 				7036AE6A2891A5D400D86CDA /* UIScreen+.swift in Sources */,
 				70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */,

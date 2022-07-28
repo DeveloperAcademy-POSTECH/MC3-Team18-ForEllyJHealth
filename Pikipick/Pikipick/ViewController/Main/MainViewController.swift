@@ -86,7 +86,7 @@ class MainViewController: UIViewController {
         
         localNetworkAuth.requestAuthorization { granted in
             if granted {
-                let swiftUIController = UIHostingController(rootView: PresentationView())
+                let swiftUIController = UIHostingController(rootView: RootPresentationView(viewMode: .home, selectedVoteType: .yesNo))
                 self.navigationController?.pushViewController(swiftUIController, animated: true)
                 self.navigationController?.isNavigationBarHidden = true
             } else {

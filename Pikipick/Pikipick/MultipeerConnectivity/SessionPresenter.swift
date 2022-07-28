@@ -104,6 +104,20 @@ class SessionPresenter: NSObject, ObservableObject {
             receivedVoteResult[votedPeer] = vote
         }
     }
+    
+    func voteResult() -> [Vote: Int] {
+        let resultList = [Vote.yes, Vote.no, Vote.option1, Vote.option2, Vote.option3, Vote.option4]
+        var result: [Vote: Int] = [:]
+        for i in 0..<6 {
+            let condition: ((String, Int)) -> Bool = {
+                $0.1.words.contains(Int.Words.Element(i))
+            }
+            let specificVoteResult = receivedVoteResult.filter(condition)
+            result.updateValue(specificVoteResult.count, forKey: resultList[i])
+        }
+        return result
+    }
+    // example use: print(voteResult()[Vote.yes] ?? 0)
 }
 
 // Error Notice Delegate
