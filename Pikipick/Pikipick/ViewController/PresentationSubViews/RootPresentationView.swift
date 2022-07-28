@@ -45,7 +45,7 @@ struct RootPresentationView: View {
                             }
                             Spacer()
                             Button{
-                                //  refresh counts
+                                presenter.clearReceivedVoteList()
                             } label: {
                                 CircleNavigationButton(icnName: "icn_autorenew_24px", buttonSize: buttonSize)
                             }
@@ -71,7 +71,7 @@ struct RootPresentationView: View {
                 
             case .votelist:
                 VStack{
-                    PresentationVoteListView(selectedVoteType: $selectedVoteType, viewMode: $viewMode)
+                    PresentationVoteListView(presenter: presenter, selectedVoteType: $selectedVoteType, viewMode: $viewMode)
                         .padding(.top, 60)
                 }
             case .vote:
