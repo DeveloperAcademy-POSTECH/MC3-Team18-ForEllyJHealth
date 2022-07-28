@@ -1,8 +1,14 @@
+![img](https://user-images.githubusercontent.com/74142881/181620133-c6f5895e-5b5b-4a76-b62e-542a0c9b071b.png)
+---
+
 # :iphone: Piki Pick 
 
 Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다. 
 "Community Impact" 를 주제로 다양한 사회의 커뮤니티들이 직면한 문제를 해결하는 Impact를 만들어 보는 프로젝트를 진행했습니다. 
-> Multipeer Connectivity를 통해 동일한 와이파이 환경, 또는 Peer-to-Peer 와이파이, 블루투스를 통해 청중들은 발표자의 기기 또는 아이패드에 연결합니다. 발표자는 AirPlay등을 사용해 큰 화면에 기기를 연결하거나 혹은 본인의 기기를 통해 청중들의 다양한 피드백과 질문 등을 받을 수있으며, 필요에 따라 4가지 Option의 투표를 진행할 수있습니다.<br/>
+> Multipeer Connectivity를 통해 동일한 와이파이 환경, 또는 Peer-to-Peer 와이파이, 블루투스를 통해 청중들은 발표자의 기기 또는 아이패드에 연결합니다. 
+발표자는 AirPlay등을 사용해 큰 화면에 기기를 연결하거나 혹은 본인의 기기를 통해 청중들의 다양한 피드백과 질문 등을 받을 수있으며, 필요에 따라 4가지 Option의 투표를 진행할 수있습니다.
+
+
 #### Challenge 
 - Apple Developer Academy @ POSTECH의 멘토들의 어려움을 알고 도와주자.
 #### Solution Concept 
@@ -38,24 +44,35 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 
 ## :framed_picture: Demo
 
-### [⭐️ PikiPick ⭐️](https://youtu.be/bBylSazJQlQ)유튜브 영상데모 보러가기
-### [⭐️ 사용방법 ⭐️](https://youtu.be/0zftlcXqkXs)시뮬레이터 작동영상 보러가기
+#### [⭐️ PikiPick ⭐️]()유튜브 영상데모
+#### [⭐️ 사용방법 ⭐️]()시뮬레이터 작동영상
 
 ## 🌈 Design Guide 
 
-![DsignGuide]()
+<img width="920" alt="스크린샷" src="https://user-images.githubusercontent.com/74142881/181621937-70aabd64-378a-46bc-a6a7-ed5d7cc8ee24.png">
 
 ## :fireworks: Screenshots
 
-| HomeView | PeerView | RemoteView |
+| HomeView | RemoteView | QuestionView |
 |:---:|:---:|:---:|
-|![App Screenshot]()|![App Screenshot]()|![App Screenshot]()|
+|<img align='' alt="HomeView" src="https://user-images.githubusercontent.com/74142881/181611398-b58eb0c9-3760-4094-b4fa-90fe81bf952d.png" width= '500px'/></a>|<img align='' alt="RemoteView" src="https://user-images.githubusercontent.com/74142881/181611778-73a348d4-2e92-41f2-a863-efd67314b51c.png" width= '500px'/></a>|<img align='' alt="QuestionView" src="https://user-images.githubusercontent.com/74142881/181611414-11fcf9b7-3b6e-48fc-9374-f98a048f1c2d.png" width= '500px'/></a>|
 
 <br>
 
-| PresentationView | PeedBackView | VoteView |
-|:---:|:---:|:---:|
-|![App Screenshot]()|![App Screenshot]()|![App Screenshot]()|
+| PresentationView |
+|:---:|
+|<img align='' alt="PresentationView" src="https://user-images.githubusercontent.com/74142881/181612665-748d6f02-f3de-4d03-90bb-8c25318e3c28.png" width= '700px'/></a>|
+
+| PeedBackView |
+|:---:|
+|<img align='' alt="PeedBackView" src="https://user-images.githubusercontent.com/74142881/181622420-3bf8b696-9962-4044-af2b-2d050ee59c06.png" width= '700px'/></a>|
+
+<br>
+
+| VoteView |
+|:---:|
+|<img align='' alt="VoteView" src="https://user-images.githubusercontent.com/74142881/181612965-f21637c6-3d8a-47ab-a6b6-b344abafefbc.png" width= '700px'/></a>|
+
 
 ## :sparkles: Skills & Tech Stack
 1. 이슈관리 : Miro
@@ -65,7 +82,7 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 - OS : MacOS(M1Pro)
 - IDE : Xcode 13.4.1
 5. 상세사용
-- Application : SwiftUI
+- Application : UIKit, SwiftUI
 - Design : Sketch, Figma, Illustrator<br>
 6. 라이브러리
 ```swift
@@ -100,10 +117,10 @@ feat: Summarize changes in around 50 characters or less
 This is a body part. Please describe the details of commit.
 ```
 3. Git 브랜치
-    - `master` : 배포
+    - `main` : 배포
     - `develop` : 개발된 기능(feature)을 통합하는 브랜치
     - `docs` : 문서작업 브랜치
-    -  Convention/#Issues number
+    -  CONVENTION/#Issues number
     - 띄어쓰기, 구분 필요한 경우 대쉬
 
 ## :people_hugging: Authors
