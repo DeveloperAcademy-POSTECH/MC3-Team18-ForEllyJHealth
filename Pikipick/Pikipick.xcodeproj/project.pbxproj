@@ -37,6 +37,9 @@
 		70EFFCEC2887DDB700B08306 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCE92887DDB700B08306 /* PresentationView.swift */; };
 		70EFFCED2887DDB700B08306 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */; };
 		70EFFCEE2887DDB700B08306 /* ButtonAnimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */; };
+		E00114D428927E1700117C63 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00114D328927E1700117C63 /* CircularProgressBarView.swift */; };
+		E00114D92892AE0800117C63 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E00114D82892AE0800117C63 /* SF-Pro-Display-Bold.otf */; };
+		E00114DD2892AFAB00117C63 /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E00114DC2892AFAB00117C63 /* SF-Compact-Rounded-Bold.otf */; };
 		E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */; };
 		E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */; };
 		E265439528919D3600CA8D59 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265439428919D3600CA8D59 /* UIButton+.swift */; };
@@ -81,6 +84,9 @@
 		70EFFCE92887DDB700B08306 /* PresentationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
 		70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAnimView.swift; sourceTree = "<group>"; };
+		E00114D328927E1700117C63 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		E00114D82892AE0800117C63 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		E00114DC2892AFAB00117C63 /* SF-Compact-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudienceViewController.swift; sourceTree = "<group>"; };
 		E0BBEC1328869BEA008E31DA /* AudienceStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudienceStoryboard.storyboard; sourceTree = "<group>"; };
 		E21D99352887D4070065CB2A /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 		3AB219B1287FE94300945A02 = {
 			isa = PBXGroup;
 			children = (
+				E00114D72892ADF500117C63 /* Font */,
 				3AB219BC287FE94300945A02 /* Pikipick */,
 				3AB219BB287FE94300945A02 /* Products */,
 				E08EFF842886A0C700582C83 /* Recovered References */,
@@ -184,6 +191,7 @@
 				E2B6B246288190A20034E0DD /* ViewController */,
 				70EFFCE92887DDB700B08306 /* PresentationView.swift */,
 				70EFFCEA2887DDB700B08306 /* ButtonActionView.swift */,
+				E00114D328927E1700117C63 /* CircularProgressBarView.swift */,
 				70EFFCEB2887DDB700B08306 /* ButtonAnimView.swift */,
 				3A75CF39289144AF009686CA /* PresentationMenu */,
 				E0BBEC1228869BEA008E31DA /* AudienceViewController.swift */,
@@ -200,6 +208,23 @@
 				E276ACFE2885742900D14369 /* Settings.bundle */,
 			);
 			path = Pikipick;
+			sourceTree = "<group>";
+		};
+		70DE708C28900325009E98A9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				70DE708D28900325009E98A9 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E00114D72892ADF500117C63 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E00114DC2892AFAB00117C63 /* SF-Compact-Rounded-Bold.otf */,
+				E00114D82892AE0800117C63 /* SF-Pro-Display-Bold.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		E08EFF842886A0C700582C83 /* Recovered References */ = {
@@ -299,7 +324,9 @@
 				E276ACFF2885742900D14369 /* Settings.bundle in Resources */,
 				3AB219CD287FE94400945A02 /* LaunchScreen.storyboard in Resources */,
 				3AB219CA287FE94400945A02 /* Assets.xcassets in Resources */,
+				E00114D92892AE0800117C63 /* SF-Pro-Display-Bold.otf in Resources */,
 				3AB219C5287FE94300945A02 /* Main.storyboard in Resources */,
+				E00114DD2892AFAB00117C63 /* SF-Compact-Rounded-Bold.otf in Resources */,
 				E0BBEC1528869BEA008E31DA /* AudienceStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +349,7 @@
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				2D4F8B8E2890C1DB00B78D95 /* PresentationVoteView.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,
+				E00114D428927E1700117C63 /* CircularProgressBarView.swift in Sources */,
 				3AB219C8287FE94300945A02 /* Pikipick.xcdatamodeld in Sources */,
 				3A86767A288EDF3A00209733 /* MultipeerVoteDataModel.swift in Sources */,
 				E265439528919D3600CA8D59 /* UIButton+.swift in Sources */,
@@ -498,6 +526,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,6 +557,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
