@@ -1,14 +1,13 @@
-## MC3 Team18 For EllyJ Health
-
 # :iphone: Piki Pick 
 
 Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다. 
 "Community Impact" 를 주제로 다양한 사회의 커뮤니티들이 직면한 문제를 해결하는 Impact를 만들어 보는 프로젝트를 진행했습니다. 
-> Multipeer Connectivity를 통해 동일한 와이파이 환경, 또는 Peer-to-Peer 와이파이, 블루투스를 통해 청중들은 발표자의 기기 또는 아이패드에 연결합니다. 발표자는 AirPlay등을 사용해 큰 화면에 기기를 연결하거나 혹은 본인의 기기를 통해 청중들의 다양한 피드백과 질문 등을 받을 수있으며, 필요에 따라 4가지 Option의 투표를 진행할 수있습니다.
----
-### Challenge : Apple Developer Academy @ POSTECH의 멘토들의 어려움을 알고 도와주자.
-### Solution Concept : Multipeer Connectivity를 사용해 시니어 러너와 주니어 러너의 피드백을 도와주자.
-### Boundaries 
+> Multipeer Connectivity를 통해 동일한 와이파이 환경, 또는 Peer-to-Peer 와이파이, 블루투스를 통해 청중들은 발표자의 기기 또는 아이패드에 연결합니다. 발표자는 AirPlay등을 사용해 큰 화면에 기기를 연결하거나 혹은 본인의 기기를 통해 청중들의 다양한 피드백과 질문 등을 받을 수있으며, 필요에 따라 4가지 Option의 투표를 진행할 수있습니다.<br/>
+#### Challenge 
+- Apple Developer Academy @ POSTECH의 멘토들의 어려움을 알고 도와주자.
+#### Solution Concept 
+- Multipeer Connectivity를 사용해 시니어 러너와 주니어 러너의 피드백을 도와주자.
+#### Boundaries 
 - 네트워킹 : API optional, No backend
 - Unity와 같은 게임 엔진 (X)
 - 만날 수 없는 사용자를 위한 서비스 (X)
@@ -25,7 +24,7 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 - 애플 아카데미 토막상식을 준비하는 시니어 러너
 - 애플 아카데미의 다양한 행사의 밣표자(ex: 영일대 익스프레스, asyncSwift 행사)
 - 청중과 소통하며 발표를 진행하고자 하는 발표자
-
+<br/>
 
 ## :pushpin: Features
 
@@ -45,7 +44,6 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 ## 🌈 Design Guide 
 
 ![DsignGuide]()
-
 
 ## :fireworks: Screenshots
 
