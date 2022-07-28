@@ -210,4 +210,12 @@ class AudienceViewController: UIViewController {
         circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
         circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
     }
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == Segue.audience.identifier {
+			let questionsVC = segue.destination as! QuestionsViewController
+			questionsVC.audience = audience
+			questionsVC.deviceName = deviceName
+		}
+	}
 }
