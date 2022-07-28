@@ -11,19 +11,16 @@ struct PresentationMenuButtonListView: View {
     
     let dividerColor: Color
     
-    private let closeButtonColor = Color.closeButtonColor
-    private let defaultTextColor = Color.white
-    
     var body: some View {
         Divider()
             .overlay(dividerColor)
-        PresentationMenuButtonView(buttonName: "CLOSE", buttonTextColor: closeButtonColor,transferViewType: MenuButtonViewType.close)
+        PresentationMenuButtonView(buttonName: MenuButtonViewType.close.name, buttonTextColor:  MenuButtonViewType.close.color,transferViewType: MenuButtonViewType.close)
         Divider()
             .overlay(dividerColor)
-        PresentationMenuButtonView(buttonName: "VOTE", buttonTextColor: defaultTextColor, transferViewType: MenuButtonViewType.vote)
+        PresentationMenuButtonView(buttonName: MenuButtonViewType.vote.name, buttonTextColor:  MenuButtonViewType.vote.color, transferViewType: MenuButtonViewType.vote)
         Divider()
             .overlay(dividerColor)
-        PresentationMenuButtonView(buttonName: "Q&A", buttonTextColor: defaultTextColor, transferViewType: MenuButtonViewType.question)
+        PresentationMenuButtonView(buttonName: MenuButtonViewType.qAndA.name, buttonTextColor:  MenuButtonViewType.qAndA.color, transferViewType: MenuButtonViewType.qAndA)
     }
 }
 
@@ -41,7 +38,7 @@ struct PresentationMenuButtonView: View {
                 print("CloseButton Pressed")
             case .vote:
                 print("VoteButton Pressed")
-            case .question:
+            case .qAndA:
                 print("QuestionButton Pressed")
                 break
             }
