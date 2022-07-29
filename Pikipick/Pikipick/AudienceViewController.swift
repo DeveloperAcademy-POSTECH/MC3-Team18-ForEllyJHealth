@@ -58,6 +58,11 @@ class AudienceViewController: UIViewController {
         backButton?.layer.borderColor = UIColor(named: "secondaryColor")?.cgColor
         backButton?.layer.borderWidth = 1
         
+        sendButton?.sendButtonGradient(colours: [UIColor(named: "gradientFirstColor") ?? UIColor.black, UIColor.black], locations: [0.0, 1.0])
+        sendButton?.layer.cornerRadius = sendButton.frame.height/2
+        sendButton?.layer.borderColor = UIColor(named: "backgroundColor")?.cgColor
+        sendButton?.layer.borderWidth = 12
+        
         segmentControl?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
         segmentControl?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
         
@@ -68,6 +73,7 @@ class AudienceViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        CustomizeHaptic.instance.prepareHaptics()
         if UserDefaults.standard.object(forKey: "Haptic_preference") == nil {
             UserDefaults.standard.set(true, forKey: "Haptic_preference")
         }
@@ -95,8 +101,8 @@ class AudienceViewController: UIViewController {
         circularProgressBarView.createCircularPath()
         view.addSubview(circularProgressBarView)
         circularProgressBarView.translatesAutoresizingMaskIntoConstraints = false
-        circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
-        circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
+        circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 80).isActive = true
+        circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 80).isActive = true
     }
     
     @IBAction func sendAction(_ sender: UILongPressGestureRecognizer) {
@@ -131,8 +137,8 @@ class AudienceViewController: UIViewController {
             circularProgressBarView.createCircularPath()
             view.addSubview(circularProgressBarView)
             circularProgressBarView.translatesAutoresizingMaskIntoConstraints = false
-            circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
-            circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
+            circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 80).isActive = true
+            circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 80).isActive = true
             emoji = ""
         }
     }
@@ -224,8 +230,8 @@ class AudienceViewController: UIViewController {
         circularProgressBarView.createCircularPath()
         view.addSubview(circularProgressBarView)
         circularProgressBarView.translatesAutoresizingMaskIntoConstraints = false
-        circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
-        circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
+        circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 80).isActive = true
+        circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 80).isActive = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

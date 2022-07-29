@@ -25,15 +25,15 @@ class CircularProgressBarView: UIView {
     
     func createCircularPath() {
         // created circularPath for circleLayer and progressLayer
-        let circularPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: 75, startAngle: startPoint, endAngle: endPoint, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: 76, startAngle: startPoint, endAngle: endPoint, clockwise: true)
         // circleLayer path defined to circularPath
         circleLayer.path = circularPath.cgPath
         // ui edits
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.lineCap = .round
-        circleLayer.lineWidth = 14.0
+        circleLayer.lineWidth = 12.0
         circleLayer.strokeEnd = 1.0
-        circleLayer.strokeColor = UIColor(named: "secondaryColorSaturation")?.cgColor
+        circleLayer.strokeColor = UIColor(named: "backgroundColor")?.cgColor
         // added circleLayer to layer
         layer.addSublayer(circleLayer)
         // progressLayer path defined to circularPath
@@ -41,7 +41,7 @@ class CircularProgressBarView: UIView {
         // ui edits
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.lineCap = .round
-        progressLayer.lineWidth = 14.0
+        progressLayer.lineWidth = 11.0
         progressLayer.strokeEnd = 0
         progressLayer.strokeColor = UIColor(named: "primaryColor")?.cgColor
         // added progressLayer to layer
