@@ -28,7 +28,7 @@ struct RootPresentationView: View {
                     switch viewMode {
                     case .home:
                         Spacer()
-                    case .votelist, .question:
+                    case .votelist:
                         Group{
                             Button{
                                 viewMode = .home
@@ -36,6 +36,20 @@ struct RootPresentationView: View {
                                 CircleNavigationButton(icnName: "icn_close_32px", buttonSize: buttonSize)
                             }
                             Spacer()
+                        }
+                    case .question:
+                        Group{
+                            Button{
+                                viewMode = .home
+                            } label: {
+                                CircleNavigationButton(icnName: "icn_close_32px", buttonSize: buttonSize)
+                            }
+                            Spacer()
+                            Button{
+                                // 함수를 적용해주세요!
+                            } label: {
+                                CircleNavigationButton(icnName: "icn_autorenew_24px", buttonSize: buttonSize)
+                            }
                         }
                     case .vote:
                         Group{
