@@ -7,12 +7,14 @@
 
 import MultipeerConnectivity
 import UIKit
+import SwiftUI
 
-class ParticipateViewController: UIViewController {
+class ParticipateViewController: UIViewController, UITableViewDelegate {
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var backButton: UIButton!
+	@IBOutlet weak var refreshButton: UIButton!
 	
     private var detector = PresenterDetector()
-    
 	private var presenterList = [MCPeerID]()
     
     let waitTime: TimeInterval = 0.3
@@ -22,7 +24,27 @@ class ParticipateViewController: UIViewController {
 
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
-        
+		
+		let guideMessageLabel = UILabel(frame: CGRect(x: 0, y: view.frame.height-88, width: view.frame.width, height: 88))
+		guideMessageLabel.text = "Please select a presenter device."
+		guideMessageLabel.textColor = UIColor.white
+		guideMessageLabel.backgroundColor = UIColor(named: "secondaryColor")
+		guideMessageLabel.textAlignment = .center
+		guideMessageLabel.clipsToBounds = true
+		guideMessageLabel.layer.cornerRadius = 30
+		
+		backButton.applyGradient(colours: [UIColor(named: "gradientFirstColor") ?? UIColor.black, UIColor.black], locations: [0.0, 1.0])
+		backButton.layer.cornerRadius = backButton.frame.height/2
+		backButton.layer.borderColor = UIColor(named: "secondaryColor")?.cgColor
+		backButton.layer.borderWidth = 1
+		
+		refreshButton.applyGradient(colours: [UIColor(named: "gradientFirstColor") ?? UIColor.black, UIColor.black], locations: [0.0, 1.0])
+		refreshButton.layer.cornerRadius = refreshButton.frame.height/2
+		refreshButton.layer.borderColor = UIColor(named: "secondaryColor")?.cgColor
+		refreshButton.layer.borderWidth = 1
+		
+		view.addSubview(guideMessageLabel)
+		
         detector.startBrowsing()
         initRefresh()
     }
@@ -36,21 +58,31 @@ class ParticipateViewController: UIViewController {
         detector.stopBrowsing()
         detector.sessionDisconnect()
     }
-    
+	
+	@IBAction func backButtonTapped(_ sender: UIButton) {
+		self.navigationController?.popViewController(animated: true)
+	}
+	
+	@IBAction func refresgButtonTapped(_ sender: UIButton) {
+		tableView.reloadData()
+		self.tableView.separatorStyle = .none
+	}
+	
     // https://gigas-blog.tistory.com/44
     func initRefresh() {
         let refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(updateUI(refresh:)), for: .valueChanged)
         refresh.attributedTitle = NSAttributedString(string: "RELOAD")
-        
         tableView.refreshControl = refresh
+		self.tableView.separatorStyle = .none
     }
     
     @objc func updateUI(refresh: UIRefreshControl) {
         refresh.endRefreshing()
-        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-            self.tableView.reloadData()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
+//            self.tableView.reloadData()
+//        }
+		self.tableView.reloadData()
     }
     
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,7 +94,6 @@ class ParticipateViewController: UIViewController {
 			if let indexPath = indexPath {
                 audienceVC.deviceName = presenterList[indexPath.row]
 			}
-			
 		}
 	}
 }
@@ -70,7 +101,7 @@ class ParticipateViewController: UIViewController {
 extension ParticipateViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if detector.connectedPeers.isEmpty {
-			emptyMessage("현재 연결 가능한 기기가 없습니다.")
+			emptyMessage()
 		} else {
 			restore()
 		}
@@ -90,22 +121,28 @@ extension ParticipateViewController: UITableViewDataSource {
 	}
     
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+		let cell = tableView.dequeueReusableCell(withIdentifier: "ParticipateTableViewCell", for: indexPath) as! ParticipateTableViewCell
         let presenterStrLength = presenterList[indexPath.row].displayName.count
-        cell.textLabel?.text = presenterList[indexPath.row].displayName.substring(from: 0, to: presenterStrLength - minusPresenterSuffixNum)
+        cell.deviceName.text = presenterList[indexPath.row].displayName.substring(from: 0, to: presenterStrLength - minusPresenterSuffixNum)
 		
 		return cell
 	}
-}
-
-extension ParticipateViewController: UITableViewDelegate {
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 56
+	}
 	
 }
 
 extension ParticipateViewController {
-	func emptyMessage(_ message: String) {
-		let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-		messageLabel.text = message
+	func emptyMessage() {
+		let message = "🤔\nThere is no connectable device."
+		let attributedString = NSMutableAttributedString(string: message)
+		attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 56), range: (message as NSString).range(of: "🤔"))
+		attributedString.addAttribute(.foregroundColor, value: UIColor.white, range: (message as NSString).range(of: "\nThere is no connectable device."))
+		let messageLabel = UILabel()
+		messageLabel.numberOfLines = 2
+		messageLabel.attributedText = attributedString
 		messageLabel.textAlignment = .center
 		
 		tableView.backgroundView = messageLabel
