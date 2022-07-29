@@ -81,9 +81,7 @@ struct PTVoteView: View {
                             .cornerRadius(30)
                         RoundedRectangle(cornerRadius: 30)
                             .strokeBorder(Color.secondaryColor, lineWidth: 1)
-//                        Text("\(returnVoteType(voteType: selectedVoteType)[idx])")
                         Text("\(presenter.voteResult()[selectedVoteType.emojiTag[idx]] ?? -1)")
-                        // TODO: 인덱스에 맞게 해당 위치에 대한 값을 반환해주어야함.
                             .foregroundColor(.accentColor)
                             .font(.system(size: 96))
                             .bold()
@@ -122,16 +120,11 @@ struct PTVoteView: View {
 
 }
 
-//struct PTVoteView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group{
-//        PTVoteView(selectedVoteType: .yesNo)
-//            .previewInterfaceOrientation(.landscapeLeft)
-//        PTVoteView(selectedVoteType: .opt3)
-//            .previewInterfaceOrientation(.landscapeLeft)
-//        PTVoteView(selectedVoteType: .opt4)
-//            .previewInterfaceOrientation(.landscapeLeft)
-//        }
-//        .preferredColorScheme(.dark)
-//    }
-//}
+struct PTVoteView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group{
+            PTVoteView(presenter: SessionPresenter(), selectedVoteType: .yesNo)
+        }
+        .preferredColorScheme(.dark)
+    }
+}
