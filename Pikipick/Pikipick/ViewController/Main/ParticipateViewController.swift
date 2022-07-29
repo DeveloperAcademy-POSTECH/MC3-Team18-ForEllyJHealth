@@ -124,6 +124,7 @@ extension ParticipateViewController: UITableViewDataSource {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ParticipateTableViewCell", for: indexPath) as! ParticipateTableViewCell
         let presenterStrLength = presenterList[indexPath.row].displayName.count
         cell.deviceName.text = presenterList[indexPath.row].displayName.substring(from: 0, to: presenterStrLength - minusPresenterSuffixNum)
+		cell.selectionStyle = .none
 		
 		return cell
 	}
