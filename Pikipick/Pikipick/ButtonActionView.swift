@@ -36,7 +36,7 @@ struct ButtonActionView: View {
         }
         .background(){
             RoundedRectangle(cornerRadius: 50)
-                .fill(Color.secondary)
+                .fill(Color.secondaryColor)
                 .frame(width: 318, height: 64, alignment: .center)
         }
         .onAppear(){
