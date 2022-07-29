@@ -46,7 +46,7 @@ struct RootPresentationView: View {
                                 CircleNavigationButton(icnName: "icn_chevron_left_32px", buttonSize: buttonSize)
                             }
                             Spacer()
-                            Button{
+                            Button {
 								showingClearAlert.toggle()
                             } label: {
                                 CircleNavigationButton(icnName: "icn_autorenew_24px", buttonSize: buttonSize)
