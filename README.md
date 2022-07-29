@@ -86,12 +86,12 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 - Design : Sketch, Figma, Illustrator<br>
 6. 라이브러리
 ```swift
-import SwiftUI
-import UIKit
-import OS
 import CoreHpatics
 import MultipeerConnectivity
 import Network
+import OS
+import SwiftUI
+import UIKit
 ```
 ## 🔀 Git
 
