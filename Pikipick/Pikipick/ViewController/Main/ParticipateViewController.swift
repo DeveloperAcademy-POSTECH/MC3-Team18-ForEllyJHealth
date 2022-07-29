@@ -79,10 +79,8 @@ class ParticipateViewController: UIViewController, UITableViewDelegate {
     
     @objc func updateUI(refresh: UIRefreshControl) {
         refresh.endRefreshing()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-//            self.tableView.reloadData()
-//        }
 		self.tableView.reloadData()
+		self.tableView.separatorStyle = .none
     }
     
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
