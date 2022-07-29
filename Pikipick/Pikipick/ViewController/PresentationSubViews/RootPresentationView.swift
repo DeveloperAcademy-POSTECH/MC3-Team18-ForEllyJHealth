@@ -12,12 +12,13 @@ enum ViewMode: String {
 }
 
 struct RootPresentationView: View {
+    @StateObject var presenter = SessionPresenter()
     
     @State private var orientation = UIDeviceOrientation.unknown
-    @StateObject var presenter = SessionPresenter()
+	@State private var showingClearAlert = false
 
     @State var viewMode: ViewMode = .home
-    @State var selectedVoteType : VoteType = .yesNo
+    @State var selectedVoteType: VoteType = .yesNo
     
     private let buttonSize: CGFloat = 44
     
@@ -45,11 +46,16 @@ struct RootPresentationView: View {
                                 CircleNavigationButton(icnName: "icn_chevron_left_32px", buttonSize: buttonSize)
                             }
                             Spacer()
-                            Button{
-                                presenter.clearReceivedVoteList()
+                            Button {
+								showingClearAlert.toggle()
                             } label: {
                                 CircleNavigationButton(icnName: "icn_autorenew_24px", buttonSize: buttonSize)
-                            }
+							}.alert(isPresented: $showingClearAlert) {
+								Alert(title: Text("Reset Vote"), message: Text("Voting Results will be deleted immediately. You can't undo this action."),
+									  primaryButton: .destructive(Text("Reset"), action: {
+									presenter.clearReceivedVoteList()
+								}), secondaryButton: .cancel(Text("Cancel")))
+							}
                         }
                     }
                     
