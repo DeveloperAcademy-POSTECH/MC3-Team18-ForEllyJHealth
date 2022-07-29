@@ -23,7 +23,7 @@ struct PresentationQuestionView: View {
             
             VStack {
                 ScrollView(showsIndicators: false) {
-                    ForEach (0 ..< presenter.receivedQuestionList.count) { idx in
+                    ForEach (0 ..< presenter.receivedQuestionList.count, id:\.self) { idx in
                         Button {
                             selectedIdx = (selectedIdx != idx) ? idx : -1
                         } label: {
@@ -67,11 +67,3 @@ struct PresentationQuestionView: View {
         }
     }
 }
-
-//struct PresentationQuestionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PresentationQuestionView()
-//            .preferredColorScheme(.dark)
-//            .previewInterfaceOrientation(.landscapeLeft)
-//    }
-//}
