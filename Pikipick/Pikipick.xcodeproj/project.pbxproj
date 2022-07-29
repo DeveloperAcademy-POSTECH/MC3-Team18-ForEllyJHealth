@@ -31,6 +31,7 @@
 		3AC11CCF2890133D00194A05 /* PresentationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC11CCE2890133D00194A05 /* PresentationMenuView.swift */; };
 		3AC11CD328903F5D00194A05 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC11CD128903F5D00194A05 /* Segment.swift */; };
 		3AD2FD85288D74A30092609D /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */; };
+		3AE151AC2893C2700099FC90 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE151AB2893C2700099FC90 /* HapticManager.swift */; };
 		3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05413288BF5BF00BE9E39 /* AppUtility.swift */; };
 		3AF62F332891D2A0003A0EE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F322891D2A0003A0EE4 /* Constants.swift */; };
 		7036AE6A2891A5D400D86CDA /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036AE692891A5D400D86CDA /* UIScreen+.swift */; };
@@ -81,6 +82,7 @@
 		3AC11CCE2890133D00194A05 /* PresentationMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationMenuView.swift; sourceTree = "<group>"; };
 		3AC11CD128903F5D00194A05 /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Segment.swift; path = Pikipick/Model/Segment.swift; sourceTree = SOURCE_ROOT; };
 		3AD2FD84288D74A30092609D /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
+		3AE151AB2893C2700099FC90 /* HapticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3AF05413288BF5BF00BE9E39 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		3AF62F322891D2A0003A0EE4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7036AE692891A5D400D86CDA /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				70B61A2328927AA3009AB83C /* Color+.swift */,
 				7036AE692891A5D400D86CDA /* UIScreen+.swift */,
 				E265439428919D3600CA8D59 /* UIButton+.swift */,
+				3AE151AB2893C2700099FC90 /* HapticManager.swift */,
 				2DADB3282892F87F0099C57B /* RotationDetecter.swift */,
 			);
 			path = Extensions;
@@ -374,6 +377,7 @@
 				3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */,
 				70B61A2428927AA3009AB83C /* Color+.swift in Sources */,
 				E0BBEC1428869BEA008E31DA /* AudienceViewController.swift in Sources */,
+				3AE151AC2893C2700099FC90 /* HapticManager.swift in Sources */,
 				3AF62F332891D2A0003A0EE4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
