@@ -8,17 +8,34 @@
 import SwiftUI
 
 struct PresentationView: View {
+    @Environment (\.dismiss) var dismiss
+    @ObservedObject var presenter: SessionPresenter
+    @Binding var viewMode: ViewMode
     @State var isPresentationReady : Bool = false
+    @State private var showingAlert = false
+    
     var body: some View {
-        VStack{
-            Spacer()
-            ButtonActionView()
+        ZStack{
+            Color.backgroundColor.ignoresSafeArea()
+            PresentationMenuView(viewMode: $viewMode, isExpanded: false)
+            VStack{
+                Spacer()
+                ButtonActionView(presenter: presenter)
+                    .offset(y: -17)
+            }
+            .onAppear(perform: {
+                presenter.isVoteOpen = false
+                AppUtility.lockOrientation(UIInterfaceOrientationMask.landscape)
+                UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+                UINavigationController.attemptRotationToDeviceOrientation()
+            })
         }
     }
 }
 
-struct PresentationView_Previews: PreviewProvider {
-    static var previews: some View {
-        PresentationView()
-    }
-}
+//struct PresentationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PresentationView(viewMode: .constant(.question))
+//            .previewInterfaceOrientation(.landscapeLeft)
+//    }
+//}

@@ -41,19 +41,42 @@ class SessionAudience: NSObject, ObservableObject {
     @Published var connectedPeers: [MCPeerID] = []
     
     // MARK: 이모지 전송
-    /* 이모지 전송
-     - 연결된 peer가 존재한다면, 특정 peer 선택 후 이모지를 전송합니다
-     */
-    func send(emoji: EmojiName, receiver: MCPeerID) {
-        log.info("sendEmoji: \(String(describing: emoji)) to \(receiver.displayName)")
-
+    func sendEmoji(sendEmoji: String, receiver: MCPeerID) {
+        log.info("sendEmoji: \(String(describing: sendEmoji)) to \(receiver.displayName)")
+        let sendData = "EMO" + UUID().uuidString + sendEmoji
         // Is there any Connected Peers more than 1
-        if (!session.connectedPeers.isEmpty) {
-            do {
-                try session.send(emoji.rawValue.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
-            } catch {
-                log.error("Error for sending: \(String(describing: error))")
-            }
+        guard !session.connectedPeers.isEmpty else { return }
+        do {
+            try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
+        } catch {
+            log.error("Error for sending: \(String(describing: error))")
+        }
+    }
+    
+    // MARK: 질문 전송
+    func sendQuestion(sendQuestion: String, receiver: MCPeerID) {
+        log.info("sendQuestion: \(String(describing: sendQuestion)) to \(receiver.displayName)")
+        let sendData = "QUE" + myPeerId.displayName + "|" + sendQuestion
+        // Is there any Connected Peers more than 1
+        guard !session.connectedPeers.isEmpty else { return }
+        do {
+            try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
+        } catch {
+            log.error("Error for sending: \(String(describing: error))")
+        }
+    }
+    
+    // MARK: 투표 결과 전송
+    func sendVote(sendVote: Int, receiver: MCPeerID) {
+        if sendVote == -1 { return }
+        log.info("sendVote: \(String(describing: sendVote)) to \(receiver.displayName)")
+        let sendData = "VOT" + myPeerId.displayName + "|" + String(sendVote)
+        // Is there any Connected Peers more than 1
+        guard !session.connectedPeers.isEmpty else { return }
+        do {
+            try session.send(sendData.data(using: .utf8)!, toPeers: [receiver], with: .reliable)
+        } catch {
+            log.error("Error for sending: \(String(describing: error))")
         }
     }
     

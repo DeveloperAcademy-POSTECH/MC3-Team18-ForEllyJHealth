@@ -15,7 +15,7 @@ struct Emoji: Hashable {
 
 struct ButtonActionView: View {
     
-    @StateObject var presenter = SessionPresenter()
+    @ObservedObject var presenter: SessionPresenter
     
     @State var currentEmoji: String = ""
     @State private var counter: Int = 0
@@ -34,22 +34,22 @@ struct ButtonActionView: View {
                 ButtonAnimView(presenter: presenter, emoji: $emoji[index])
             }
         }
+        .background(){
+            RoundedRectangle(cornerRadius: 50)
+                .fill(Color.secondaryColor)
+                .frame(width: 318, height: 64, alignment: .center)
+        }
         .onAppear(){
             print("BROWSING START!")
             presenter.startBrowsing()
             presenter.startAdvertise()
-        }
-        .onDisappear(){
-            print("BROWSING STOP!")
-            presenter.stopAdvertise()
-            presenter.stopBrowsing()
-            presenter.sessionDisconnect()
         }
     }
 }
 
 struct ButtonActionView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonActionView()
+        ButtonActionView(presenter: SessionPresenter())
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

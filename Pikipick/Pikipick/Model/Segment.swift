@@ -9,11 +9,12 @@ import Foundation
 
 enum Segue: String {
 	case audience
+	case questions
 
 	var identifier: String {
 		switch self {
 		case .audience: return "AudienceSegue"
+		case .questions: return "QuestionsSeuge"
 		}
 	}
 }
-
