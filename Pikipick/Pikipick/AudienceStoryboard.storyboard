@@ -160,14 +160,12 @@
                                 <rect key="frame" x="87.666666666666686" y="232" width="200" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzv-Nt-GXV">
-                                        <rect key="frame" x="30" y="30" width="140" height="140"/>
+                                        <rect key="frame" x="18" y="18" width="164" height="164"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="secondaryColor"/>
                                         <gestureRecognizers/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
-                                            <backgroundConfiguration key="background" strokeWidth="12" strokeOutset="12">
-                                                <color key="strokeColor" name="secondaryColorSaturation"/>
-                                            </backgroundConfiguration>
+                                        <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="PIKIPICK">
                                                     <attributes>
@@ -176,7 +174,6 @@
                                                 </fragment>
                                             </attributedString>
                                             <color key="baseForegroundColor" name="primaryColor"/>
-                                            <color key="baseBackgroundColor" name="secondaryColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="cancelPressing:" destination="QxJ-Wu-8WC" eventType="touchUpInside" id="hMd-fb-ief"/>
@@ -236,7 +233,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJ0-u6-s0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="rKr-u6-LaL">
+                <pongPressGestureRecognizer allowableMovement="150" minimumPressDuration="1.5" id="rKr-u6-LaL">
                     <connections>
                         <action selector="sendAction:" destination="QxJ-Wu-8WC" id="7dp-6c-jFH"/>
                     </connections>
@@ -741,9 +738,6 @@
         </namedColor>
         <namedColor name="secondaryColor">
             <color red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="secondaryColorSaturation">
-            <color red="0.16862745098039217" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
