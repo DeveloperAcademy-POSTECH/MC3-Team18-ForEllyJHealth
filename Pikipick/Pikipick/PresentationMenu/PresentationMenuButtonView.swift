@@ -54,8 +54,8 @@ struct PresentationMenuButtonView: View {
                 .foregroundColor(buttonTextColor)
         }
         .frame(width:64)
-        .alert("알람타이틀",isPresented: $showingAlert) {
-            Button("나가기", role: .destructive) {
+        .alert("End Presentation",isPresented: $showingAlert) {
+            Button("Exit", role: .destructive) {
                 AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait)
                 UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
@@ -63,7 +63,7 @@ struct PresentationMenuButtonView: View {
                 })
             }
         } message: {
-            Text("샘플입니다.")
+            Text("If you exit, the question and voting you recieved will disappear.")
         }
     }
 }
