@@ -13,6 +13,7 @@
 		2D4F8B8E2890C1DB00B78D95 /* PresentationVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8D2890C1DB00B78D95 /* PresentationVoteView.swift */; };
 		2D4F8B9028919DFF00B78D95 /* PresentationQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B8F28919DFF00B78D95 /* PresentationQuestionView.swift */; };
 		2D4F8B922891A4A900B78D95 /* QuestionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */; };
+		2DADB3292892F87F0099C57B /* RotationDetecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DADB3282892F87F0099C57B /* RotationDetecter.swift */; };
 		3A5AE5C62886D817002393E6 /* SessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C52886D817002393E6 /* SessionPresenter.swift */; };
 		3A5AE5C82886D9C0002393E6 /* PresenterDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */; };
 		3A5AE5CA2886DA06002393E6 /* SessionAudience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE5C92886DA06002393E6 /* SessionAudience.swift */; };
@@ -59,6 +60,7 @@
 		2D4F8B8D2890C1DB00B78D95 /* PresentationVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationVoteView.swift; sourceTree = "<group>"; };
 		2D4F8B8F28919DFF00B78D95 /* PresentationQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationQuestionView.swift; sourceTree = "<group>"; };
 		2D4F8B912891A4A900B78D95 /* QuestionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionButtonView.swift; sourceTree = "<group>"; };
+		2DADB3282892F87F0099C57B /* RotationDetecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationDetecter.swift; sourceTree = "<group>"; };
 		3A5AE5C22886D73F002393E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A5AE5C52886D817002393E6 /* SessionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionPresenter.swift; sourceTree = "<group>"; };
 		3A5AE5C72886D9C0002393E6 /* PresenterDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterDetector.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				7036AE692891A5D400D86CDA /* UIScreen+.swift */,
 				E265439428919D3600CA8D59 /* UIButton+.swift */,
 				3AE151AB2893C2700099FC90 /* HapticManager.swift */,
+				2DADB3282892F87F0099C57B /* RotationDetecter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				E2C2563C2890844100BF75FC /* ParticipateTableViewCell.swift in Sources */,
 				3A867678288ED61C00209733 /* MultipeerDataModel.swift in Sources */,
 				2D4F8B882890323300B78D95 /* RootPresentationView.swift in Sources */,
+				2DADB3292892F87F0099C57B /* RotationDetecter.swift in Sources */,
 				3AF05414288BF5BF00BE9E39 /* AppUtility.swift in Sources */,
 				2D4F8B8E2890C1DB00B78D95 /* PresentationVoteView.swift in Sources */,
 				E2B6B24C288191AC0034E0DD /* ParticipateViewController.swift in Sources */,

@@ -13,6 +13,9 @@ enum ViewMode: String {
 
 struct RootPresentationView: View {
     
+    @State private var orientation = UIDeviceOrientation.unknown
+    @StateObject var presenter = SessionPresenter()
+
     @State var viewMode: ViewMode = .home
     @State var selectedVoteType : VoteType = .yesNo
     
@@ -43,7 +46,7 @@ struct RootPresentationView: View {
                             }
                             Spacer()
                             Button{
-                                //  refresh counts
+                                presenter.clearReceivedVoteList()
                             } label: {
                                 CircleNavigationButton(icnName: "icn_autorenew_24px", buttonSize: buttonSize)
                             }
@@ -65,28 +68,34 @@ struct RootPresentationView: View {
             
             switch viewMode {
             case .home:
-                PresentationView(viewMode: $viewMode)
+                PresentationView(presenter: presenter, viewMode: $viewMode)
                 
             case .votelist:
                 VStack{
-                    PresentationVoteListView(selectedVoteType: $selectedVoteType, viewMode: $viewMode)
+                    PresentationVoteListView(presenter: presenter, selectedVoteType: $selectedVoteType, viewMode: $viewMode)
                         .padding(.top, 60)
                 }
             case .vote:
-                PTVoteView(selectedVoteType: selectedVoteType)
+                PTVoteView(presenter: presenter, selectedVoteType: selectedVoteType)
                     .padding(.vertical, 8)
             case .question:
-                PresentationQuestionView()
+                PresentationQuestionView(presenter: presenter)
             }
             
             
         }
-        .edgesIgnoringSafeArea([.leading])
-        // TODO: 뷰 오리엔테이션 추적가능? 오케이 적용가능
-        
-        //        ignoresSafeArea(.container, edges: .top)
+        .onAppear(perform: {
+            AppUtility.lockOrientation(UIInterfaceOrientationMask.landscape)
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+            UINavigationController.attemptRotationToDeviceOrientation()
+        })
+        .edgesIgnoringSafeArea(orientation == .landscapeRight ? [.leading] : [.trailing])
         .background(Color("backgroundColor"))
         .accentColor(Color("primaryColor"))
+        .onRotate { newOrientation in
+            // https://www.hackingwithswift.com/quick-start/swiftui/how-to-detect-device-rotation
+            orientation = newOrientation
+        }
     }
 }
 

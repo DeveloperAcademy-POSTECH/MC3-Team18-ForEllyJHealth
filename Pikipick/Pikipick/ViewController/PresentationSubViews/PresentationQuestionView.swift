@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PresentationQuestionView: View {
-    
+    @ObservedObject var presenter: SessionPresenter
     @State var selectedIdx = -1
     
     private let questionListSample = ["테스트 질문입니다.", "questionque stionquestio nque stionquestion questionqu esti on questionquestion question", "질문이 잘 작성됩니다.", "question", "question", "테스트 질문입니다.", "question", "테스트 질문입니다."]
@@ -23,11 +23,11 @@ struct PresentationQuestionView: View {
             
             VStack {
                 ScrollView(showsIndicators: false) {
-                    ForEach (0 ..< questionListSample.count) { idx in
+                    ForEach (0 ..< presenter.receivedQuestionList.count, id:\.self) { idx in
                         Button {
                             selectedIdx = (selectedIdx != idx) ? idx : -1
                         } label: {
-                            QuestionButtonView(question: questionListSample[idx], isSelected: selectedIdx == idx ? true : false)
+                            QuestionButtonView(question: presenter.receivedQuestionList[idx], isSelected: selectedIdx == idx ? true : false)
                         }
                     }
                 } // scrollview
@@ -50,7 +50,7 @@ struct PresentationQuestionView: View {
                 }
                 .padding()
                 ScrollView {
-                    Text(selectedIdx == -1 ? "질문을 선택해주세요." : questionListSample[selectedIdx])
+                    Text(selectedIdx == -1 ? "질문을 선택해주세요." : presenter.receivedQuestionList[selectedIdx])
                         .font(.title2)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.leading)
@@ -65,13 +65,5 @@ struct PresentationQuestionView: View {
             .padding(.bottom, 28)
             .padding(.horizontal)
         }
-    }
-}
-
-struct PresentationQuestionView_Previews: PreviewProvider {
-    static var previews: some View {
-        PresentationQuestionView()
-            .preferredColorScheme(.dark)
-            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
