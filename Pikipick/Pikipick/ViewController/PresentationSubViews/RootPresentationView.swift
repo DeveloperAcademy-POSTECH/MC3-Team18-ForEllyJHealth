@@ -12,10 +12,10 @@ enum ViewMode: String {
 }
 
 struct RootPresentationView: View {
+    @StateObject var presenter = SessionPresenter()
     
     @State private var orientation = UIDeviceOrientation.unknown
 	@State private var showingClearAlert = false
-    @StateObject var presenter = SessionPresenter()
 
     @State var viewMode: ViewMode = .home
     @State var selectedVoteType : VoteType = .yesNo
