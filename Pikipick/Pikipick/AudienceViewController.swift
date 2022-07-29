@@ -30,7 +30,7 @@ class AudienceViewController: UIViewController {
     @IBOutlet weak var longPressGesture: UILongPressGestureRecognizer!
     @IBOutlet weak var sendButton: UIButton!
     
-
+    
     var circularProgressBarView: CircularProgressBarView!
     var circularViewDuration: TimeInterval = 1.5
     
@@ -50,7 +50,7 @@ class AudienceViewController: UIViewController {
         if let text = deviceName?.displayName {
             titleLabel.text = "\(text.substring(from: 0, to: deviceNameLength))"
         }
-
+        
         backButton?.applyGradient(colours: [UIColor(named: "gradientFirstColor") ?? UIColor.black, UIColor.black], locations: [0.0, 1.0])
         backButton?.layer.cornerRadius = backButton.frame.height/2
         backButton?.layer.borderColor = UIColor(named: "secondaryColor")?.cgColor
@@ -75,7 +75,7 @@ class AudienceViewController: UIViewController {
         audience.stopAdvertise()
         audience.sessionDisconnect()
     }
-
+    
     @IBAction func backButtonTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -220,21 +220,12 @@ class AudienceViewController: UIViewController {
         circularProgressBarView.topAnchor.constraint(equalTo: sendButton.topAnchor, constant: 70).isActive = true
         circularProgressBarView.leadingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: 70).isActive = true
     }
-	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is QuestionsViewController {
-                    guard let questionsVC = segue.destination as? QuestionsViewController else { return }
+            guard let questionsVC = segue.destination as? QuestionsViewController else { return }
             questionsVC.audience = self.audience
             questionsVC.deviceName = self.audience.currentPresenter
-                }
-//		if segue.identifier == Segue.audience.identifier {
-//			let questionsVC = segue.destination as! QuestionsViewController
-//            DispatchQueue.main.async {
-//                questionsVC.text = "HIIII"
-//                questionsVC.audience = self.audience
-//                questionsVC.deviceName = self.audience.currentPresenter ?? MCPeerID()
-//                print(self.audience.currentPresenter?.displayName ?? "eeeee")
-//            }
-//		}
-	}
+        }
+    }
 }
