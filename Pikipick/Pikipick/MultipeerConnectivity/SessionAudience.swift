@@ -68,6 +68,7 @@ class SessionAudience: NSObject, ObservableObject {
     
     // MARK: 투표 결과 전송
     func sendVote(sendVote: Int, receiver: MCPeerID) {
+        if sendVote == -1 { return }
         log.info("sendVote: \(String(describing: sendVote)) to \(receiver.displayName)")
         let sendData = "VOT" + myPeerId.displayName + "|" + String(sendVote)
         // Is there any Connected Peers more than 1

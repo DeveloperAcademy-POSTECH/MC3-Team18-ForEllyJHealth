@@ -93,7 +93,6 @@ class SessionPresenter: NSObject, ObservableObject {
     func appendVoteResult(data: String) {
         guard isVoteOpen else { return }
         guard let receivedVote = extractVote(data: data) else { return }
-        
         let votedPeer = receivedVote.first?.key ?? ""
         let vote = receivedVote.first?.value ?? -1
         
@@ -170,17 +169,15 @@ extension SessionPresenter: MCSessionDelegate {
         if let string = String(data: data, encoding: .utf8) {
             log.info("didReceive Emoji \(string)")
             DispatchQueue.main.async {
-                let identifier = string.substring(from: 0, to: 3)
+                let identifier = string.substring(from: 0, to: 2)
                 
                 switch sendDataType(identifier: identifier) {
                 case .question:
                     self.receivedQuestionList.append(extractQuestion(data: string))
                 case .vote:
                     self.appendVoteResult(data: string)
-                    break
                 case .emoji:
                     self.receivedData = string
-                    break
                 }
             }
         } else {
