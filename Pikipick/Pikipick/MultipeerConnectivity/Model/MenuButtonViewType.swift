@@ -13,7 +13,7 @@ enum MenuButtonViewType: String {
     
     var name: String {
            switch self {
-           case .close: return "CLOSE"
+           case .close: return "EXIT"
            case .vote: return "VOTE"
            case .qAndA: return "Q&A"
        }
