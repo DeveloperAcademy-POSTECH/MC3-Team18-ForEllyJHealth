@@ -44,8 +44,8 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 
 ## :framed_picture: Demo
 
-#### [⭐️ PikiPick ⭐️](https://youtu.be/xoaojkRhj8w)유튜브 영상데모
-#### [⭐️ 사용방법 ⭐️]()시뮬레이터 작동영상
+#### [⭐️ PikiPick ⭐️](https://youtu.be/jQuChTe-K0I)유튜브 영상데모
+#### [⭐️ 사용방법 ⭐️]()사용방법 시연 영상
 
 ## 🌈 Design Guide 
 
@@ -79,7 +79,7 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 2. 형상관리 : Github
 3. 커뮤니케이션 : Ryver, Notion, Zoom<br>
 4. 개발환경
-- OS : MacOS(M1Pro)
+- OS : iOS 15.5
 - IDE : Xcode 13.4.1
 5. 상세사용
 - Application : UIKit, SwiftUI
@@ -88,41 +88,75 @@ Apple Developer Academy @ POSTECH Mini Challenge #3 Project입니다.
 ```swift
 import swiftUI
 import UIKit
-import CoreData
-import Combine
+import OS
+import CoreHpatics
 import MultipeerConnectivity
 import Network
 ```
 ## 🔀 Git
 
-1. Commit 컨벤션
-    - `feat` : 새로운 기능 추가
-    - `fix` : 버그 수정
-    - `docs` : 문서 (README, 포팅메뉴얼)
-    - `test` : 테스트 코드
-    - `refactor` : 코드 리팩토링 (기능 말고 성능 개선)
-    - `style` : 코드 의미에 영향을 주지 않는 변경 사항
-    - `chore` : 빌드, 설정 파일
-    - `comment` : 주석이 추가되는 경우.
-    
-2. 규칙
-    - 제목의 길이는 50글자를 넘기지 않는다
-    - 제목의 마지막에 마침표를 사용하지 않는다
-    - 본문을 작성할 때 한 줄에 72글자 넘기지 않는다
-    - 과거형을 사용하지 않는다
-    - 커밋 메시지는 **영어 or 한글**로 작성한다   
-```bash
-feat: Summarize changes in around 50 characters or less
+1. 기본적인 작업 프로세스
+    - Issue 생성: Assignees 할당, Label 할당
+    - Kanban 작성: Issue의 TODO를 바탕으로 칸반 작성하기
+    - Branch 작성: Branch의 종류에 맞는 형태로 이름 지정
+    - Work: Issue에서 작성했던 내용들을 기반으로 코드, 디자인 etc 구현
+    - Pull Request: Issue의 TODO에서 제시되었던 모든 작업을 마친 후 PR 신청
+    - 상위 Branch에 Merge하기 전, 상위 Branch의 변경 사항을 현재 작업했던 Branch로 들고와, 최대한 Conflict가 없게 만들기
+    - 최소 2명 이상의 Reviewer의 Approve 후 Merge 가능
 
-This is a body part. Please describe the details of commit.
+2. Phase: Issue
+    - Issue 생성 규칙
+    - 기본적으로는 이슈 템플릿을 사용하여 작성
+    - 구현해야하는 요소들: 해결해야하는 문제에 대해 간략 서술
+    - 구현 방안: 위의 요소들의 실제 구현 시의 세부 사항 및 방법을 작성한다
+
+- 제목
+    - 50자 이내
+    - 단어 형태로 종결
 ```
-3. Git 브랜치
-    - `main` : 배포
-    - `develop` : 개발된 기능(feature)을 통합하는 브랜치
-    - `docs` : 문서작업 브랜치
-    -  CONVENTION/#Issues number
-    - 띄어쓰기, 구분 필요한 경우 대쉬
+ex) [FEAT] Add Notification Permission Error
+ex) [FEAT] Notification 접근 권한 추가
+```
 
+- 본문
+    - 80자 이내
+    - 단어 형태로 종결
+    - 작업 사항에 대한 간략한 설명
+
+3. Phase: Branch
+    - Branch 관리
+
+- Main Branch
+    - Dev Branch: For Development
+    - View Branch: Development Branch 중에서도 View 단위로 관리하기 위한 Branch들
+    - 개발 이외의 Branch는 언제든지 추가될 여지 존재
+
+- Branch 생성 규칙
+
+    - Default: 작업태그/이슈번호
+    - View Branch: View이름/이슈번호
+```
+ex) FEAT/[FEAT] AudienceView (#7) #11
+ex) HomeView/[FEAT] MainView #3
+```
+
+4. Phase: Pull Request
+
+- PR(Pull Request) 규칙
+    - [작업태그] 작업 사항 축약
+    - ex) [FEAT] 회원가입 뷰 추가
+    - PR 생성 후, 오른쪽 하단의 Development에서 연관된 이슈를 연결하기
+    - Close #이슈넘버 의 형태로 자동 할당이 가능
+
+- 작업태그 일괄
+    - FEAT : 새로운 기능 추가 / 일부 코드 추가 / 일부 코드 수정(리팩토링과 구분)
+    - FIX : 버그 수정
+    - DOCS : 문서 수정
+    - TEST : 테스트 코드 추가
+    - REFACTOR : 코드 리팩토링
+    - STYLE : 코드 의미에 영향을 주지 않는 변경사항
+    - CHORE : 빌드 부분 혹은 패키지 매니저 수정사항
+    
 ## :people_hugging: Authors
 
 - [@김형중](https://github.com/dkdo1406) | [@송시원](https://github.com/song-cool) | [@이준영](https://github.com/User-Lawn) | [정우영](https://github.com/woo0dev) | [@황정현](https://github.com/jeong-hyeonHwang)
