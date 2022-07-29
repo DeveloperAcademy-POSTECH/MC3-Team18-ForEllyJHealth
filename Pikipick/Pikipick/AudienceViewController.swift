@@ -44,6 +44,8 @@ class AudienceViewController: UIViewController {
     var deviceName: MCPeerID?
     private var audience = SessionAudience()
     
+    private let customHapticSound: [HapticProperty] = [HapticProperty(count: 1, interval: [0.0], intensity: [0.65], sharpness: [0.65]), HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.7, 0.55], sharpness: [0.5, 0.85])]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let deviceNameLength = (deviceName?.displayName.count ?? minusPresenterSuffixNum) - minusPresenterSuffixNum
@@ -61,6 +63,7 @@ class AudienceViewController: UIViewController {
         
         audience.startAdvertise()
         audience.currentPresenter = deviceName
+        CustomizeHaptic.instance.prepareHaptics()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,8 +83,11 @@ class AudienceViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func pressButton(_ sender: UIButton) {
-        sendButton.configuration?.background.strokeColor = UIColor(named: "primaryColor")
-        setUpCircularProgressBarView()
+        if emoji != "" {
+            CustomizeHaptic.instance.haptic(hapticCase: Haptic.transient, hapticProperty: customHapticSound[0])
+            setUpCircularProgressBarView()
+            return
+        }
     }
     
     @IBAction func cancelPressing(_ sender: UIButton) {
@@ -94,7 +100,8 @@ class AudienceViewController: UIViewController {
     }
     
     @IBAction func sendAction(_ sender: UILongPressGestureRecognizer) {
-        if longPressGesture.state.rawValue == 1 {
+        if longPressGesture.state.rawValue == 1  && emoji != "" {
+            CustomizeHaptic.instance.haptic(hapticCase: Haptic.transient, hapticProperty: customHapticSound[1])
             if emojiView.alpha == 1.0 {
                 audience.sendEmoji(sendEmoji: emoji, receiver: deviceName!)
             } else {
