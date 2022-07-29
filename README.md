@@ -1,4 +1,4 @@
-![img](https://user-images.githubusercontent.com/74142881/181620133-c6f5895e-5b5b-4a76-b62e-542a0c9b071b.png)
+![Artboard 1](https://user-images.githubusercontent.com/74142881/181747683-d50bb521-cad3-439e-bf44-6472ff7ed962.png)
 ---
 
 # :iphone: Piki Pick 
