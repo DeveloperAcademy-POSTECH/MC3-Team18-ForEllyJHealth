@@ -18,7 +18,7 @@ struct RootPresentationView: View {
 	@State private var showingClearAlert = false
 
     @State var viewMode: ViewMode = .home
-    @State var selectedVoteType : VoteType = .yesNo
+    @State var selectedVoteType: VoteType = .yesNo
     
     private let buttonSize: CGFloat = 44
     
