@@ -222,6 +222,8 @@ class AudienceViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
         if segue.destination is QuestionsViewController {
             guard let questionsVC = segue.destination as? QuestionsViewController else { return }
             questionsVC.audience = self.audience
