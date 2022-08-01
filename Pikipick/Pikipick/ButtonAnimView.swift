@@ -63,7 +63,7 @@ struct ButtonAnimView: View {
 //ref: https://www.youtube.com/watch?v=S7hhHc9FgnY&t=639s
 struct ConfettiContainer: View {
     @State var movement = Movement(x: 0, y: 0, emojiSize: 0.1, opacity: 0)
-    @State var animationValues: [Bool] = Array(repeating: false, count: 5)
+    @State var animationValues: [Bool] = Array(repeating: false, count: 3)
     @State var emojiPositionSet = false
     @Binding var animate: Bool
     @Binding var emoji: Emoji
@@ -81,20 +81,14 @@ struct ConfettiContainer: View {
                     movement.emojiSize = 20 * movement.emojiSize
                     movement.x = UIScreen.screenHalfWidth * CGFloat.random(in: -0.4...0.4)
                     movement.y = -UIScreen.screenHalfHeight * CGFloat.random(in: 0.4...0.8)
-                    withAnimation(.easeInOut(duration: 0.35)){
+                    withAnimation(.easeInOut(duration: 0.35).delay(0.3)){
                         animationValues[0] = true
                     }
-                    withAnimation(.easeInOut(duration: 0.45).delay(0.06)){
+                    withAnimation(.easeInOut(duration: 0.35).delay(0.4)){
                         animationValues[1] = true
                     }
-                    withAnimation(.easeInOut(duration: 0.35).delay(0.3)){
-                        animationValues[2] = true
-                    }
-                    withAnimation(.easeInOut(duration: 0.35).delay(0.4)){
-                        animationValues[3] = true
-                    }
                     withAnimation(.easeInOut(duration: 0.55).delay(0.55)){
-                        animationValues[4] = true
+                        animationValues[2] = true
                     }
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
@@ -112,10 +106,10 @@ struct ConfettiContainer: View {
                         .fill(Color.primaryGradient)
                         .frame(width: .random(in: 3...5), height: .random(in: 3...5))
                         .offset(x: .random(in: -5...5), y: .random(in: -5...5))
-                        .offset(x: animationValues[3] ? 45 : 10)
+                        .offset(x: animationValues[1] ? 45 : 10)
                         .rotationEffect(.init(degrees: Double(index) * 18.0))
-                        .scaleEffect(animationValues[2] ? 1 : 0.01)
-                        .opacity(animationValues[4] ? 0 : 1)
+                        .scaleEffect(animationValues[0] ? 1 : 0.01)
+                        .opacity(animationValues[2] ? 0 : 1)
                 }
                 .position(x: movement.x * 2 + 12, y: movement.y * 2 + 12)
                 
@@ -123,20 +117,14 @@ struct ConfettiContainer: View {
             }
             .onChange(of: emojiPositionSet) { _ in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1){
-                    withAnimation(.easeInOut(duration: 0.35)){
+                    withAnimation(.easeInOut(duration: 0.35).delay(0.3)){
                         animationValues[0] = true
                     }
-                    withAnimation(.easeInOut(duration: 0.45).delay(0.06)){
+                    withAnimation(.easeInOut(duration: 0.35).delay(0.4)){
                         animationValues[1] = true
                     }
-                    withAnimation(.easeInOut(duration: 0.35).delay(0.3)){
-                        animationValues[2] = true
-                    }
-                    withAnimation(.easeInOut(duration: 0.35).delay(0.4)){
-                        animationValues[3] = true
-                    }
                     withAnimation(.easeInOut(duration: 0.55).delay(0.55)){
-                        animationValues[4] = true
+                        animationValues[2] = true
                     }
                 }
             }
